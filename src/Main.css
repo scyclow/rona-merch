@@ -1,0 +1,512 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.headerTitle {
+  width: calc(100vw - 500px);
+  /*width: 100%;*/
+  flex-grow: 1;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-right: 20px;
+}
+
+@media (max-width: 750px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .headerTitle {
+    width: calc(100% - 40px);
+    height: 200px;
+  }
+}
+
+.background {
+  position: absolute;
+  z-index: -100;
+  height: 100vh;
+  width: 100vw;
+}
+
+.logo {
+  padding: 20px;
+  display: inline-block;
+  max-width: 425px;
+  /*width: 100%;*/
+  pointer-events: none;
+  animation: App-logo-spin infinite 10s linear;
+}
+
+@media (max-width: 750px) {
+  .logo {
+    max-height: 425px;
+    max-width: calc(100% - 40px);
+    margin: auto;
+  }
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.section {
+  margin: auto;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 1450px;
+}
+
+.section:hover * {
+  opacity: 0.95;
+}
+
+.patriotTitle {
+  width: 100%;
+  background-image: url('./assets/flagstar.svg');
+  background-size: auto 100%;
+  background-repeat: repeat-x;
+  background-color: #3C3B6E;
+  animation: starMarquee 20s linear infinite;
+  display: flex;
+  justify-content: center;
+}
+
+.patriotTitleMarquee {
+  width: 300px;
+  display: inline-flex;
+  align-items: center;
+  color: #ffffff;
+  background-color: #b22234;
+  border: 2px solid #ffffff;
+  border-bottom: 0;
+  border-top: 0;
+  box-sizing: border-box;
+  text-shadow: 3px 3px 0 #3C3B6E;
+}
+
+.patriotTitleMarqueeText {
+  padding-right: 20px;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+@media (max-width: 425px) {
+  .patriotTitleMarquee {
+    width: 150px;
+  }
+}
+
+
+.brandedTitleMarquee {
+  background-color: #000;
+  border: 2px solid;
+}
+
+.brandedTitleMarqueeText {
+  white-space: nowrap;
+  font-size: 20px;
+  margin-right: 20px;
+  font-style: italic;
+}
+
+.safetyTitleMarquee {
+  animation: safetyBorder 1s linear infinite;
+  padding: 5px;
+}
+
+.safetyTitleMarqueeText {
+  white-space: nowrap;
+  margin-right: 20px;
+  font-size: 20px;
+  animation: safetyBlink 1.25s linear infinite;
+}
+
+.bargainTitleMarqueeText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: growShrink 2s ease-in-out infinite;
+  font-size: 35px;
+}
+
+.imageMarquee {
+  border: 4px solid;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+}
+
+.imageMarqueeInner {
+  animation: marqueeImages 5s linear infinite;
+  width: 100%;
+  height: 300px;
+
+}
+
+.imageMarqueeInnerInner {
+  display: inline-flex;
+  animation: marqueeImagesInner 5s linear infinite;
+
+}
+
+.imageMarqueeChild {
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.imageMarqueeChild img {
+  border-left: 2px solid;
+  border-right: 2px solid;
+}
+
+.imageMarqueeChild > * {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
+.imageMarqueeChild:first-child {
+  border-left: 0;
+}
+
+.imageMarqueeChild:last-child {
+  border-right: 0;
+  margin-right: 0;
+
+}
+
+@keyframes marqueeImages {
+  0% { transform: translateX(0%); }
+  50% { transform: translateX(100%); }
+  100% { transform: translateX(0%); }
+}
+
+@keyframes marqueeImagesInner {
+  0% { transform: translateX(0%); }
+  50% { transform: translateX(-100%); }
+  100% { transform: translateX(0%); }
+}
+
+
+.marqueeBorders {
+  border-left: 5px solid;
+  border-right: 5px solid;
+  margin-bottom: 5px;
+}
+.marquee {
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.marqueeInner, .marqueeInnerReverse {
+  display: inline-flex;
+  transform: translate3d(-50%, 0, 0);
+}
+
+.marqueeInnerReverse {
+  animation: marqueeReverse 5s linear infinite;
+}
+.marqueeInner {
+  animation: marquee 5s linear infinite;
+}
+
+
+.rmName {
+  white-space: nowrap;
+  padding: 5px;
+  padding-right: 40px;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+
+h1.rmName {
+  font-size: 90px
+}
+h2.rmName {
+  font-size: 45px;
+}
+h3.rmName {
+  font-size: 30px;
+}
+h4.rmName {
+  font-size: 14px;
+}
+
+@media (max-width: 1150px) {
+  h1.rmName {
+    font-size: 70px
+  }
+  h2.rmName {
+    font-size: 30px;
+  }
+  h3.rmName {
+    font-size: 20px;
+  }
+}
+
+
+@media (max-width: 750px) {
+  .headerTitle {
+    width: 100vw;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+  h3.rmName {
+    font-size: 14px;
+  }
+}
+
+.buyNow {
+  font-size: 60px;
+  text-align: center;
+  display: inline-block;
+  animation: growShrink 1.5s ease-in-out infinite
+}
+
+.sale {
+  font-size: 50px;
+  text-align: center;
+  display: inline-block;
+  animation: fade 1s ease-in-out infinite;
+}
+@media (max-width: 750px) {
+  .sale {
+    font-size: 40px;
+  }
+}
+
+
+@keyframes marquee {
+  0% {
+      transform: translate3d(-10%, 0, 0);
+  }
+
+  100% {
+      transform: translate3d(0%, 0, 0);
+  }
+}
+
+@keyframes marqueeReverse {
+  0% {
+      transform: translate3d(0%, 0, 0);
+  }
+
+  100% {
+      transform: translate3d(-10%, 0, 0);
+  }
+}
+
+
+.blink {
+  display: inline-block;
+  animation: fade 2s ease-in-out infinite;
+}
+
+.blinkFast {
+  display: inline-block;
+  animation: fade 1s ease-in-out infinite;
+}
+
+@keyframes fade {
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
+}
+
+.growShrink {
+  text-align: center;
+  display: inline-block;
+  animation: growShrink 2s ease-in-out infinite
+}
+
+.growShrinkShake {
+  display: inline-block;
+  animation: growShrinkShake 2s ease-in-out infinite
+}
+.growShrinkShakeDelayed {
+  display: inline-block;
+  animation: growShrinkShake 2.7s ease-in-out infinite
+}
+
+@keyframes growShrink {
+  0% {transform: scale(1);}
+  50% { transform: scale(0.25);}
+  100% { transform: scale(1);}
+}
+
+@keyframes growShrinkShake {
+  0% {transform: scale(0.1);}
+  30% { transform: scale(1);}
+  40% { transform:  rotate(30deg);}
+  50% { transform:  rotate(-30deg);}
+  60% { transform:  rotate(30deg);}
+  70% { transform: scale(1) rotate(0deg);}
+  100% { transform: scale(0.1);}
+}
+
+.spaceAround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.content {
+  /*display: flex;*/
+  /*flex-wrap: wrap;*/
+  /*justify-content: space-around;*/
+  /*align-items: center;*/
+  margin: 20px;
+}
+
+
+.imageSection {
+  overflow: hidden;
+  border: 5px solid;
+  /*box-sizing: border-box;*/
+  width: 300px;
+  height: 300px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.imageSection * {
+  text-shadow: 3px 3px 0 #FFF;
+}
+
+@media (max-width: 750px) {
+  .content {
+    flex-direction: column;
+  }
+  .imageSection {
+    width: 100%;
+  }
+}
+
+.tilt {
+  height: 0;
+  /*width: 750px;*/
+  position: relative;
+  left: -110px;
+  top: 42px;
+  transform: rotate(-45deg);
+}
+
+.imageSectionTitle {
+  padding-right: 20px;
+  font-size: 50px;
+}
+
+.imageSectionTitleLarge {
+  font-size: 80px;
+}
+
+@media (max-width: 600px) {
+  .imageSectionTitleLarge {
+    font-size: 50px
+  }
+}
+
+@media (max-width: 400px) {
+  .imageSectionTitleLarge {
+    font-size: 40px
+  }
+}
+
+.rotateZContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rotateZContent {
+  border: 2px solid;
+  padding: 5px;
+  display: inline-block;
+  white-space: nowrap;
+}
+.rotateZ {
+  animation: rotateZ 1.5s ease-in-out infinite
+}
+
+@keyframes rotateZ {
+  0% {
+    transform: perspective(500px) rotate3d(0,2,0, -45deg) translateZ(50px);
+  }
+  50% {
+    transform: perspective(500px) rotate3d(0,2,0, 45deg) translateZ(50px);
+    perspective: 200px;
+  }
+  100% {
+    transform: perspective(500px) rotate3d(0,2,0, -45deg) translateZ(50px);
+  }
+}
+
+
+.arrowContainer {
+  flex-grow: 1;
+  font-size: 25px;
+}
+
+.arrowsContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrowsInner {
+  display: inline-block;
+  width: 100%;
+  animation: arrowsInner 2s ease-in-out infinite;
+}
+.arrowsInnerInner {
+  display: inline-block;
+  animation: arrowsInnerInner 2s ease-in-out infinite;
+}
+
+@keyframes arrowsInner {
+  0% { transform: translateX(0%); }
+  50% { transform: translateX(100%); }
+  100% { transform: translateX(0%); }
+}
+
+@keyframes arrowsInnerInner {
+  0% { transform: translateX(0%); }
+  50% { transform: translateX(-100%); }
+  100% { transform: translateX(0%); }
+}
+
+
+
+.imageRotateContainer {
+  overflow: hidden;
+}
+.imageRotateContainer > .activeImage {
+  transition: 300ms;
+}
+
+@keyframes imageRotate {
+  0% { margin-left: 0 }
+  70% { margin-left: 0}
+  95% { margin-left: -400px }
+  100% { margin-left: -400px }
+}

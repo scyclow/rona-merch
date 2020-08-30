@@ -1,0 +1,13 @@
+.growShrink {
+  animation: growShrink 1.5s ease-in-out infinite
+}
+
+.backAndForth {
+  display: inline-block;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.backAndForth * {
+  transform: translateX(0%);
+}

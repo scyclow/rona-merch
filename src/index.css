@@ -2,6 +2,9 @@ body {
   font-family: 'Roboto', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /*color: white;
+  background-color: #222;
+  border-color: #fff;*/
 }
 
 html, body, div, span, applet, object, iframe,

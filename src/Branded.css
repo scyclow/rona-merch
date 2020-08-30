@@ -1,0 +1,250 @@
+.brandedMarquee {
+  border: 6px solid;
+}
+
+.brandedTitle {
+  font-weight: 200;
+  font-style: italic;
+}
+
+.brandedBackground {
+  min-height: 100vh;
+  background-color: #111;
+}
+
+
+.flashing {
+  animation: FullColorRotate 18s linear infinite;
+
+}
+
+
+
+.flashingSvg .__svgOutter {
+  animation: FullColorRotateSVG 18s linear infinite;
+}
+
+.flashingSvg .__svgMiddle {
+  animation: FullColorRotateSVG 18s linear infinite;
+}
+
+.flashingSvg .__svgInner {
+  animation: FullColorRotateSVG 18s linear infinite;
+}
+
+.flashingSvg .__svgRM {
+  animation: FullColorRotateSVGLogo 18s linear infinite;
+}
+
+
+.flashingSvgInverse .__svgOutter {
+  animation: FullColorRotateSVGInverse 18s linear infinite;
+}
+
+.flashingSvgInverse .__svgMiddle {
+  animation: FullColorRotateSVGInverse 18s linear infinite;
+}
+
+.flashingSvgInverse .__svgInner {
+  animation: FullColorRotateSVGInverse 18s linear infinite;
+}
+
+.flashingSvgInverse .__svgRM {
+  animation: FullColorRotateSVGLogoInverse 18s linear infinite;
+}
+
+
+@keyframes FullColorRotate {
+  0% {
+    color: #ff0000;
+    stroke: #ff0000;
+    fill: #ff0000;
+    /*background-color: #00ffff;*/
+    text-shadow: 3px 3px 0 #00ffff;
+    box-shadow: 3px 3px 0 #00ffff;
+  }
+
+  17% {
+    color: #ffff00;
+    stroke: #ffff00;
+    fill: #ffff00;
+    /*background-color: #0000ff;*/
+    text-shadow: 3px 3px 0 #0000ff;
+    box-shadow: 3px 3px 0 #0000ff;
+  }
+
+  33% {
+    color: #00ff00;
+    stroke: #00ff00;
+    fill: #00ff00;
+    /*background-color: #ff00ff;*/
+    text-shadow: 3px 3px 0 #ff00ff;
+    box-shadow: 3px 3px 0 #ff00ff;
+  }
+
+  50% {
+    color: #00ffff;
+    stroke: #00ffff;
+    fill: #00ffff;
+    /*background-color: #ff0000;*/
+    text-shadow: 3px 3px 0 #ff0000;
+    box-shadow: 3px 3px 0 #ff0000;
+  }
+
+  66% {
+    color: #0000ff;
+    stroke: #0000ff;
+    fill: #0000ff;
+    /*background-color: #ffff00;*/
+    text-shadow: 3px 3px 0 #ffff00;
+    box-shadow: 3px 3px 0 #ffff00;
+  }
+
+  83% {
+    color: #ff00ff;
+    stroke: #ff00ff;
+    fill: #ff00ff;
+    /*background-color: #00ff00;*/
+    text-shadow: 3px 3px 0 #00ff00;
+    box-shadow: 3px 3px 0 #00ff00;
+  }
+
+  100% {
+    color: #ff0000;
+    stroke: #ff0000;
+    fill: #ff0000;
+    /*background-color: #00ffff;*/
+    text-shadow: 3px 3px 0 #00ffff;
+    box-shadow: 3px 3px 0 #00ffff;
+  }
+}
+
+@keyframes FullColorRotateSVG {
+  0% {
+    stroke: #ff0000;
+    /*fill: #00ffff;*/
+  }
+
+  17% {
+    stroke: #ffff00;
+    /*fill: #0000ff;*/
+  }
+
+  33% {
+    stroke: #00ff00;
+    /*fill: #ff00ff;*/
+  }
+
+  50% {
+    stroke: #00ffff;
+    /*fill: #ff0000;*/
+  }
+
+  66% {
+    stroke: #0000ff;
+    /*fill: #ffff00;*/
+  }
+
+  83% {
+    stroke: #ff00ff;
+    /*fill: #00ff00;*/
+  }
+
+  100% {
+    stroke: #ff0000;
+    /*fill: #00ffff;*/
+  }
+}
+
+
+@keyframes FullColorRotateSVGLogo {
+  0% {
+    fill: #ff0000;
+  }
+
+  17% {
+    fill: #ffff00;
+  }
+
+  33% {
+    fill: #00ff00;
+  }
+
+  50% {
+    fill: #00ffff;
+  }
+
+  66% {
+    fill: #0000ff;
+  }
+
+  83% {
+    fill: #ff00ff;
+  }
+
+  100% {
+    fill: #ff0000;
+  }
+}
+
+
+@keyframes FullColorRotateSVGInverse {
+  0% {
+    stroke: #00ffff;
+  }
+
+  17% {
+    stroke: #0000ff;
+  }
+
+  33% {
+    stroke: #ff00ff;
+  }
+
+  50% {
+    stroke: #ff0000;
+  }
+
+  66% {
+    stroke: #ffff00;
+  }
+
+  83% {
+    stroke: #00ff00;
+  }
+
+  100% {
+    stroke: #00ffff;
+  }
+}
+
+
+@keyframes FullColorRotateSVGLogoInverse {
+  0% {
+    fill: #00ffff;
+  }
+
+  17% {
+    fill: #0000ff;
+  }
+
+  33% {
+    fill: #ff00ff;
+  }
+
+  50% {
+    fill: #ff0000;
+  }
+
+  66% {
+    fill: #ffff00;
+  }
+
+  83% {
+    fill: #00ff00;
+  }
+
+  100% {
+    fill: #00ffff;
+  }
+}

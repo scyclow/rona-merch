@@ -1,0 +1,49 @@
+
+
+.container {
+  max-width: 360px;
+  display: flex;
+  justify-content: center;
+}
+.rotate {
+  display: inline-block;
+  transform: rotate(-45deg);
+}
+
+.flagStripe {
+  height: 60px;
+  width: calc(100vw + 100vh);
+}
+
+.flagStripe.red {
+  background-color: #b22234;
+}
+
+.flagStripe.white {
+  background-color: #ffffff;
+}
+
+.flagStripe.blue {
+  background-image: url('./assets/flagstar.svg');
+  background-size: auto 100%;
+  background-repeat: repeat-x;
+  background-color: #3C3B6E;
+  animation: starMarquee 30s linear infinite;
+}
+
+.patriotMarquee {
+  display: inline-block;
+  color: #b22234;
+  border: 10px solid #3C3B6E;
+  background-color: #ffffff;
+}
+
+@keyframes starMarquee {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 100%;
+  }
+}

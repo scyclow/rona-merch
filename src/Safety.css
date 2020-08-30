@@ -1,0 +1,60 @@
+.safetyMarquee {
+  display: inline-block;
+  color: #000;
+  border: 10px solid;
+}
+.safetyMarquee .rmName  {
+  background-color: #ffffff;
+}
+
+.topRight {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-left: -10vw;
+}
+
+
+@keyframes safetyBlink {
+  0% {
+    opacity: 1;
+  }
+
+  50% { opacity: 1 }
+  60% { opacity: 0; }
+
+  90% { opacity: 0 }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes safetyBorder {
+  from {
+    border: 5px dashed;
+  }
+
+  to {
+    border: 5px dotted;
+  }
+}
+
+.safetyBorder {
+  animation: safetyBorder 1s linear infinite;
+  padding: 10px;
+
+}
+.safetyH1 {
+  font-size: 70px;
+  font-weight: 1;
+  animation: safetyBlink 1.25s linear infinite;
+  animation-delay: -0.15s;
+  text-align: center;
+}
+
+
+@media (max-width: 525px) {
+  .safetyH1 {
+    font-size: 45px;
+  }
+}
