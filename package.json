@@ -21,7 +21,7 @@
   "scripts": {
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "react-scripts build && cp ./build/index.html ./build/404.html && echo \"fastcashmoneyplus.biz\" > docs/CNAME"
+    "build": "react-scripts build && cp ./build/index.html ./build/404.html && echo \"ronamerch.co\" > build/CNAME"
   },
   "eslintConfig": {
     "extends": "react-app"
