@@ -5,7 +5,7 @@ export default function Logo({ fill, stroke, size }: { size?: number, stroke?: s
   const strokeColor = stroke ?? '#000000'
   size = size || 638
   return (
-    <svg className={`logo`} width={size} height={size} viewBox="0 0 638 638" xmlns="http://www.w3.org/2000/svg">
+    <svg className={`logo imageSpin`} width={size} height={size} viewBox="0 0 638 638" xmlns="http://www.w3.org/2000/svg">
       <path
         className="__svgOutter"
         fill={fillColor}

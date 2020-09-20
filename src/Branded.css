@@ -2,6 +2,10 @@
   border: 6px solid;
 }
 
+.brandedBorder {
+  border: 4px solid;
+}
+
 .brandedTitle {
   font-weight: 200;
   font-style: italic;
@@ -247,4 +251,51 @@
   100% {
     fill: #00ffff;
   }
+}
+
+
+.brandedContent {
+  margin-top: 20px;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 308px 308px 308px 308px;
+}
+
+@media (max-width: 1260px) {
+  .brandedContent {
+    grid-template-columns: 308px 308px 308px;
+  }
+}
+
+@media (max-width: 965px) {
+  .brandedContent {
+    grid-template-columns: 308px 308px;
+    grid-column-gap: 60px;
+  }
+}
+
+@media (max-width: 700px) {
+  .brandedContent {
+    grid-template-columns: 308px;
+  }
+}
+
+.brandedItemFeature {
+  animation: hueRotate 3s linear infinite;
+}
+
+.brandedItemFeature:hover {
+  filter: invert(1) ;
+  animation: none;
+}
+
+
+@keyframes hueRotate {
+  0% { filter: hue-rotate(0deg); }
+  16% { filter: hue-rotate(60deg); }
+  33% { filter: hue-rotate(120deg); }
+  50% { filter: hue-rotate(180deg); }
+  66% { filter: hue-rotate(240deg); }
+  82% { filter: hue-rotate(300deg); }
+  100% { filter: hue-rotate(360deg); }
 }

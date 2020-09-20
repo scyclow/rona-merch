@@ -1,8 +1,9 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import { Link } from 'react-router-dom'
 import Logo from './Logo'
 
 import logoNight from './logo-night.svg'
+import flashSale from './flashSale.svg'
 import './Main.css'
 
 import img1 from './assets/FC-T-model1.jpeg'
@@ -18,85 +19,53 @@ export default function Main() {
         <Logo size={350}/>
         <Title />
       </header>
+      <Marquee duration={20}>
+        <a href="http://fakebullshit.news" target="_blank">
+          <h4 className="rmName">
+            "Without a doubt, Rona Merch Co. offers the hottest selection of stylish face masks on the internet -- and at ROCK BOTTOM prices to boot!"
+            <span style={{ color: "blue", textDecoration: "underline", paddingLeft: 3}}>Patrick Swanson (FB News)</span>
+          </h4>
+        </a>
+      </Marquee>
       <Content>
+        <VerticalSection>
+          <FeaturedItems />
+        </VerticalSection>
 
-        <Link to="/safety">
-          <div className="section">
-            <SafetyTitle />
-            <ImageMarquee>
-              <img src={img1} alt="blah"/>
-              <img src={img4} alt="blah"/>
-              <img src={img4} alt="blah"/>
-              <img src={img4} alt="blah"/>
-              <img src={img4} alt="blah"/>
-              <img src={img4} alt="blah"/>
-              <img src={img4} alt="blah"/>
-              <img src={img4} alt="blah"/>
-              <img src={img4} alt="blah"/>
-              <img src={img5} alt="blah"/>
-            </ImageMarquee>
+
+        <VerticalSection>
+          <Patriot/>
+          <div style={{ display: 'flex', flexDirection: 'column'}}>
+            <TopReviews />
+            <Safety />
           </div>
-        </Link>
+        </VerticalSection>
+      </Content>
 
-        <Link to="/branded">
-          <div className="section">
-            <BrandedTitle />
-            <ImageMarquee>
-              <img src={img1} alt="blah"/>
-              <img src={img1} alt="blah"/>
-              <img src={img1} alt="blah"/>
-              <img src={img1} alt="blah"/>
-              <img src={img1} alt="blah"/>
-              <img src={img1} alt="blah"/>
-              <img src={img1} alt="blah"/>
-              <img src={img1} alt="blah"/>
-              <img src={img1} alt="blah"/>
-              <img src={img1} alt="blah"/>
-              <img src={img4} alt="blah"/>
-              <img src={img5} alt="blah"/>
-            </ImageMarquee>
-          </div>
-        </Link>
+      <MarqueeReverse duration={20}>
+        <a href="https://www.economist.com/finance-and-economics/2020/08/22/why-the-economic-value-of-a-face-mask-is-5614?fsrc=scn/tw/te/bl/ed/clothofgoldwhytheeconomicvalueofafacemaskis5614financeeconomics" target="_blank">
+          <h4 className="rmName">
+            "THE VALUE OF A GOOD FACE MASK IS MORE THAN $56" --
+            <span style={{ color: "blue", textDecoration: "underline", paddingLeft: 3}}>The Economist</span>
+          </h4>
+        </a>
+      </MarqueeReverse>
+
+      <Content>
+        <VerticalSection>
+          <Branded />
+          <img className="imageSpin siteImage animationReverse" src={flashSale} />
+        </VerticalSection>
+
+        <VerticalSection>
+          <GrowShrinkShake text={["WOW!!", "SO CHEAP!"]} />
+          <Bargain />
+        </VerticalSection>
 
 
-        <Link to="/bargain">
-          <div className="section">
-            <BargainTitle />
-            <ImageMarquee>
-              <img src={img1} alt="blah"/>
-              <RotateZ>
-                <span style={{fontSize: 45}}>GREAT DEALS</span>
-              </RotateZ>
-              <img src={img3} alt="blah"/>
-              <img src={img3} alt="blah"/>
-              <img src={img3} alt="blah"/>
-              <img src={img3} alt="blah"/>
-              <img src={img3} alt="blah"/>
-              <img src={img3} alt="blah"/>
-              <img src={img3} alt="blah"/>
-              <img src={img4} alt="blah"/>
-            </ImageMarquee>
-          </div>
-        </Link>
 
-        <Link to="/patriot">
-          <div className="section">
-            <PatriotTitle />
-            <ImageMarquee>
-              <img src={img1} alt="blah"/>
-              <img src={img1} alt="blah"/>
-              <img src={img1} alt="blah"/>
-              <img src={img1} alt="blah"/>
-              <img src={img1} alt="blah"/>
-              <img src={img1} alt="blah"/>
-              <img src={img1} alt="blah"/>
-              <img src={img1} alt="blah"/>
-              <img src={img1} alt="blah"/>
-              <img src={img4} alt="blah"/>
-              <img src={img5} alt="blah"/>
-            </ImageMarquee>
-          </div>
-        </Link>
+
+
       {/*
         <ImageSection text="BEST SELLER" textType="tiltedMarquee">
           <ImageRotate ms={3000}>
@@ -121,9 +90,14 @@ export default function Main() {
     </div>
   )
 }
-        // <ImageSection>
-        //   <img src={img2} alt=""/>
-        // </ImageSection>
+
+function VerticalSection({ children }: ChildProps) {
+  return (
+    <div className="verticalSection">
+      {children}
+    </div>
+  )
+}
 
 function Title() {
   return (
@@ -149,6 +123,29 @@ function Title() {
               YOUR ONE-STOP SHOP FOR RONA MERCH
             </h3>
           </Marquee>
+        </div>
+        {/*
+                <div className="marqueeBorders">
+                  <Marquee>
+                    <h4 className="rmName">
+                      A FACEMASK A DAY KEEPS THE DOCTOR AWAY
+                    </h4>
+                  </Marquee>
+                </div>
+        */}
+        <div className="marqueeBorders">
+          <Marquee>
+            <h4 className="rmName">
+              RONA MERCH CO. IS DEDICATED TO BRINGING YOU THE FRESHEST RONA DEALS EVERY DAY
+            </h4>
+          </Marquee>
+        </div>
+        <div className="marqueeBorders">
+          <MarqueeReverse>
+            <h4 className="rmName">
+              SHOP UNTIL YOU DROP
+            </h4>
+          </MarqueeReverse>
         </div>
       </div>
 
@@ -194,9 +191,197 @@ function Title() {
   )
 }
 
+function FeaturedItems() {
+  return (
+    <div style={{ width: '100%' }}>
+      <div style={{marginBottom: 10}}>
+        <RotateZ>
+          <span style={{fontSize: 30}}>FEATURED ITEMS</span>
+        </RotateZ>
+      </div>
+      <ImageMarquee>
+        <img src={img1} alt="blah"/>
+        <img src={img3} alt="blah"/>
+        <img src={img4} alt="blah"/>
+        <img src={img5} alt="blah"/>
+        <img src={img1} alt="blah"/>
+        <img src={img3} alt="blah"/>
+        <img src={img4} alt="blah"/>
+        <img src={img5} alt="blah"/>
+        <img src={img1} alt="blah"/>
+        <img src={img3} alt="blah"/>
+        <img src={img4} alt="blah"/>
+        <img src={img5} alt="blah"/>
+      </ImageMarquee>
+    </div>
+  )
+}
+
+function Patriot() {
+  const windowWidth = useResponsive()
+  return (
+    <Link to="/patriot" className="brandSection brandSectionPatriot">
+      <div>
+        <PatriotTitle />
+        <VerticalMarquee style={{ height: windowWidth > 815 ? 800 : 400, boxSizing: 'content-box' }} duration={48000}>
+          <img src={img1} alt="blah"/>
+          <img src={img1} alt="blah"/>
+          <img src={img1} alt="blah"/>
+          <img src={img1} alt="blah"/>
+          <img src={img1} alt="blah"/>
+          <img src={img1} alt="blah"/>
+          <img src={img1} alt="blah"/>
+          <img src={img1} alt="blah"/>
+          <img src={img1} alt="blah"/>
+          <img src={img4} alt="blah"/>
+          <img src={img5} alt="blah"/>
+        </VerticalMarquee>
+      </div>
+    </Link>
+  )
+}
+
+function Branded() {
+  return (
+     <Link to="/branded" className="brandSection">
+        <div>
+          <BrandedTitle />
+          <ImageMarquee>
+            <img src={img1} alt="blah"/>
+            <img src={img1} alt="blah"/>
+            <img src={img1} alt="blah"/>
+            <img src={img1} alt="blah"/>
+            <img src={img1} alt="blah"/>
+            <img src={img1} alt="blah"/>
+            <img src={img1} alt="blah"/>
+            <img src={img1} alt="blah"/>
+            <img src={img1} alt="blah"/>
+            <img src={img1} alt="blah"/>
+            <img src={img4} alt="blah"/>
+            <img src={img5} alt="blah"/>
+          </ImageMarquee>
+        </div>
+      </Link>
+  )
+}
+
+function Bargain() {
+  return (
+    <Link to="/bargain" className="brandSection">
+      <div>
+        <BargainTitle />
+        <ImageMarquee>
+          <img src={img1} alt="blah"/>
+          <img src={img3} alt="blah"/>
+          <img src={img3} alt="blah"/>
+          <img src={img3} alt="blah"/>
+          <img src={img3} alt="blah"/>
+          <img src={img3} alt="blah"/>
+          <img src={img3} alt="blah"/>
+          <img src={img3} alt="blah"/>
+          <img src={img4} alt="blah"/>
+        </ImageMarquee>
+      </div>
+    </Link>
+  )
+}
+
+function Safety() {
+  return (
+    <Link to="/safety" className="brandSection brandSectionSafety">
+      <div>
+        <SafetyTitle />
+        <div className="safetyGridSectionDesktop">
+          <ImageRotate ms={3000} delay={0}>
+            <img src={img1} className="productImageSm" alt="blah"/>
+            <img src={img3} className="productImageSm" alt="blah"/>
+            <img src={img4} className="productImageSm" alt="blah"/>
+            <img src={img5} className="productImageSm" alt="blah"/>
+          </ImageRotate>
+
+          <ImageRotate ms={3000} delay={50}>
+            <img src={img1} className="productImageSm" alt="blah"/>
+            <img src={img3} className="productImageSm" alt="blah"/>
+            <img src={img4} className="productImageSm" alt="blah"/>
+            <img src={img5} className="productImageSm" alt="blah"/>
+          </ImageRotate>
+
+          <ImageRotate ms={3000} delay={100}>
+            <img src={img1} className="productImageSm" alt="blah"/>
+            <img src={img3} className="productImageSm" alt="blah"/>
+            <img src={img4} className="productImageSm" alt="blah"/>
+            <img src={img5} className="productImageSm" alt="blah"/>
+          </ImageRotate>
+
+          <ImageRotate ms={3000} delay={150}>
+            <img src={img1} className="productImageSm" alt="blah"/>
+            <img src={img3} className="productImageSm" alt="blah"/>
+            <img src={img4} className="productImageSm" alt="blah"/>
+            <img src={img5} className="productImageSm" alt="blah"/>
+          </ImageRotate>
+        </div>
+
+        <div className="safetyGridSectionMobile">
+          <ImageRotate ms={3000} delay={0}>
+            <img src={img1} className="productImage" alt="blah"/>
+            <img src={img3} className="productImage" alt="blah"/>
+            <img src={img4} className="productImage" alt="blah"/>
+            <img src={img5} className="productImage" alt="blah"/>
+          </ImageRotate>
+        </div>
+      </div>
+    </Link>
+  )
+}
 
 
-type ChildProps = { children: React.ReactNode, className?: string }
+function TopReviews() {
+  return (
+    <div style={{ margin: 15, padding: 15, }}>
+      <div style={{ overflow: 'hidden', display: 'flex', flexDirection: 'column', height: 250  }}>
+        <TiltedMarquee rotate={0}>
+          <h4 className="rmName">TOP REVIEWS</h4>
+        </TiltedMarquee>
+
+        <div style={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%'}}>
+          <TiltedMarquee rotate={90}>
+            <h4 className="rmName">TOP REVIEWS</h4>
+          </TiltedMarquee>
+          <div style={{ width: 250}}>
+            <ImageRotate ms={5000}>
+              <div className="topReviewTestemonial" >Thes products are great! 10/10, would definitely buy again!" -- Wendy Pilson</div>
+              <div className="topReviewTestemonial" >The best face masks on the web. Period." -- Joe Schmoe</div>
+            </ImageRotate>
+          </div>
+
+          <TiltedMarquee rotate={270}>
+            <h4 className="rmName">TOP REVIEWS</h4>
+          </TiltedMarquee>
+        </div>
+
+        <TiltedMarquee rotate={180}>
+          <h4 className="rmName">TOP REVIEWS</h4>
+        </TiltedMarquee>
+      </div>
+    </div>
+  )
+  // return (
+  //   <div style={{ margin: 15, height: fillerHeight, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
+  //     <div className="blink" style={{ marginBottom: 20 }}>
+  //       GREAT DEALS
+  //     </div>
+  //     <div className="blink" style={{ marginBottom: 20, animationDirection: 'reverse' }}>
+  //       100% PROTECTION
+  //     </div>
+  //     <div className="blink" style={{ marginBottom: 20 }}>
+  //       SATISFACTION GUARANTEED
+  //     </div>
+  //   </div>
+  // )
+}
+
+
+export type ChildProps = { children: React.ReactNode, className?: string, style?: React.CSSProperties }
 
 function Content({ children }: ChildProps) {
   return (
@@ -244,16 +429,19 @@ function BargainTitle() {
 
 
 function ImageMarquee({ children }: { children: Array<React.ReactNode>}) {
-  const n = children.length
+  const rand = useRef<number>(Math.random()).current
+  const duration = children.length * 6
+  const animationDuration = duration + 's'
+  const animationDelay = (duration * rand * -1) + 's'
   return (
     <div className="imageMarquee">
       <div
         className="imageMarqueeInner"
-        style={{ animationDuration: `${n*3}s` }}
+        style={{ animationDuration, animationDelay }}
       >
         <div
           className="imageMarqueeInnerInner"
-          style={{ animationDuration: `${n*3}s` }}
+          style={{ animationDuration, animationDelay }}
         >
           {children.map((child, i) => (
             <span className="imageMarqueeChild">
@@ -338,6 +526,20 @@ function ImageSectionText({ textType, text }: {textType: TextTypes, text: string
   }
 }
 
+function GrowShrinkShake({ text }: {text: string | [string, string]}) {
+  const t = typeof text === 'string' ? [text, text] : text
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around', height: 300, marginTop: 20}}>
+      <div className="growShrinkShake" style={{ display: "block", textAlign: "center", fontSize: 60, textShadow: '5px 5px 0 #ffffff'}}>
+        {t[0]}
+      </div>
+      <div className="growShrinkShakeDelayed" style={{ display: "block", textAlign: "center", fontSize: 50, left: 120, textShadow: '5px 5px 0 #ffffff'}}>
+        {t[1]}
+      </div>
+    </div>
+  )
+}
+
 
 function ImageSection({ children, textType, text }: ImageSectionProps) {
   return (
@@ -354,10 +556,10 @@ function ImageSection({ children, textType, text }: ImageSectionProps) {
 
 
 
-export function Marquee({ children, duration, className }: ChildProps & {className?: string, duration?: number}) {
+export function Marquee({ children, duration, className, style }: ChildProps & {className?: string, duration?: number}) {
   const animationDuration = duration ? duration + 's' : '5s'
   return (
-      <div className={`marquee ${className || ''}`}>
+      <div className={`marquee ${className || ''}`} style={style}>
         <div className="marqueeInner" style={{ animationDuration }}>
           <span style={{ whiteSpace: 'nowrap' }}>{children}</span>
           <span style={{ whiteSpace: 'nowrap' }}>{children}</span>
@@ -447,7 +649,7 @@ type ImageRotateState = {
   opacity: number
 }
 
-function ImageRotate({children, ms}: ChildProps & {ms: number}) {
+function ImageRotate({children, ms, delay}: ChildProps & {ms: number, delay?: number}) {
   const [ix, setIx] = useState<number>(0)
 
   const images = Array.isArray(children) ? children : [children]
@@ -456,7 +658,7 @@ function ImageRotate({children, ms}: ChildProps & {ms: number}) {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIx(ix + 1)
+      setTimeout(() => setIx(ix + 1), delay || 0)
     }, ms)
 
     return () => clearInterval(interval)
@@ -472,12 +674,100 @@ function ImageRotate({children, ms}: ChildProps & {ms: number}) {
 }
 
 
+
 function RotateZ({ children }: ChildProps) {
   return (
-      <div className="rotateZContainer">
-        <div className="rotateZ">
-          <span className="rotateZContent">{children}</span>
-        </div>
+    <div className="rotateZContainer">
+      <div className="rotateZ">
+        <span className="rotateZContent">{children}</span>
+      </div>
+    </div>
+  )
+}
+
+function RotateZFull({ children, style }: ChildProps) {
+  return (
+    <div className="rotateZContainer" style={style}>
+      <div className="rotateZFull">
+        <span className="rotateZContent">{children}</span>
+      </div>
+    </div>
+  )
+}
+
+export function MarqueeChild({ children, className, style }: ChildProps) {
+  return (
+    <div className={`imageMarqueeChild ${className || ''}`} style={style}>
+      {children}
+    </div>
+  )
+}
+
+export function ItemFeature({ children, className, style }: ChildProps) {
+  return (
+    <div className={`itemFeature ${className || ''}`} style={style}>
+      {children}
+    </div>
+  )
+}
+
+function BlinkLongHeader({children}: ChildProps) {
+  return (
+    <div style={{ width: '100%', overflow: 'hidden', whiteSpace: 'nowrap'}}>
+      <h4 className="rmName blink" style={{animationDuration: '1s'}}>{children}</h4>
+      <h4 className="rmName blink" style={{animationDuration: '1s'}}>{children}</h4>
+      <h4 className="rmName blink" style={{animationDuration: '1s'}}>{children}</h4>
+      <h4 className="rmName blink" style={{animationDuration: '1s'}}>{children}</h4>
+      <h4 className="rmName blink" style={{animationDuration: '1s'}}>{children}</h4>
+      <h4 className="rmName blink" style={{animationDuration: '1s'}}>{children}</h4>
+      <h4 className="rmName blink" style={{animationDuration: '1s'}}>{children}</h4>
+      <h4 className="rmName blink" style={{animationDuration: '1s'}}>{children}</h4>
+      <h4 className="rmName blink" style={{animationDuration: '1s'}}>{children}</h4>
+      <h4 className="rmName blink" style={{animationDuration: '1s'}}>{children}</h4>
+    </div>
+  )
+}
+
+export function VerticalMarquee({children, className, direction, duration, style}: ChildProps & {children: Array<React.ReactNode>, direction?: 1 | -1, duration?: number}) {
+  duration = duration || 24000
+
+  const images = children.map((child, i) => (
+    <ItemFeature style={{ marginTop: 10 }}>
+      {child}
+    </ItemFeature>
+  ))
+
+
+  return (
+    <div className={`verticalMarquee ${className || ''}`} style={style}>
+      <div
+        className={direction === -1 ? "verticalMarqueeInnerReverse" : "verticalMarqueeInner"}
+        style={{ animationDuration: duration + 'ms' }}
+      >
+        {images}
+        {images}
+      </div>
+    </div>
+  )
+}
+
+function useResponsive() {
+  const [width, setWidth] = useState(window.innerWidth)
+  useEffect(() => {
+    const resize = () => setWidth(window.innerWidth)
+    window.addEventListener('resize', resize)
+    return () => window.removeEventListener('resize', resize)
+  })
+
+  return width
+}
+
+function TiltedMarquee({ children, style, rotate }: {rotate?: number} & ChildProps) {
+  return (
+    <div style={{ transform: `rotate(-${rotate || 0}deg)`, ...style }}>
+      <Marquee style={{ overflow: 'visible', width: 10, position: 'relative', left: -100}}>
+        {children}
+      </Marquee>
     </div>
   )
 }

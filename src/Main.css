@@ -38,13 +38,24 @@ a {
   width: 100vw;
 }
 
+.siteImage {
+  width: 300px;
+  height: 300px;
+}
+
+.imageSpin {
+  animation: imageSpin infinite 10s linear;
+}
+
+.animationReverse {
+  animation-direction: reverse;
+}
 .logo {
   padding: 20px;
   display: inline-block;
   max-width: 425px;
   /*width: 100%;*/
   pointer-events: none;
-  animation: App-logo-spin infinite 10s linear;
 }
 
 @media (max-width: 750px) {
@@ -56,7 +67,7 @@ a {
 }
 
 
-@keyframes App-logo-spin {
+@keyframes imageSpin {
   from {
     transform: rotate(0deg);
   }
@@ -66,14 +77,38 @@ a {
 }
 
 
-.section {
+.verticalSection {
   margin: auto;
   margin-bottom: 20px;
   width: 100%;
   max-width: 1450px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.section:hover * {
+.brandSection {
+  width: calc(100% - 350px);
+  margin-bottom: 20px;
+}
+
+
+
+.fillerSection {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 815px) {
+  .verticalSection {
+    flex-direction: column;
+  }
+  .brandSection {
+    width: 100%;
+  }
+}
+
+
+.brandSection:hover * {
   opacity: 0.95;
 }
 
@@ -89,7 +124,7 @@ a {
 }
 
 .patriotTitleMarquee {
-  width: 300px;
+  width: 175px;
   display: inline-flex;
   align-items: center;
   color: #ffffff;
@@ -103,15 +138,11 @@ a {
 
 .patriotTitleMarqueeText {
   padding-right: 20px;
-  font-size: 20px;
+  font-size: 25px;
   white-space: nowrap;
+  width: 150px;
 }
 
-@media (max-width: 425px) {
-  .patriotTitleMarquee {
-    width: 150px;
-  }
-}
 
 
 .brandedTitleMarquee {
@@ -124,6 +155,50 @@ a {
   font-size: 20px;
   margin-right: 20px;
   font-style: italic;
+}
+
+
+.safetyGridSectionDesktop {
+  margin: auto;
+  height: 510px;
+  width: 510px;
+  display: grid;
+  grid-template-columns: 250px 250px;
+  grid-template-rows: 250px 250px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.safetyGridSectionMobile {
+  display: none;
+  height: 320px;
+  width: 320px;
+  margin: auto;
+}
+
+.brandSectionSafety {
+  width: 510px;
+}
+
+.brandSectionPatriot {
+  width: 310px;
+}
+
+@media (max-width: 525px) {
+  .brandSectionSafety {
+    width: 100%
+  }
+
+  .safetyGridSectionDesktop {
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+
+  .safetyGridSectionMobile {
+    display: block;
+  }
+
 }
 
 .safetyTitleMarquee {
@@ -171,9 +246,16 @@ a {
   margin-right: 25px;
 }
 
-.imageMarqueeChild img {
-  border-left: 2px solid;
-  border-right: 2px solid;
+.productImage {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
+.productImageSm {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
 }
 
 .imageMarqueeChild > * {
@@ -402,6 +484,14 @@ h4.rmName {
   }
 }
 
+.tilt90 {
+  transform: rotate(-90deg);
+}
+
+.tilt270 {
+  transform: rotate(-270deg);
+}
+
 .tilt {
   height: 0;
   /*width: 750px;*/
@@ -448,6 +538,12 @@ h4.rmName {
   animation: rotateZ 1.5s ease-in-out infinite
 }
 
+.rotateZFull {
+  animation: rotateZFull 3s linear infinite;
+  perspective: 600px;
+
+}
+
 @keyframes rotateZ {
   0% {
     transform: perspective(500px) rotate3d(0,2,0, -45deg) translateZ(50px);
@@ -458,6 +554,18 @@ h4.rmName {
   }
   100% {
     transform: perspective(500px) rotate3d(0,2,0, -45deg) translateZ(50px);
+  }
+}
+
+@keyframes rotateZFull {
+  0% {
+    transform: perspective(500px) rotate3d(0,2,0, -0deg) translateZ(75px);
+  }
+  50% {
+    /*transform: perspective(500px) rotate3d(0,2,0, 45deg) translateZ(50px);*/
+  }
+  100% {
+    transform: perspective(500px) rotate3d(0,2,0, -360deg) translateZ(75px);
   }
 }
 
@@ -509,4 +617,62 @@ h4.rmName {
   70% { margin-left: 0}
   95% { margin-left: -400px }
   100% { margin-left: -400px }
+}
+
+.itemFeature {
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+
+.itemFeature > * {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
+
+.verticalMarquee {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: column;
+  border: 5px solid;
+  width: 300px;
+  overflow: hidden;
+  height: 800px;
+}
+
+.verticalMarqueeInner {
+  animation: verticalMarquee 3s linear infinite
+}
+
+@keyframes verticalMarquee {
+  0% {
+    transform: translateY(-50%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.verticalMarqueeInnerReverse {
+  animation: verticalMarqueeReverse 3s linear infinite
+}
+
+@keyframes verticalMarqueeReverse {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.topReviewTestemonial {
+  display: inline-block;
+  width: 250px;
+  transform: translateY(-50%);
+  font-size: 30px;
 }
