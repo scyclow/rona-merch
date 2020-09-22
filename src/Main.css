@@ -238,7 +238,18 @@ a {
 .imageMarqueeInnerInner {
   display: inline-flex;
   animation: marqueeImagesInner 5s linear infinite;
+}
 
+.imageMarqueeInnerJerk {
+  animation: marqueeImagesJerk 5s ease-in-out infinite;
+  width: 100%;
+  height: 300px;
+
+}
+
+.imageMarqueeInnerInnerJerk {
+  display: inline-flex;
+  animation: marqueeImagesInnerJerk 5s ease-in-out infinite;
 }
 
 .imageMarqueeChild {
@@ -283,6 +294,38 @@ a {
 @keyframes marqueeImagesInner {
   0% { transform: translateX(0%); }
   50% { transform: translateX(-100%); }
+  100% { transform: translateX(0%); }
+}
+
+@keyframes marqueeImagesJerk {
+  0% { transform: translateX(0%); }
+  4% { transform: translateX(33%); }
+  16% { transform: translateX(33%); }
+  20% { transform: translateX(66%); }
+  33% { transform: translateX(66%); }
+  37% { transform: translateX(100%); }
+  50% { transform: translateX(100%); }
+  54% { transform: translateX(66%); }
+  66% { transform: translateX(66%); }
+  70% { transform: translateX(33%); }
+  83% { transform: translateX(33%); }
+  87% { transform: translateX(0%); }
+  100% { transform: translateX(0%); }
+}
+
+@keyframes marqueeImagesInnerJerk {
+  0% { transform: translateX(0%); }
+  4% { transform: translateX(-33%); }
+  16% { transform: translateX(-33%); }
+  20% { transform: translateX(-66%); }
+  33% { transform: translateX(-66%); }
+  37% { transform: translateX(-100%); }
+  50% { transform: translateX(-100%); }
+  54% { transform: translateX(-66%); }
+  66% { transform: translateX(-66%); }
+  70% { transform: translateX(-33%); }
+  83% { transform: translateX(-33%); }
+  87% { transform: translateX(0%); }
   100% { transform: translateX(0%); }
 }
 
@@ -676,3 +719,22 @@ h4.rmName {
   transform: translateY(-50%);
   font-size: 30px;
 }
+
+.imageShrinkRotation {
+  transition: 300ms;
+}
+
+@keyframes imageShrinkRotation {
+  0% { transform: scale(0); }
+  5% { transform: scale(0); }
+  17% { transform: scale(1); }
+  80% { transform: scale(1); }
+  92% { transform: scale(0); }
+  100% { transform: scale(0); }
+}
+
+.bargainImageSection {
+  display: flex;
+  justify-content: space-around;
+}
+

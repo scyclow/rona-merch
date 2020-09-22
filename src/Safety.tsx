@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Logo from './Logo'
-import { Marquee } from './Main'
+import { Marquee, ChildProps, ItemFeature } from './Main'
+import img3 from './assets/FCMP-mask-model.jpeg'
+
 
 import './Safety.css'
 
@@ -18,6 +20,17 @@ export default function Safety() {
           <h1 className="rmName safetyH1">SAFETY SWAG</h1>
         </Marquee>
       </div>
+      <Content>
+        <img src={img3} alt="blah"/>
+        <img src={img3} alt="blah"/>
+        <img src={img3} alt="blah"/>
+        <img src={img3} alt="blah"/>
+        <img src={img3} alt="blah"/>
+        <img src={img3} alt="blah"/>
+        <img src={img3} alt="blah"/>
+        <img src={img3} alt="blah"/>
+        <img src={img3} alt="blah"/>
+      </Content>
     </>
   )
 }
@@ -82,7 +95,6 @@ function CanvasBackground({ ref_ }: {ref_: React.Ref<any>}) {
       // @ts-ignore
       const y = (offsetHeight / 2) + offsetTop || 0
 
-      console.log(offsetWidth, offsetLeft, offsetHeight, offsetTop)
       const radius = ((elapsedForShape % time) / time) * distance
       ctx.beginPath();
       ctx.globalAlpha = 1 - (radius / window.innerWidth)
@@ -136,4 +148,25 @@ function withCanvas(canvasElement: HTMLCanvasElement, init: InitFn, frame: Rende
 }
 
 
+
+
+function Content({children}: {children: Array<React.ReactNode>}) {
+  const images = children.map((child, i) => {
+    const animationDelay = (i * 100) + 'ms'
+    return (
+      <div className="safetyContentBlink" style={{ animationDelay, border: '4px solid' }}>
+        <ItemFeature>
+          {child}
+        </ItemFeature>
+      </div>
+    )
+  })
+  return (
+    <div style={{ display: 'flex', justifyContent: 'center'}}>
+      <div className="safetyContent">
+        {images}
+      </div>
+    </div>
+  )
+}
 

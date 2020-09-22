@@ -246,7 +246,7 @@ function Branded() {
      <Link to="/branded" className="brandSection">
         <div>
           <BrandedTitle />
-          <ImageMarquee>
+          <ImageMarquee jerk duration={20}>
             <img src={img1} alt="blah"/>
             <img src={img1} alt="blah"/>
             <img src={img1} alt="blah"/>
@@ -266,21 +266,28 @@ function Branded() {
 }
 
 function Bargain() {
+  const windowWidth = useResponsive()
   return (
     <Link to="/bargain" className="brandSection">
       <div>
         <BargainTitle />
-        <ImageMarquee>
-          <img src={img1} alt="blah"/>
-          <img src={img3} alt="blah"/>
-          <img src={img3} alt="blah"/>
-          <img src={img3} alt="blah"/>
-          <img src={img3} alt="blah"/>
-          <img src={img3} alt="blah"/>
-          <img src={img3} alt="blah"/>
-          <img src={img3} alt="blah"/>
-          <img src={img4} alt="blah"/>
-        </ImageMarquee>
+        <div className="bargainImageSection">
+          <ImageShrinkRotation ms={3000} delay={0}>
+            <img className="productImage" src={img1} alt="blah"/>
+            <img className="productImage" src={img3} alt="blah"/>
+            <img className="productImage" src={img4} alt="blah"/>
+            <img className="productImage" src={img5} alt="blah"/>
+          </ImageShrinkRotation>
+
+          {windowWidth >= 600 && (
+            <ImageShrinkRotation ms={3000} delay={500}>
+              <img className="productImage" src={img1} alt="blah"/>
+              <img className="productImage" src={img3} alt="blah"/>
+              <img className="productImage" src={img4} alt="blah"/>
+              <img className="productImage" src={img5} alt="blah"/>
+            </ImageShrinkRotation>
+          )}
+        </div>
       </div>
     </Link>
   )
@@ -428,23 +435,24 @@ function BargainTitle() {
 }
 
 
-function ImageMarquee({ children }: { children: Array<React.ReactNode>}) {
+function ImageMarquee({ children, jerk, duration }: { children: Array<React.ReactNode>, jerk?: boolean, duration?: number}) {
   const rand = useRef<number>(Math.random()).current
-  const duration = children.length * 6
+  duration = duration || children.length * 6
   const animationDuration = duration + 's'
   const animationDelay = (duration * rand * -1) + 's'
+  const jerkit = jerk ? 'Jerk' : ''
   return (
     <div className="imageMarquee">
       <div
-        className="imageMarqueeInner"
+        className={`imageMarqueeInner${jerkit}`}
         style={{ animationDuration, animationDelay }}
       >
         <div
-          className="imageMarqueeInnerInner"
+          className={`imageMarqueeInnerInner${jerkit}`}
           style={{ animationDuration, animationDelay }}
         >
           {children.map((child, i) => (
-            <span className="imageMarqueeChild">
+            <span key={'marquee'+i} className="imageMarqueeChild">
               {child}
             </span>
           )
@@ -667,7 +675,9 @@ function ImageRotate({children, ms, delay}: ChildProps & {ms: number, delay?: nu
   return (
     <div className="imageRotateContainer">
       {images.map((child, i) => (
-        <span style={{ zIndex: -10, transition: '300ms', position: 'absolute', opacity: i === ix % images.length ? 1 : 0}}>{child}</span>
+        <span key={'ir-'+i} style={{ zIndex: -10, transition: '300ms', position: 'absolute', opacity: i === ix % images.length ? 1 : 0}}>
+          {child}
+        </span>
       ))}
     </div>
   )
@@ -732,9 +742,11 @@ export function VerticalMarquee({children, className, direction, duration, style
   duration = duration || 24000
 
   const images = children.map((child, i) => (
-    <ItemFeature style={{ marginTop: 10 }}>
-      {child}
-    </ItemFeature>
+    <React.Fragment key={'vm'+i}>
+      <ItemFeature style={{ marginTop: 10 }}>
+        {child}
+      </ItemFeature>
+    </React.Fragment>
   ))
 
 
@@ -762,12 +774,47 @@ function useResponsive() {
   return width
 }
 
-function TiltedMarquee({ children, style, rotate }: {rotate?: number} & ChildProps) {
+export function TiltedMarquee({ children, style, rotate }: {rotate?: number} & ChildProps) {
   return (
-    <div style={{ transform: `rotate(-${rotate || 0}deg)`, ...style }}>
+    <div style={{ transform: `rotate(${-1*(rotate || 0)}deg)`, ...style }}>
       <Marquee style={{ overflow: 'visible', width: 10, position: 'relative', left: -100}}>
         {children}
       </Marquee>
+    </div>
+  )
+}
+
+function ImageShrinkRotation({children, delay, ms, style}: {ms: number, delay?: number} & ChildProps) {
+  const ixRef = React.useRef(0)
+  const [ix, setIx] = useState<number>(0)
+  const [scaleSize, setScaleSize] = useState<number>(1)
+
+  const images = Array.isArray(children) ? children : [children]
+  const activeImage = images[ix % images.length]
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimeout(() => {
+        setScaleSize(1)
+      }, (delay||0) + (ms/10))
+
+      setTimeout(() => {
+        setScaleSize(0)
+      }, (delay||0) + (ms - (ms/10)))
+
+      setTimeout(() => {
+        ixRef.current++
+        setIx(ixRef.current)
+      }, (delay||0) + ms)
+    }, ms)
+
+    return () => clearInterval(interval)
+  }, [])
+  return (
+    <div style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', ...style}}>
+      <div className="imageShrinkRotation" style={{ transform: `scale(${scaleSize})`}}>
+        {activeImage}
+      </div>
     </div>
   )
 }
