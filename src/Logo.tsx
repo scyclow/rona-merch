@@ -1,11 +1,11 @@
 import React from 'react'
 
-export default function Logo({ fill, stroke, size }: { size?: number, stroke?: string, fill?: string }) {
+export default function Logo({ fill, stroke, size, className }: {className?: string, size?: number, stroke?: string, fill?: string }) {
   const fillColor = fill ?? '#ffffff'
   const strokeColor = stroke ?? '#000000'
   size = size || 638
   return (
-    <svg className={`logo imageSpin`} width={size} height={size} viewBox="0 0 638 638" xmlns="http://www.w3.org/2000/svg">
+    <svg className={`logo imageSpin ${className || ''}`} width={size} height={size} viewBox="0 0 638 638" xmlns="http://www.w3.org/2000/svg">
       <path
         className="__svgOutter"
         fill={fillColor}

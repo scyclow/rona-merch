@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from './Logo'
 import { Marquee, ItemFeature, TiltedMarquee } from './Main'
+import data from './data'
 import img3 from './assets/FCMP-mask-model.jpeg'
 
 import './Bargain.css'
@@ -12,8 +13,8 @@ export default function Bargain() {
     <>
       <div className="header" style={{overflow: 'visible'}}>
         <LogoLink />
-        <div className="spin">
-          <h1 className="rmName">BARGAIN BIN</h1>
+        <div className="spin headerTitlePadding">
+          <h1 className="rmName bargainTitle">BARGAIN BIN</h1>
         </div>
       </div>
 
@@ -35,15 +36,9 @@ export default function Bargain() {
       </TiltedMarquee>
 
       <Content>
-        <img src={img3} alt="blah"/>
-        <img src={img3} alt="blah"/>
-        <img src={img3} alt="blah"/>
-        <img src={img3} alt="blah"/>
-        <img src={img3} alt="blah"/>
-        <img src={img3} alt="blah"/>
-        <img src={img3} alt="blah"/>
-        <img src={img3} alt="blah"/>
-        <img src={img3} alt="blah"/>
+        {data.bargain.map(item => (
+          <ItemFeature key={item.id} item={item} />
+        ))}
       </Content>
     </>
   )
@@ -66,9 +61,7 @@ function Content({children}: {children: Array<React.ReactNode>}) {
     const animationDuration = (Math.random() * duration * 0.2) + (duration * 0.8) + 's'
     return (
       <div className="bargainGrowShrink" style={{ animationDuration, animationDelay }}>
-        <ItemFeature>
-          {child}
-        </ItemFeature>
+        {child}
       </div>
     )
   })

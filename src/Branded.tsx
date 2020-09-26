@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import logo from './logo.svg'
 import Logo from './Logo'
 import { MarqueeReverse, ChildProps, ItemFeature } from './Main'
+import data from './data'
 
 import './Branded.css'
 
@@ -18,20 +19,14 @@ export default function Branded() {
     <div className="brandedBackground">
       <div className="header">
         <LogoLink />
-        <MarqueeReverse className="brandedMarquee flashing" duration={3.5}>
+        <MarqueeReverse className="brandedMarquee flashing headerTitlePadding" duration={3.5}>
           <h1 className="rmName brandedTitle">BRANDED MERCH</h1>
         </MarqueeReverse>
       </div>
       <Content>
-        <img src={img3} alt="blah"/>
-        <img src={img3} alt="blah"/>
-        <img src={img3} alt="blah"/>
-        <img src={img3} alt="blah"/>
-        <img src={img3} alt="blah"/>
-        <img src={img3} alt="blah"/>
-        <img src={img3} alt="blah"/>
-        <img src={img3} alt="blah"/>
-        <img src={img3} alt="blah"/>
+        {data.branded.map(item => (
+          <ItemFeature key={item.id} item={item} />
+        ))}
       </Content>
     </div>
   )
@@ -55,9 +50,9 @@ function Content({children}: {children: Array<React.ReactNode>}) {
     const animationDelay = (Math.random() * -3) + 's'
     return (
       <div className={`flashing brandedBorder`} style={{ animationDuration: '9s', animationDelay }}>
-        <ItemFeature className={`brandedItemFeature`} style={{ animationDelay }}>
+        <div className={`brandedItemFeature`} style={{ animationDelay }}>
           {child}
-        </ItemFeature>
+        </div>
       </div>
     )
   })

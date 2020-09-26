@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Logo from './Logo'
 import { Marquee, ChildProps, ItemFeature } from './Main'
 import img3 from './assets/FCMP-mask-model.jpeg'
+import data from './data'
 
 
 import './Safety.css'
@@ -16,20 +17,14 @@ export default function Safety() {
       <div className="header">
         <LogoLink ref_={logoRef}/>
 
-        <Marquee className="safetyBorder">
+        <Marquee className="safetyBorder headerTitlePadding">
           <h1 className="rmName safetyH1">SAFETY SWAG</h1>
         </Marquee>
       </div>
       <Content>
-        <img src={img3} alt="blah"/>
-        <img src={img3} alt="blah"/>
-        <img src={img3} alt="blah"/>
-        <img src={img3} alt="blah"/>
-        <img src={img3} alt="blah"/>
-        <img src={img3} alt="blah"/>
-        <img src={img3} alt="blah"/>
-        <img src={img3} alt="blah"/>
-        <img src={img3} alt="blah"/>
+        {data.safety.map(item => (
+          <ItemFeature key={item.id} item={item} />
+        ))}
       </Content>
     </>
   )
@@ -155,9 +150,7 @@ function Content({children}: {children: Array<React.ReactNode>}) {
     const animationDelay = (i * 100) + 'ms'
     return (
       <div className="safetyContentBlink" style={{ animationDelay, border: '4px solid' }}>
-        <ItemFeature>
-          {child}
-        </ItemFeature>
+        {child}
       </div>
     )
   })

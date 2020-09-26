@@ -16,7 +16,7 @@ export default function Patriot() {
       <Background />
       <div className="header">
         <LogoLink />
-        <Marquee className="patriotMarquee" duration={7.2}>
+        <Marquee className="patriotMarquee headerTitlePadding" duration={7.2}>
           <h1 style={{ backgroundColor: 'white'}} className="rmName">PATRIOT GEAR</h1>
         </Marquee>
       </div>

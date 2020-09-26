@@ -3,11 +3,28 @@ a {
   color: inherit;
 }
 
+.link {
+  color: blue;
+  text-decoration: underline;
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding: 20px;
+}
+
+.headerTitlePadding {
+  margin-left: 20px;
+}
+
+@media (max-width: 750px) {
+  .headerTitlePadding {
+    margin-left: 0;
+    margin-top: 10px;
+  }
 }
 
 .headerTitle {
@@ -17,7 +34,6 @@ a {
   display: inline-flex;
   flex-direction: column;
   justify-content: space-around;
-  padding-right: 20px;
 }
 
 @media (max-width: 750px) {
@@ -50,8 +66,8 @@ a {
 .animationReverse {
   animation-direction: reverse;
 }
+
 .logo {
-  padding: 20px;
   display: inline-block;
   max-width: 425px;
   /*width: 100%;*/
@@ -59,9 +75,12 @@ a {
 }
 
 @media (max-width: 750px) {
-  .logo {
-    max-height: 425px;
+  .logoFull {
     max-width: calc(100% - 40px);
+
+  }
+  .logo {
+    max-height: 250px;
     margin: auto;
   }
 }
@@ -98,7 +117,7 @@ a {
   margin-bottom: 20px;
 }
 
-@media (max-width: 815px) {
+@media (max-width: 900px) {
   .verticalSection {
     flex-direction: column;
   }
@@ -616,6 +635,8 @@ h4.rmName {
 .arrowContainer {
   flex-grow: 1;
   font-size: 25px;
+  display: flex;
+  align-items: center;
 }
 
 .arrowsContent {
@@ -663,12 +684,13 @@ h4.rmName {
 }
 
 .itemFeature {
+  cursor: pointer;
   display: inline-block;
   box-sizing: border-box;
 }
 
 
-.itemFeature > * {
+.itemFeature img {
   width: 300px;
   height: 300px;
   object-fit: contain;

@@ -1,0 +1,155 @@
+.itemHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.itemHeaderTitle {
+  width: calc(100% - 90px);
+}
+
+
+.itemWrapper {
+  margin: auto;
+  padding: 0 20px;
+  max-width: 800px;
+  margin-bottom: 10px
+}
+
+.itemTitle {
+  font-size: 70px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  /*border: ;*/
+}
+
+@media (max-width: 550px) {
+  .itemTitle {
+    font-size: 45px
+  }
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  column-gap: 30px;
+}
+
+@media (max-width: 750px) {
+  .contentGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.itemImage {
+  border: 15px double;
+  padding: 5px;
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
+@media (max-width: 400px) {
+  .itemImage {
+    width: 270px;
+    height: 270px;
+  }
+}
+
+.itemLeftCol {
+  margin-bottom: 60px;
+}
+
+.itemSectionHeader {
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.itemSectionSubHeader {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 400px) {
+  .itemSectionHeader {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+}
+
+.description {
+  margin-bottom: 20px;
+}
+
+.descriptionText {
+  line-height: 1.4;
+}
+
+.review {
+  border: 2px solid;
+  margin-bottom: 10px;
+}
+
+.reviewRating {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 7px;
+  padding-bottom: 0;
+}
+
+.reviewContent {
+  padding: 7px;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+.reviewData {
+  font-size: 12px;
+  border-top: 2px solid;
+  padding: 3px 7px;
+}
+
+.buyNowSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buyNowLink {
+  font-size: 25px;
+  font-weight: 600;
+  padding: 8px;
+  border: 3px solid;
+  border-radius: 3px;
+  margin-top: 10px;
+  transition: 1s;
+}
+
+.itemLeftCol:hover .buyNowLink {
+  transform: rotate(720deg);
+}
+
+.reviewInput {
+  width: 96%;
+  height: 125px;
+  padding: 7px;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.reviewSubmitButton {
+  padding: 5px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.errorText {
+  color: red;
+}

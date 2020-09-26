@@ -1,0 +1,13 @@
+.contentInput {
+  width: 96%;
+  height: 125px;
+  padding: 7px;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.submitButton {
+  padding: 5px;
+  font-size: 13px;
+  cursor: pointer;
+}

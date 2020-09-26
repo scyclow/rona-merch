@@ -5,6 +5,7 @@ import Logo from './Logo'
 import logoNight from './logo-night.svg'
 import flashSale from './flashSale.svg'
 import './Main.css'
+import { Item } from './data'
 
 import img1 from './assets/FC-T-model1.jpeg'
 import img2 from './assets/FC-thumbnail1.jpeg'
@@ -16,14 +17,14 @@ export default function Main() {
   return (
     <div className="app">
       <header className="header">
-        <Logo size={350}/>
+        <Logo className="logoFull" size={350}/>
         <Title />
       </header>
       <Marquee duration={20}>
         <a href="http://fakebullshit.news" target="_blank">
           <h4 className="rmName">
             "Without a doubt, Rona Merch Co. offers the hottest selection of stylish face masks on the internet -- and at ROCK BOTTOM prices to boot!"
-            <span style={{ color: "blue", textDecoration: "underline", paddingLeft: 3}}>Patrick Swanson (FB News)</span>
+            <span className="link" style={{paddingLeft: 3}}>Patrick Swanson (FB News)</span>
           </h4>
         </a>
       </Marquee>
@@ -46,7 +47,7 @@ export default function Main() {
         <a href="https://www.economist.com/finance-and-economics/2020/08/22/why-the-economic-value-of-a-face-mask-is-5614?fsrc=scn/tw/te/bl/ed/clothofgoldwhytheeconomicvalueofafacemaskis5614financeeconomics" target="_blank">
           <h4 className="rmName">
             "THE VALUE OF A GOOD FACE MASK IS MORE THAN $56" --
-            <span style={{ color: "blue", textDecoration: "underline", paddingLeft: 3}}>The Economist</span>
+            <span className="link" style={{ paddingLeft: 3}}>The Economist</span>
           </h4>
         </a>
       </MarqueeReverse>
@@ -101,7 +102,7 @@ function VerticalSection({ children }: ChildProps) {
 
 function Title() {
   return (
-    <div className="headerTitle">
+    <div className="headerTitle headerTitlePadding">
       <div>
         <div className="marqueeBorders">
           <MarqueeReverse>
@@ -388,9 +389,10 @@ function TopReviews() {
 }
 
 
-export type ChildProps = { children: React.ReactNode, className?: string, style?: React.CSSProperties }
+export type StyleProps = { className?: string, style?: React.CSSProperties }
+export type ChildProps = { children: React.ReactNode } & StyleProps
 
-function Content({ children }: ChildProps) {
+export function Content({ children }: ChildProps) {
   return (
     <div className="content">
       {children}
@@ -621,7 +623,7 @@ function GrowShrink({ children }: ChildProps) {
 }
 
 
-function Arrows({children, className}: ChildProps) {
+export function Arrows({children, className}: ChildProps) {
   return (
     <div className={className} style={{ display: 'flex', }}>
       <span className="arrowContainer">
@@ -657,7 +659,7 @@ type ImageRotateState = {
   opacity: number
 }
 
-function ImageRotate({children, ms, delay}: ChildProps & {ms: number, delay?: number}) {
+export function ImageRotate({children, ms, delay}: ChildProps & {ms: number, delay?: number}) {
   const [ix, setIx] = useState<number>(0)
 
   const images = Array.isArray(children) ? children : [children]
@@ -713,10 +715,12 @@ export function MarqueeChild({ children, className, style }: ChildProps) {
   )
 }
 
-export function ItemFeature({ children, className, style }: ChildProps) {
+export function ItemFeature({ item, className, style }: { item: Item } & StyleProps) {
   return (
     <div className={`itemFeature ${className || ''}`} style={style}>
-      {children}
+      <Link to={`/items/${item.id}`}>
+        <img src={item.images[0]} alt={item.title} />
+      </Link>
     </div>
   )
 }
@@ -742,11 +746,9 @@ export function VerticalMarquee({children, className, direction, duration, style
   duration = duration || 24000
 
   const images = children.map((child, i) => (
-    <React.Fragment key={'vm'+i}>
-      <ItemFeature style={{ marginTop: 10 }}>
-        {child}
-      </ItemFeature>
-    </React.Fragment>
+    <div key={'vm'+i} className="itemFeature" style={{ marginTop: 10 }}>
+      {child}
+    </div>
   ))
 
 

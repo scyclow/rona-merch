@@ -27,7 +27,16 @@
   display: grid;
   grid-gap: 15px;
   grid-template-columns: 308px 308px 308px;
+}
 
+h1.bargainTitle.rmName {
+  padding-right: 0
+}
+
+@media (max-width: 450px) {
+  h1.bargainTitle.rmName {
+    font-size: 50px;
+  }
 }
 
 @media (max-width: 965px) {

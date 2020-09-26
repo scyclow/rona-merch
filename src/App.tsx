@@ -4,7 +4,9 @@ import Patriot from './Patriot'
 import Safety from './Safety'
 import Branded from './Branded'
 import Bargain from './Bargain'
+import Item from './Item'
 import { BrowserRouter, Route, Switch, useLocation } from 'react-router-dom'
+import './App.css'
 
 export function ScrollToTop() {
   const { pathname } = useLocation();
@@ -38,12 +40,17 @@ export default function App() {
             <Bargain />
           </Route>
 
+          <Route path="/items/:itemId">
+            <Item />
+          </Route>
+
           <Route path="/">
             <Main />
           </Route>
 
         </Switch>
       </div>
+      <footer className="footer">(c) RonaMerch.co</footer>
     </BrowserRouter>
   )
 }
