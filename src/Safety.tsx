@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Logo from './Logo'
 import { Marquee, ChildProps, ItemFeature } from './Main'
-import img3 from './assets/FCMP-mask-model.jpeg'
 import data from './data'
 
 

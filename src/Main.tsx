@@ -8,12 +8,6 @@ import flashSale from './flashSale.svg'
 import './Main.css'
 import data, { Item } from './data'
 
-import img1 from './assets/FC-T-model1.jpeg'
-import img2 from './assets/FC-thumbnail1.jpeg'
-import img3 from './assets/FCMP-mask-model.jpeg'
-import img4 from './assets/anti-face1.jpeg'
-import img5 from './assets/hoax.jpeg'
-
 export default function Main() {
   return (
     <div className="app">
@@ -202,18 +196,9 @@ function FeaturedItems() {
         </RotateZ>
       </div>
       <ImageMarquee>
-        <img src={img1} alt="blah"/>
-        <img src={img3} alt="blah"/>
-        <img src={img4} alt="blah"/>
-        <img src={img5} alt="blah"/>
-        <img src={img1} alt="blah"/>
-        <img src={img3} alt="blah"/>
-        <img src={img4} alt="blah"/>
-        <img src={img5} alt="blah"/>
-        <img src={img1} alt="blah"/>
-        <img src={img3} alt="blah"/>
-        <img src={img4} alt="blah"/>
-        <img src={img5} alt="blah"/>
+        {shuffle(data.patriot.map(item => (
+          <ItemFeature noLink key={item.id} item={item}/>
+        )))}
       </ImageMarquee>
     </div>
   )
@@ -797,7 +782,7 @@ function ImageShrinkRotation({children, delay, ms, style}: {ms: number, delay?: 
   return (
     <div style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', ...style}}>
       <div className="imageShrinkRotation" style={{ transform: `scale(${scaleSize})`}}>
-        {activeImage}
+        {/*activeImage*/}
       </div>
     </div>
   )

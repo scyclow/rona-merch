@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import Logo from './Logo'
 import { Marquee, ItemFeature, TiltedMarquee } from './Main'
 import data from './data'
-import img3 from './assets/FCMP-mask-model.jpeg'
 
 import './Bargain.css'
 

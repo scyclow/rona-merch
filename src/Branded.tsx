@@ -7,12 +7,6 @@ import data from './data'
 
 import './Branded.css'
 
-import img1 from './assets/FC-T-model1.jpeg'
-import img2 from './assets/FC-thumbnail1.jpeg'
-import img3 from './assets/FCMP-mask-model.jpeg'
-import img4 from './assets/anti-face1.jpeg'
-import img5 from './assets/hoax.jpeg'
-
 
 export default function Branded() {
   return (

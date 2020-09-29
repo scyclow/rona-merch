@@ -1,9 +1,4 @@
 import {shuffle} from 'lodash'
-import img1 from './assets/FC-T-model1.jpeg'
-import img2 from './assets/FC-thumbnail1.jpeg'
-import img3 from './assets/FCMP-mask-model.jpeg'
-import img4 from './assets/anti-face1.jpeg'
-import img5 from './assets/hoax.jpeg'
 
 export type Review = {
   author: string
@@ -61,37 +56,33 @@ const authors = {
   }
 }
 
-const tShirtImages = (id: string, back: boolean = false) => shuffle([
-  `https://www.zazzle.com/rlv/svc/view?rlvnet=1&realview=113745894146800642&design=${id}&style=hanes_mens_crew_tshirt_5250&size=a_s&max_dim=325&bg=0xffffff`,
-  `https://www.zazzle.com/rlv/svc/view?rlvnet=1&realview=113562383382757001&design=${id}&style=hanes_mens_crew_tshirt_5250&size=a_s&max_dim=325&bg=0xffffff`,
-  back ? `https://www.zazzle.com/rlv/svc/view?rlvnet=1&realview=113047569559324703&design=${id}&style=hanes_mens_crew_tshirt_5250&size=a_s&max_dim=325&bg=0xffffff` : ''
-].filter(i => !!i))
-
-const darkTshirtImages = (id: string, back: boolean = false) => shuffle([
-  `https://www.zazzle.com/rlv/svc/view?rlvnet=1&realview=113745894146800642&design=${id}&style=hanes_mens_crew_darktshirt_5250&size=a_s&max_dim=325&bg=0xffffff`,
-  `https://www.zazzle.com/rlv/svc/view?rlvnet=1&realview=113562383382757001&design=${id}&style=hanes_mens_crew_darktshirt_5250&size=a_s&max_dim=325&bg=0xffffff`,
-  back ? `https://www.zazzle.com/rlv/svc/view?rlvnet=1&realview=113047569559324703&design=${id}&style=hanes_mens_crew_darktshirt_5250&size=a_s&max_dim=325&bg=0xffffff` : ''
-].filter(i => !!i))
-
-const fullFaceMaskImages = (id: string) => shuffle([
-  `https://www.zazzle.com/rlv/svc/view?realview=113161478230575712&design=${id}&max_dim=325&bg=0xffffff`,
-  `https://www.zazzle.com/rlv/svc/view?realview=113637405611640427&design=${id}&max_dim=325&bg=0xffffff`,
-  `https://www.zazzle.com/rlv/svc/view?realview=113668507371945024&design=${id}&max_dim=325&bg=0xffffff`,
-  `https://www.zazzle.com/rlv/svc/view?realview=113741992753217556&design=${id}&max_dim=325&bg=0xffffff`,
-  `https://www.zazzle.com/rlv/svc/view?realview=113172235682006239&design=${id}&max_dim=325&bg=0xffffff`,
-  `https://www.zazzle.com/rlv/svc/view?realview=113885022310819668&design=${id}&max_dim=325&bg=0xffffff`,
+// const tShirtImages = (id: string) => shuffle([
+const tShirtImages = (id: string) => shuffle([
+  process.env.PUBLIC_URL + '/' + id + '-0.jpeg',
+  process.env.PUBLIC_URL + '/' + id + '-1.jpeg',
+  process.env.PUBLIC_URL + '/' + id + '-2.jpeg',
 ])
 
-// [center]
-//   `https://www.zazzle.com/rlv/svc/view?realview=113161478230575712&design=21d83c6c-f833-472e-9d06-d16f69c3c904&rlvnet=1&style=cottonpolyblend&color=black&max_dim=325&bg=0xffffff[/img][/url]
-// [url=https://www.zazzle.com/pd/spp/pt-zazzle_facemaskcoverblend?dz=21d83c6c-f833-472e-9d06-d16f69c3c904&clone=true&pending=true&style=cottonpolyblend&size=standard&color=black&design.areas=%5Bzazzle_facemaskcoverblend_front%5D&social=true&view=113161478230575712&rf=238012063771219973]Smiling Eyes Yellow Mask[/url]
+const darkTshirtImages = (id: string) => shuffle([
+  process.env.PUBLIC_URL + '/' + id + '-0.jpeg',
+  process.env.PUBLIC_URL + '/' + id + '-1.jpeg',
+  process.env.PUBLIC_URL + '/' + id + '-2.jpeg',
+])
 
-// [/center]
+const fullFaceMaskImages = (id: string) => shuffle([
+  process.env.PUBLIC_URL + '/' + id + '-0.jpeg',
+  process.env.PUBLIC_URL + '/' + id + '-1.jpeg',
+  process.env.PUBLIC_URL + '/' + id + '-2.jpeg',
+  process.env.PUBLIC_URL + '/' + id + '-3.jpeg',
+  process.env.PUBLIC_URL + '/' + id + '-4.jpeg',
+  process.env.PUBLIC_URL + '/' + id + '-5.jpeg',
+])
+
 
 const test = {
   id: 'test',
   title: 'Rona Merch Test Title T Mask',
-  images: [img1, img3],
+  images: [],
   link: '',
   description: "There's no better way to show the world that you're a proud American than by flaunting it with this stunning image of America's mascot: the majestic Bald Eagle",
   reviews: [
@@ -109,13 +100,15 @@ const test = {
     }
   ]
 }
+
 const data: Data = {
   patriot: shuffle([
     {
       id: 'proud-american-t',
       title: 'Proud American T',
       link: '',
-      images: tShirtImages('619b9cda-2c73-44c5-96ee-14cfc6008831'),
+      // images: tShirtImages('619b9cda-2c73-44c5-96ee-14cfc6008831'),
+      images: tShirtImages('proud-american-t'),
       description: "There's no better way to show the world that you're a proud American than by flaunting it with this stunning image of America's mascot: the majestic Bald Eagle",
       reviews: [
         {
@@ -130,7 +123,8 @@ const data: Data = {
       id: 'george-cat',
       title: 'Henry George Cat Mask',
       link: '',
-      images: fullFaceMaskImages('68feda60-1da3-467f-b20e-ab8e8d8a161a'),
+      // images: fullFaceMaskImages('68feda60-1da3-467f-b20e-ab8e8d8a161a'),
+      images: fullFaceMaskImages('george-cat'),
       description: `Have you seen the cat? As most proponents of Henry George's Land Value Tax will tell you, once you "see the cat" and understand how deeply the LVT aligns with American values, you can't "unsee" it. Rock this vintage looks to tell everyone around you that you stand for Free Land, Free Trade, and Free People`,
       reviews: [
         {
@@ -169,7 +163,8 @@ const data: Data = {
       id: 'guns-n-beer-dark',
       title: 'Guns N Beer Mask Dark',
       link: '',
-      images: fullFaceMaskImages('fbfdbdb2-28b1-40af-86d7-2c4a85b71b00'),
+      // images: fullFaceMaskImages('fbfdbdb2-28b1-40af-86d7-2c4a85b71b00'),
+      images: fullFaceMaskImages('guns-n-beer-dark'),
       description: "Nothing is more American then drinking beer and shooting guns. let your neighbors know what you're really all about.",
       reviews: [
         {
@@ -190,7 +185,8 @@ const data: Data = {
       id: 'guns-n-beer-white',
       title: 'Guns N Beer Mask White',
       link: '',
-      images: fullFaceMaskImages('fa40acb8-9a74-4a6b-9bbc-b5a236470135'),
+      // images: fullFaceMaskImages('fa40acb8-9a74-4a6b-9bbc-b5a236470135'),
+      images: fullFaceMaskImages('guns-n-beer-white'),
       description: "Nothing is more American then drinking beer and shooting guns. let your neighbors know what you're really all about.",
       reviews: [
         {
@@ -205,7 +201,8 @@ const data: Data = {
       id: 'antifa-antico',
       title: 'Antifascist Anticommunist Mask',
       link: '',
-      images: fullFaceMaskImages('7a31c773-abf3-4fb2-aba2-15815ac3f06a'),
+      // images: fullFaceMaskImages('7a31c773-abf3-4fb2-aba2-15815ac3f06a'),
+      images: fullFaceMaskImages('antifa-antico'),
       description: "Real Americans hate Fascism as much as they hate Communism. Show the world that you're a real American with this sleek modernist design. #WWG1WGA",
       reviews: [
         {
@@ -220,7 +217,8 @@ const data: Data = {
       id: 'wwg1wga-q',
       title: 'WWG1WGA Q Mask',
       link: '',
-      images: fullFaceMaskImages('14cb1052-0f6f-4eca-b584-bf8824127ccf'),
+      // images: fullFaceMaskImages('14cb1052-0f6f-4eca-b584-bf8824127ccf'),
+      images: fullFaceMaskImages('wwg1wga-q'),
       description: "Celebrate the patriotic 1996 classic White Squall with this fetching minimalist design. ",
       reviews: [
         {
@@ -255,7 +253,8 @@ const data: Data = {
       id: 'gas-mask',
       title: 'Gas Mask Mask',
       link: '',
-      images: fullFaceMaskImages('786592f3-f00c-4041-9bf9-f59720dfdb7a'),
+      // images: fullFaceMaskImages('786592f3-f00c-4041-9bf9-f59720dfdb7a'),
+      images: fullFaceMaskImages('gas-mask'),
       description: `Whether you're braving the California wild fires, getting teargassed by the police, or simply browsing through your local COVID-19-invected super market, this face mask offers an extra layer of protection above the competition. Don't leave home without it!`,
       reviews: [
         {
@@ -288,7 +287,8 @@ const data: Data = {
       id: 'infected1-mask',
       title: 'Infected Mask 1',
       link: '',
-      images: fullFaceMaskImages('de02c477-1f2a-45a5-807f-02c1c0762496'),
+      // images: fullFaceMaskImages('de02c477-1f2a-45a5-807f-02c1c0762496'),
+      images: fullFaceMaskImages('infected1-mask'),
       description: `There's only one sure-fire way to make sure that people stay 6 feet away from you -- and that's by implying that you may be infected with COVID-19. `,
       reviews: [
         {
@@ -316,7 +316,8 @@ const data: Data = {
       id: 'infected1-t',
       title: 'Infected T 1',
       link: '',
-      images: tShirtImages('58542316-bfc5-46dc-b99a-658002772cc5', true),
+      // images: tShirtImages('58542316-bfc5-46dc-b99a-658002772cc5'),
+      images: tShirtImages('infected1-t'),
       description: `There's only one sure-fire way to make sure that people stay 6 feet away from you -- and that's by implying that you may be infected with COVID-19. `,
       reviews: [
         {
@@ -338,7 +339,8 @@ const data: Data = {
       id: 'radio-wave-protection',
       title: 'Radio Wave Protection Mask',
       link: '',
-      images: fullFaceMaskImages('2d5da480-4278-4e44-9318-dfe650aac28e'),
+      // images: fullFaceMaskImages('2d5da480-4278-4e44-9318-dfe650aac28e'),
+      images: fullFaceMaskImages('radio-wave-protection'),
       description: `With 5G technology right around the corner, cancer-causing radio waves and V2K attacks are top of mind for many. Take all the help you can get by donning this sharply designed mask.`,
       reviews: [
         {
@@ -375,7 +377,8 @@ const data: Data = {
       id: 'fastcash-lime',
       title: 'FastCash Logo T Lime Green Purple',
       link: '',
-      images: tShirtImages('ae7f66ce-d683-45ee-b458-848f3127fffe', true),
+      // images: tShirtImages('ae7f66ce-d683-45ee-b458-848f3127fffe'),
+      images: tShirtImages('fastcash-lime'),
       description: `Stand out from the crowd and let everyone know that you're a winner with the bank account to back it up. Great for biking safely at night -- drivers will think twice before they hit you with their vehicle, lest they find themselves in the middle of a costly lawsuit!`,
       reviews: [
         {
@@ -415,7 +418,8 @@ const data: Data = {
       title: "FastCash Logo Mask Colorful",
       link: '',
       description: 'This vibrant, multi-colored face mask is the perfect way to express your identity as someone who is both forward-thinking and ambitious.',
-      images: fullFaceMaskImages('2bfff509-dace-4287-886c-af100e2562f8'),
+      // images: fullFaceMaskImages('2bfff509-dace-4287-886c-af100e2562f8'),
+      images: fullFaceMaskImages('fastcash-colorful'),
       reviews: [
         {
           author: 'CrystalBell',
@@ -439,7 +443,8 @@ const data: Data = {
       id: 'wakka-wakka',
       title: 'Wakka Wakka Mask',
       link: '',
-      images: fullFaceMaskImages('84086b27-9d4a-4a68-8d70-f373d48fe436'),
+      // images: fullFaceMaskImages('84086b27-9d4a-4a68-8d70-f373d48fe436'),
+      images: fullFaceMaskImages('wakka-wakka'),
       description: `Wakka Wakka all the way home with this hilarious throwback.`,
       reviews: [
         {
@@ -468,7 +473,8 @@ const data: Data = {
       id: 'smiling-eyes',
       title: 'Smiling Eyes Mask',
       link: '',
-      images: fullFaceMaskImages('5c0ef824-8029-460a-bab6-8269ea420eb1'),
+      // images: fullFaceMaskImages('5c0ef824-8029-460a-bab6-8269ea420eb1'),
+      images: fullFaceMaskImages('smiling-eyes'),
       description: `Who says that it has to be hard to read facial cues when you're wearing a face mask? Use this adorable mask to project good vibes all around and to let the world know: you're smiling!`,
       reviews: [
         {
@@ -483,7 +489,8 @@ const data: Data = {
       id: 'apocalypse',
       title: 'Apocalypse Mask',
       link: '',
-      images: fullFaceMaskImages('aab5243c-3815-4155-b616-b4ac59f43328'),
+      // images: fullFaceMaskImages('aab5243c-3815-4155-b616-b4ac59f43328'),
+      images: fullFaceMaskImages('apocalypse'),
       description: `Everyone knows it's coming, but no one knows how many years we have left. So live your last days out in style with this bold face mask!`,
       reviews: [
         {
@@ -510,7 +517,8 @@ const data: Data = {
       id: 'freemason-blood-sacrifice',
       title: 'Freemason Blood Sacrifice Mask',
       link: '',
-      images: fullFaceMaskImages('9b931020-ae11-4b9f-9839-96de6a0ead68'),
+      // images: fullFaceMaskImages('9b931020-ae11-4b9f-9839-96de6a0ead68'),
+      images: fullFaceMaskImages('freemason-blood-sacrifice'),
       description: ``,
       reviews: [
         {
@@ -525,7 +533,8 @@ const data: Data = {
       id: 'cluck',
       title: 'Cluck Mask',
       link: '',
-      images: fullFaceMaskImages('104479fc-5499-4e55-bdb4-2ce7f68a6c78'),
+      // images: fullFaceMaskImages('104479fc-5499-4e55-bdb4-2ce7f68a6c78'),
+      images: fullFaceMaskImages('cluck'),
       description: ``,
       reviews: [
         {

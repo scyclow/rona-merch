@@ -24,7 +24,7 @@
 }
 
 .flagStripe.blue {
-  background-image: url('./assets/flagstar.svg');
+  background-image: url(./flagstar.svg);
   background-size: auto 100%;
   background-repeat: repeat-x;
   background-color: #3C3B6E;
