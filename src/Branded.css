@@ -281,7 +281,7 @@
 }
 
 .brandedItemFeature {
-  animation: hueRotate 3s linear infinite;
+  /*animation: hueRotate 3s linear infinite;*/
 }
 
 .brandedItemFeature:hover {

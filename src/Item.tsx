@@ -60,28 +60,30 @@ function Content() {
               ))}
             </ImageRotate>
             <div className="itemImage" style={{}}/>
-            <Arrows>
-              <div className="buyNowLink">BUY NOW</div>
-            </Arrows>
+            <div style={{marginTop: 10}}>
+              <Arrows>
+                <div className="buyNowLink">BUY<br/> NOW</div>
+              </Arrows>
+            </div>
           </a>
         </div>
 
         <div>
           <div className="description">
             <h2 className="itemSectionHeader">PRODUCT DESCRIPTION</h2>
-            <p className="descriptionText">{item.description}</p>
+            <p className="descriptionText">{item.description || 'DESCRIPTION MISSING'}</p>
           </div>
           <div className="reviews">
             <h2 className="itemSectionHeader">REVIEWS</h2>
             <h3 className="itemSectionSubHeader">Powered by <a className="link" href="https://friendworld.social/" target="_blank">friendworld.social</a></h3>
             {item.reviews.map(review => (
               <div key={review.content} className="review">
-                <h4 className="reviewRating">{review.rating} stars!</h4>
+                <h4 className="reviewRating">{review.rating} Stars!</h4>
                 <p className="reviewContent">{review.content}</p>
-                <div className="reviewData">
+                <div className="reviewData" style={{backgroundColor: '#f6f6f6'}}>
                   <a href={`https://friendworld.social/users/${review.author}`} target="_blank">
                     <div className="link">{review.author}</div>
-                    <div style={{ marginTop: 3}}>{new Date(review.date).toISOString()}</div>
+                    <div style={{ marginTop: 3 }}>{new Date(review.date).toISOString()}</div>
                   </a>
                 </div>
               </div>
@@ -111,12 +113,12 @@ function TextInput () {
 
   return (
     <div>
-      <select style={{ marginBottom: 5}}>
-        <option>5</option>
-        <option>4</option>
-        <option>3</option>
-        <option>2</option>
-        <option>1</option>
+      <select style={{ marginBottom: 5, cursor: 'pointer'}}>
+        <option>5 Stars</option>
+        <option>4 Stars</option>
+        <option>3 Stars</option>
+        <option>2 Stars</option>
+        <option>1 Stars</option>
       </select>
       <textarea
         className="reviewInput"

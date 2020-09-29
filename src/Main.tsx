@@ -1,11 +1,12 @@
 import React, {useState, useEffect, useRef} from 'react'
 import { Link } from 'react-router-dom'
+import {shuffle} from 'lodash'
 import Logo from './Logo'
 
 import logoNight from './logo-night.svg'
 import flashSale from './flashSale.svg'
 import './Main.css'
-import { Item } from './data'
+import data, { Item } from './data'
 
 import img1 from './assets/FC-T-model1.jpeg'
 import img2 from './assets/FC-thumbnail1.jpeg'
@@ -225,17 +226,9 @@ function Patriot() {
       <div>
         <PatriotTitle />
         <VerticalMarquee style={{ height: windowWidth > 815 ? 800 : 400, boxSizing: 'content-box' }} duration={48000}>
-          <img src={img1} alt="blah"/>
-          <img src={img1} alt="blah"/>
-          <img src={img1} alt="blah"/>
-          <img src={img1} alt="blah"/>
-          <img src={img1} alt="blah"/>
-          <img src={img1} alt="blah"/>
-          <img src={img1} alt="blah"/>
-          <img src={img1} alt="blah"/>
-          <img src={img1} alt="blah"/>
-          <img src={img4} alt="blah"/>
-          <img src={img5} alt="blah"/>
+          {shuffle(data.patriot.map(item => (
+            <ItemFeature noLink key={item.id} item={item}/>
+          )))}
         </VerticalMarquee>
       </div>
     </Link>
@@ -248,18 +241,9 @@ function Branded() {
         <div>
           <BrandedTitle />
           <ImageMarquee jerk duration={20}>
-            <img src={img1} alt="blah"/>
-            <img src={img1} alt="blah"/>
-            <img src={img1} alt="blah"/>
-            <img src={img1} alt="blah"/>
-            <img src={img1} alt="blah"/>
-            <img src={img1} alt="blah"/>
-            <img src={img1} alt="blah"/>
-            <img src={img1} alt="blah"/>
-            <img src={img1} alt="blah"/>
-            <img src={img1} alt="blah"/>
-            <img src={img4} alt="blah"/>
-            <img src={img5} alt="blah"/>
+            {shuffle(data.branded.map(item => (
+              <ItemFeature noLink key={item.id} item={item}/>
+            )))}
           </ImageMarquee>
         </div>
       </Link>
@@ -274,18 +258,16 @@ function Bargain() {
         <BargainTitle />
         <div className="bargainImageSection">
           <ImageShrinkRotation ms={3000} delay={0}>
-            <img className="productImage" src={img1} alt="blah"/>
-            <img className="productImage" src={img3} alt="blah"/>
-            <img className="productImage" src={img4} alt="blah"/>
-            <img className="productImage" src={img5} alt="blah"/>
+            {shuffle(data.bargain.map(item => (
+              <ItemFeature noLink key={item.id} item={item}/>
+            )))}
           </ImageShrinkRotation>
 
           {windowWidth >= 600 && (
             <ImageShrinkRotation ms={3000} delay={500}>
-              <img className="productImage" src={img1} alt="blah"/>
-              <img className="productImage" src={img3} alt="blah"/>
-              <img className="productImage" src={img4} alt="blah"/>
-              <img className="productImage" src={img5} alt="blah"/>
+              {shuffle(data.bargain.map(item => (
+                <ItemFeature noLink key={item.id} item={item}/>
+              )))}
             </ImageShrinkRotation>
           )}
         </div>
@@ -301,40 +283,35 @@ function Safety() {
         <SafetyTitle />
         <div className="safetyGridSectionDesktop">
           <ImageRotate ms={3000} delay={0}>
-            <img src={img1} className="productImageSm" alt="blah"/>
-            <img src={img3} className="productImageSm" alt="blah"/>
-            <img src={img4} className="productImageSm" alt="blah"/>
-            <img src={img5} className="productImageSm" alt="blah"/>
+            {shuffle(data.safety.map(item => (
+              <ItemFeature noLink className="itemFeatureSm" key={item.id} item={item}/>
+            )))}
           </ImageRotate>
 
           <ImageRotate ms={3000} delay={50}>
-            <img src={img1} className="productImageSm" alt="blah"/>
-            <img src={img3} className="productImageSm" alt="blah"/>
-            <img src={img4} className="productImageSm" alt="blah"/>
-            <img src={img5} className="productImageSm" alt="blah"/>
+            {shuffle(data.safety.map(item => (
+              <ItemFeature noLink className="itemFeatureSm" key={item.id} item={item}/>
+            )))}
           </ImageRotate>
 
           <ImageRotate ms={3000} delay={100}>
-            <img src={img1} className="productImageSm" alt="blah"/>
-            <img src={img3} className="productImageSm" alt="blah"/>
-            <img src={img4} className="productImageSm" alt="blah"/>
-            <img src={img5} className="productImageSm" alt="blah"/>
+            {shuffle(data.safety.map(item => (
+              <ItemFeature noLink className="itemFeatureSm" key={item.id} item={item}/>
+            )))}
           </ImageRotate>
 
           <ImageRotate ms={3000} delay={150}>
-            <img src={img1} className="productImageSm" alt="blah"/>
-            <img src={img3} className="productImageSm" alt="blah"/>
-            <img src={img4} className="productImageSm" alt="blah"/>
-            <img src={img5} className="productImageSm" alt="blah"/>
+            {shuffle(data.safety.map(item => (
+              <ItemFeature noLink className="itemFeatureSm" key={item.id} item={item}/>
+            )))}
           </ImageRotate>
         </div>
 
         <div className="safetyGridSectionMobile">
           <ImageRotate ms={3000} delay={0}>
-            <img src={img1} className="productImage" alt="blah"/>
-            <img src={img3} className="productImage" alt="blah"/>
-            <img src={img4} className="productImage" alt="blah"/>
-            <img src={img5} className="productImage" alt="blah"/>
+            {shuffle(data.safety.map(item => (
+              <ItemFeature noLink key={item.id} item={item}/>
+            )))}
           </ImageRotate>
         </div>
       </div>
@@ -715,12 +692,17 @@ export function MarqueeChild({ children, className, style }: ChildProps) {
   )
 }
 
-export function ItemFeature({ item, className, style }: { item: Item } & StyleProps) {
+export function ItemFeature({ item, className, style, noLink }: { item: Item, noLink?: boolean } & StyleProps) {
   return (
     <div className={`itemFeature ${className || ''}`} style={style}>
-      <Link to={`/items/${item.id}`}>
+      {!!noLink
+        ? (
         <img src={item.images[0]} alt={item.title} />
-      </Link>
+      ) : (
+        <Link to={`/items/${item.id}`}>
+          <img src={item.images[0]} alt={item.title} />
+        </Link>
+      )}
     </div>
   )
 }

@@ -5,6 +5,9 @@ import { Marquee, MarqueeChild, ItemFeature, ChildProps, VerticalMarquee } from 
 import img1 from './assets/FC-T-model1.jpeg'
 import img4 from './assets/anti-face1.jpeg'
 import img5 from './assets/hoax.jpeg'
+import {shuffle} from 'lodash'
+import data from './data'
+
 
 
 import './Patriot.css'
@@ -21,29 +24,24 @@ export default function Patriot() {
         </Marquee>
       </div>
       <Content>
-        <VerticalMarquee direction={-1} className="borderRed">
-          <img src={img1} alt="blah"/>
-          <img src={img4} alt="blah"/>
-          <img src={img5} alt="blah"/>
-        </VerticalMarquee>
-
-        <VerticalMarquee direction={1} className="borderWhite">
-          <img src={img1} alt="blah"/>
-          <img src={img4} alt="blah"/>
-          <img src={img5} alt="blah"/>
-        </VerticalMarquee>
-
-        <VerticalMarquee direction={-1} className="borderBlue">
-          <img src={img1} alt="blah"/>
-          <img src={img4} alt="blah"/>
-          <img src={img5} alt="blah"/>
+        <VerticalMarquee direction={-1} className="borderWhite">
+          {shuffle(data.patriot.map(item => (
+            <ItemFeature key={item.id} item={item}/>
+          )))}
         </VerticalMarquee>
 
         <VerticalMarquee direction={1} className="borderRed">
-          <img src={img1} alt="blah"/>
-          <img src={img4} alt="blah"/>
-          <img src={img5} alt="blah"/>
+          {shuffle(data.patriot.map(item => (
+            <ItemFeature key={item.id} item={item}/>
+          )))}
         </VerticalMarquee>
+
+        <VerticalMarquee direction={-1} className="borderBlue">
+          {shuffle(data.patriot.map(item => (
+            <ItemFeature key={item.id} item={item}/>
+          )))}
+        </VerticalMarquee>
+
       </Content>
 
     </>
@@ -84,7 +82,7 @@ function Background() {
 
 function Content({children}: ChildProps) {
   return (
-    <div style={{display: 'flex', justifyContent: 'center'}}>
+    <div style={{display: 'flex', justifyContent: 'center', }}>
       <div className="patriotContent">{children}</div>
     </div>
   )

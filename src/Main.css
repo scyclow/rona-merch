@@ -695,6 +695,11 @@ h4.rmName {
   height: 300px;
   object-fit: contain;
 }
+.itemFeatureSm img {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+}
 
 
 .verticalMarquee {

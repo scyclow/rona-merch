@@ -21,13 +21,19 @@
 .itemTitle {
   font-size: 70px;
   font-weight: 400;
-  margin-bottom: 10px;
+  margin-top: 0.5em;
+  margin-bottom: 0.75em;
   /*border: ;*/
 }
 
+@media (max-width: 750px) {
+  .itemTitle {
+    text-align: center;
+  }
+}
 @media (max-width: 550px) {
   .itemTitle {
-    font-size: 45px
+    font-size: 45px;
   }
 }
 
@@ -123,13 +129,15 @@
 }
 
 .buyNowLink {
+  text-align: center;
   font-size: 25px;
   font-weight: 600;
   padding: 8px;
   border: 3px solid;
   border-radius: 3px;
-  margin-top: 10px;
+  margin: 10px 5px;
   transition: 1s;
+  box-shadow: -2px 2px 3px #666;
 }
 
 .itemLeftCol:hover .buyNowLink {
