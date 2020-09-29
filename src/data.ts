@@ -23,40 +23,7 @@ export type Data = {
   bargain: Array<Item>
 }
 
-const authors = {
-  wendy: {
-    author: 'WendyPilsen',
-  },
-  dumbo: {
-    author: 'DumboTheClown',
-  },
-  pleiadian: {
-    author: 'ActualPleiadian',
-  },
-  vince: {
-    author: 'VinceSlickson',
-  },
-  octo: {
-    author: 'octofuzz',
-  },
-  bob: {
-    author: 'BullseyeBob',
-  },
-  ray: {
-    author: 'ray',
-  },
-  salvation: {
-    author: 'SweetSalvation',
-  },
-  tom: {
-    author: 'TargetedTom',
-  },
-  stupid: {
-    author: 'stupid',
-  }
-}
 
-// const tShirtImages = (id: string) => shuffle([
 const tShirtImages = (id: string) => shuffle([
   process.env.PUBLIC_URL + '/' + id + '-0.jpeg',
   process.env.PUBLIC_URL + '/' + id + '-1.jpeg',
@@ -78,28 +45,12 @@ const fullFaceMaskImages = (id: string) => shuffle([
   process.env.PUBLIC_URL + '/' + id + '-5.jpeg',
 ])
 
-
-const test = {
-  id: 'test',
-  title: 'Rona Merch Test Title T Mask',
-  images: [],
-  link: '',
-  description: "There's no better way to show the world that you're a proud American than by flaunting it with this stunning image of America's mascot: the majestic Bald Eagle",
-  reviews: [
-    {
-      ...authors.salvation,
-      date: '9/25/20',
-      rating: 4,
-      content: `I wear this shirt every day that i wake up and feel proud to be an American on God's green earth let me tell ya! The only thing that would make this better is if the picutre eagle was a bit sharper but other than that it's my favorite t shirt in my arsenal!`
-    },
-    {
-      ...authors.ray,
-      date: '9/26/20',
-      rating: 4,
-      content: `how do I buy the product?`
-    }
-  ]
-}
+// TODO
+  // full masks
+    // - crazy for adrenachrome https://www.zazzle.com/pd/spp?dz=01d34249-179e-4d73-8af0-ca2eed56a9a5
+    // - fake news
+    // - rona merch co https://www.zazzle.com/pd/spp?dz=9bc3dd90-6f52-4726-8814-44e43c4b8305
+    // - pattern 1 https://www.zazzle.com/pd/spp?dz=a836f76a-c758-4de0-968f-ed4a8322134e
 
 const data: Data = {
   patriot: shuffle([
@@ -107,12 +58,11 @@ const data: Data = {
       id: 'proud-american-t',
       title: 'Proud American T',
       link: '',
-      // images: tShirtImages('619b9cda-2c73-44c5-96ee-14cfc6008831'),
       images: tShirtImages('proud-american-t'),
       description: "There's no better way to show the world that you're a proud American than by flaunting it with this stunning image of America's mascot: the majestic Bald Eagle",
       reviews: [
         {
-          ...authors.salvation,
+          author: 'SweetSalvation',
           date: '9/25/20',
           rating: 4,
           content: `I wear this shirt every day that i wake up and feel proud to be an American on God's green earth let me tell ya! The only thing that would make this better is if the picutre eagle was a bit sharper but other than that it's my favorite t shirt in my arsenal!`
@@ -120,10 +70,30 @@ const data: Data = {
       ]
     },
     {
+      id: 'afraid-of-feminism',
+      title: 'Afraid of Feminism Mask',
+      link: '',
+      images: fullFaceMaskImages('proud-american-t'),
+      description: "The fabric of American society has changed drastically over the last 70 years, due in no small part to the rise of feminism. Let the world know that you're scared of change, and miss simpler times.",
+      reviews: [
+        {
+          author: 'SweetSalvation',
+          date: '9/24/20',
+          rating: 4,
+          content: `I don't understand why any woman would say that they're a feminist it just doesn't make any sense to me why they wouldn't want to stay where they belong and that's in the kitchen making me a sandwich`
+        },
+        {
+          author: 'CrystalBell',
+          date: '9/28/20',
+          rating: 3,
+          content: `I would not wear this mask, personally, as feminism is a tremendous force of good in the world. But I'm glad that this mask exists so I know who to peg as an idiot.`
+        }
+      ]
+    },
+    {
       id: 'george-cat',
       title: 'Henry George Cat Mask',
       link: '',
-      // images: fullFaceMaskImages('68feda60-1da3-467f-b20e-ab8e8d8a161a'),
       images: fullFaceMaskImages('george-cat'),
       description: `Have you seen the cat? As most proponents of Henry George's Land Value Tax will tell you, once you "see the cat" and understand how deeply the LVT aligns with American values, you can't "unsee" it. Rock this vintage looks to tell everyone around you that you stand for Free Land, Free Trade, and Free People`,
       reviews: [
@@ -163,7 +133,6 @@ const data: Data = {
       id: 'guns-n-beer-dark',
       title: 'Guns N Beer Mask Dark',
       link: '',
-      // images: fullFaceMaskImages('fbfdbdb2-28b1-40af-86d7-2c4a85b71b00'),
       images: fullFaceMaskImages('guns-n-beer-dark'),
       description: "Nothing is more American then drinking beer and shooting guns. let your neighbors know what you're really all about.",
       reviews: [
@@ -185,7 +154,6 @@ const data: Data = {
       id: 'guns-n-beer-white',
       title: 'Guns N Beer Mask White',
       link: '',
-      // images: fullFaceMaskImages('fa40acb8-9a74-4a6b-9bbc-b5a236470135'),
       images: fullFaceMaskImages('guns-n-beer-white'),
       description: "Nothing is more American then drinking beer and shooting guns. let your neighbors know what you're really all about.",
       reviews: [
@@ -201,7 +169,6 @@ const data: Data = {
       id: 'antifa-antico',
       title: 'Antifascist Anticommunist Mask',
       link: '',
-      // images: fullFaceMaskImages('7a31c773-abf3-4fb2-aba2-15815ac3f06a'),
       images: fullFaceMaskImages('antifa-antico'),
       description: "Real Americans hate Fascism as much as they hate Communism. Show the world that you're a real American with this sleek modernist design. #WWG1WGA",
       reviews: [
@@ -217,9 +184,8 @@ const data: Data = {
       id: 'wwg1wga-q',
       title: 'WWG1WGA Q Mask',
       link: '',
-      // images: fullFaceMaskImages('14cb1052-0f6f-4eca-b584-bf8824127ccf'),
       images: fullFaceMaskImages('wwg1wga-q'),
-      description: "Celebrate the patriotic 1996 classic White Squall with this fetching minimalist design. ",
+      description: `Celebrate the patriotic 1996 classic White Squall with this fetching "Where We Go 1 We Go All" minimalist design.`,
       reviews: [
         {
           author: 'DumboTheClown',
@@ -253,7 +219,6 @@ const data: Data = {
       id: 'gas-mask',
       title: 'Gas Mask Mask',
       link: '',
-      // images: fullFaceMaskImages('786592f3-f00c-4041-9bf9-f59720dfdb7a'),
       images: fullFaceMaskImages('gas-mask'),
       description: `Whether you're braving the California wild fires, getting teargassed by the police, or simply browsing through your local COVID-19-invected super market, this face mask offers an extra layer of protection above the competition. Don't leave home without it!`,
       reviews: [
@@ -287,12 +252,10 @@ const data: Data = {
       id: 'infected1-mask',
       title: 'Infected Mask 1',
       link: '',
-      // images: fullFaceMaskImages('de02c477-1f2a-45a5-807f-02c1c0762496'),
       images: fullFaceMaskImages('infected1-mask'),
       description: `There's only one sure-fire way to make sure that people stay 6 feet away from you -- and that's by implying that you may be infected with COVID-19. `,
       reviews: [
         {
-          // author: 'TommyFlombego',
           author: 'HunterMcFarlane',
           date: '7/5/20',
           rating: -1,
@@ -313,15 +276,34 @@ const data: Data = {
       ]
     },
     {
+      id: 'infected2-mask',
+      title: 'Infected Mask 2',
+      link: '',
+      images: fullFaceMaskImages('infected1-mask'),
+      description: `There's only one sure-fire way to make sure that people stay 6 feet away from you -- and that's by implying that you may be infected with COVID-19. `,
+      reviews: [
+        {
+          author: 'HunterMcFarlane',
+          date: '7/5/20',
+          rating: 0,
+          content: `Again, this mask was NOT INFECTED, Why do people buy this garbage?`
+        },
+        {
+          author: 'Hubert',
+          date: '9/2/20',
+          rating: 4,
+          content: `This mask reminds me of my days as a young man in Korea. Not pleasent memories at all. But the mask is very comfortable.`
+        },
+      ]
+    },
+    {
       id: 'infected1-t',
       title: 'Infected T 1',
       link: '',
-      // images: tShirtImages('58542316-bfc5-46dc-b99a-658002772cc5'),
       images: tShirtImages('infected1-t'),
       description: `There's only one sure-fire way to make sure that people stay 6 feet away from you -- and that's by implying that you may be infected with COVID-19. `,
       reviews: [
         {
-          // author: 'TommyFlombego',
           author: 'HunterMcFarlane',
           date: '7/16/20',
           rating: 3,
@@ -336,10 +318,24 @@ const data: Data = {
       ]
     },
     {
+      id: 'infected2-t',
+      title: 'Infected T 2',
+      link: '',
+      images: tShirtImages('infected2-t'),
+      description: `There's only one sure-fire way to make sure that people stay 6 feet away from you -- and that's by implying that you may be infected with COVID-19. `,
+      reviews: [
+      {
+          author: 'ActualPleiadian',
+          date: '8/1/20',
+          rating: 5,
+          content: `This shirt is great!`
+        },
+      ]
+    },
+    {
       id: 'radio-wave-protection',
       title: 'Radio Wave Protection Mask',
       link: '',
-      // images: fullFaceMaskImages('2d5da480-4278-4e44-9318-dfe650aac28e'),
       images: fullFaceMaskImages('radio-wave-protection'),
       description: `With 5G technology right around the corner, cancer-causing radio waves and V2K attacks are top of mind for many. Take all the help you can get by donning this sharply designed mask.`,
       reviews: [
@@ -367,17 +363,57 @@ const data: Data = {
           rating: 4,
           content: `Reading through these comments, it seems like this mask is rairly controversial. I am obviously not qualified to speak to the science behind it, but I can speak to my personal experience. And with that in mind, I'm fairly confident that this mask has reduced my exposure to EMFs, and has overall had a positive impact on my mental health. And even if it's technically possible that the effects are psychosomatic, better safe than sorry!`
         },
-
       ]
     },
-    test,
+    {
+      id: 'wear-your-mask',
+      title: 'Wear Your Mask Mask',
+      link: '',
+      images: tShirtImages('wear-your-mask'),
+      description: `Sometimes you just want to let your mask do the talking for you. Perfect for long subway rides or grocery shopping when you want to give nearby non-mask-wearing bystanders a reminder that they should wear their fucking mask.`,
+      reviews: [
+        {
+          author: 'YeeHaw',
+          date: '8/30/20',
+          rating: 4,
+          content: `Down here in Florida some people just aren't respectful. And usually I just don't want to open my mouth`
+        },
+        {
+          author: 'octofuzz',
+          date: '9/2/20',
+          rating: 5,
+          content: `This mask is pretty solid overall. It definitely gets the point across. Sometimes when I'm riding the subway and I see an idiot not wearing their mask, I'll look them directly in the eyes and point at my face. Works every time.`
+        },
+      ]
+    },
+    {
+      id: 'anti-facial1',
+      title: 'Anti Facial Recognition Mask 1',
+      link: '',
+      images: tShirtImages('anti-facial1'),
+      description: `Whether you're protesting for civil rights or freeing children from the grips of satanic pedophiles, one thing is constant: the government is increasingly using facial recognition technology to keep tabs on you and your political leanings. Using the latest advancements in anti-facial recognition technology, this mask will garble the signal of anyone watching you, making it hard to link you to groups considered problematic by authority figures.`,
+      reviews: [
+        {
+          author: 'TargetedTom',
+          date: '7/12/20',
+          rating: 5,
+          content: `Thank f_cking god. I've needed a mask like this for quite some time. The description really sells this product short. There are plenty of agencies and groups who employ facial recognition and gang stalking techniques that you need to watch out for. Forget COVID -- this is mask a must-wear ant time you leave the house, pandemic or no pandemic.`
+        },
+        {
+          author: 'pastisfuture',
+          date: '9/11/20',
+          rating: 5,
+          content: `I have to agree with @TargetedTom here. Anti-facial recog masks are critical in today's day and age`
+        },
+      ]
+    },
+
   ]),
   branded: shuffle([
     {
       id: 'fastcash-lime',
       title: 'FastCash Logo T Lime Green Purple',
       link: '',
-      // images: tShirtImages('ae7f66ce-d683-45ee-b458-848f3127fffe'),
       images: tShirtImages('fastcash-lime'),
       description: `Stand out from the crowd and let everyone know that you're a winner with the bank account to back it up. Great for biking safely at night -- drivers will think twice before they hit you with their vehicle, lest they find themselves in the middle of a costly lawsuit!`,
       reviews: [
@@ -414,11 +450,58 @@ const data: Data = {
       ]
     },
     {
+      id: 'fastcash-bw',
+      title: 'FastCash Logo B/W T',
+      link: 'https://www.zazzle.com/fastcash_logo_b_w_t_t_shirt-235890455630096256',
+      images: tShirtImages('fastcash-bw'),
+      description: `Nothing beats the classic style of the Black/White FastCashMoneyPlus logo T. No frills. All business.`,
+      reviews: [
+        {
+          author: 'VinceSlickson',
+          date: '9/27/20',
+          rating: 5,
+          content: `Clearly one of the best designed t-shirts on the market. I'd also check out the dark version of this shirt for more formal occasions`
+        },
+        {
+          author: 'DumboTheClown',
+          date: '9/28/20',
+          rating: 5,
+          content: `What a great shirt!`
+        },
+        {
+          author: 'WendyPilsen',
+          date: '9/28/20',
+          rating: 5,
+          content: `this shirt fits well`
+        },
+      ]
+    },
+    {
+      id: 'fastcash-bw-dark',
+      title: 'FastCash Logo B/W Dark T',
+      link: '',
+      images: darkTshirtImages('fastcash-bw-dark'),
+      description: `Nothing beats the classic style of the Black/White FastCashMoneyPlus logo T. No frills. All business. Break out this sleek dark rendition for any occasion`,
+      reviews: [
+        {
+          author: 'VinceSlickson',
+          date: '9/27/20',
+          rating: 5,
+          content: `This, frankly, is my favorite t-shirt of all time. Well fitting, slick logo, comfortable, stylish, and versatile enough to wear for any occasion. This belongs in everyone's wardrobe.`
+        },
+        {
+          author: 'WendyPilsen',
+          date: '9/29/20',
+          rating: 5,
+          content: `i have several pairs of this shirt`
+        },
+      ]
+    },
+    {
       id: `fastcash-colorful`,
       title: "FastCash Logo Mask Colorful",
       link: '',
       description: 'This vibrant, multi-colored face mask is the perfect way to express your identity as someone who is both forward-thinking and ambitious.',
-      // images: fullFaceMaskImages('2bfff509-dace-4287-886c-af100e2562f8'),
       images: fullFaceMaskImages('fastcash-colorful'),
       reviews: [
         {
@@ -435,15 +518,12 @@ const data: Data = {
         }
       ],
     },
-    test,
-    test,
   ]),
   bargain: shuffle([
     {
       id: 'wakka-wakka',
       title: 'Wakka Wakka Mask',
       link: '',
-      // images: fullFaceMaskImages('84086b27-9d4a-4a68-8d70-f373d48fe436'),
       images: fullFaceMaskImages('wakka-wakka'),
       description: `Wakka Wakka all the way home with this hilarious throwback.`,
       reviews: [
@@ -473,7 +553,6 @@ const data: Data = {
       id: 'smiling-eyes',
       title: 'Smiling Eyes Mask',
       link: '',
-      // images: fullFaceMaskImages('5c0ef824-8029-460a-bab6-8269ea420eb1'),
       images: fullFaceMaskImages('smiling-eyes'),
       description: `Who says that it has to be hard to read facial cues when you're wearing a face mask? Use this adorable mask to project good vibes all around and to let the world know: you're smiling!`,
       reviews: [
@@ -489,7 +568,6 @@ const data: Data = {
       id: 'apocalypse',
       title: 'Apocalypse Mask',
       link: '',
-      // images: fullFaceMaskImages('aab5243c-3815-4155-b616-b4ac59f43328'),
       images: fullFaceMaskImages('apocalypse'),
       description: `Everyone knows it's coming, but no one knows how many years we have left. So live your last days out in style with this bold face mask!`,
       reviews: [
@@ -517,7 +595,6 @@ const data: Data = {
       id: 'freemason-blood-sacrifice',
       title: 'Freemason Blood Sacrifice Mask',
       link: '',
-      // images: fullFaceMaskImages('9b931020-ae11-4b9f-9839-96de6a0ead68'),
       images: fullFaceMaskImages('freemason-blood-sacrifice'),
       description: ``,
       reviews: [
@@ -533,7 +610,6 @@ const data: Data = {
       id: 'cluck',
       title: 'Cluck Mask',
       link: '',
-      // images: fullFaceMaskImages('104479fc-5499-4e55-bdb4-2ce7f68a6c78'),
       images: fullFaceMaskImages('cluck'),
       description: ``,
       reviews: [

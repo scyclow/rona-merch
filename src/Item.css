@@ -71,15 +71,14 @@
 }
 
 .itemSectionHeader {
-  text-decoration: underline;
   font-weight: 500;
   font-size: 20px;
   margin-bottom: 10px;
 }
 .itemSectionSubHeader {
-  font-size: 14px;
-  font-weight: 400;
-  margin-bottom: 20px;
+  font-size: 10px;
+  font-weight: 600;
+  padding-bottom: 20px;
 }
 
 @media (max-width: 400px) {
@@ -91,7 +90,7 @@
 }
 
 .description {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .descriptionText {
@@ -142,6 +141,12 @@
 
 .itemLeftCol:hover .buyNowLink {
   transform: rotate(720deg);
+}
+
+.reviews {
+  border: 1px dotted;
+  padding: 10px;
+  background-color: #fff;
 }
 
 .reviewInput {

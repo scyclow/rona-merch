@@ -6,7 +6,7 @@ import Logo from './Logo'
 import logoNight from './logo-night.svg'
 import flashSale from './flashSale.svg'
 import './Main.css'
-import data, { Item } from './data'
+import data, { Item, allData } from './data'
 
 export default function Main() {
   return (
@@ -196,9 +196,9 @@ function FeaturedItems() {
         </RotateZ>
       </div>
       <ImageMarquee>
-        {shuffle(data.patriot.map(item => (
-          <ItemFeature noLink key={item.id} item={item}/>
-        )))}
+        {shuffle(allData).slice(0, 7).map(item => (
+          <ItemFeature key={item.id} item={item}/>
+        ))}
       </ImageMarquee>
     </div>
   )
@@ -376,7 +376,7 @@ function PatriotTitle() {
 
 function BrandedTitle() {
   return (
-    <MarqueeReverse className="flashing brandedTitleMarquee" duration={2.7}>
+    <MarqueeReverse className="brandedTitleMarquee" duration={2.7}>
       <span className="brandedTitleMarqueeText">BRANDED MERCH</span>
     </MarqueeReverse>
   )
@@ -782,7 +782,11 @@ function ImageShrinkRotation({children, delay, ms, style}: {ms: number, delay?: 
   return (
     <div style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', ...style}}>
       <div className="imageShrinkRotation" style={{ transform: `scale(${scaleSize})`}}>
-        {/*activeImage*/}
+        {images.map((image, i) =>
+          <div style={{ display: i === ix % images.length ? 'block': 'none'}}>
+            {image}
+          </div>
+        )}
       </div>
     </div>
   )

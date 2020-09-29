@@ -73,9 +73,9 @@ function Content() {
             <h2 className="itemSectionHeader">PRODUCT DESCRIPTION</h2>
             <p className="descriptionText">{item.description || 'DESCRIPTION MISSING'}</p>
           </div>
+          <h2 className="itemSectionHeader">REVIEWS</h2>
           <div className="reviews">
-            <h2 className="itemSectionHeader">REVIEWS</h2>
-            <h3 className="itemSectionSubHeader">Powered by <a className="link" href="https://friendworld.social/" target="_blank">friendworld.social</a></h3>
+            <a href="https://friendworld.social/" target="_blank"><h3 className="itemSectionSubHeader">Powered by <span className="link">friendworld.social</span></h3></a>
             {item.reviews.map(review => (
               <div key={review.content} className="review">
                 <h4 className="reviewRating">{review.rating} Stars!</h4>

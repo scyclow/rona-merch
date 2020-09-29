@@ -1,6 +1,7 @@
 const fs = require('fs')
 const https = require('https')
 const Stream = require('stream').Transform
+const sharp = require('sharp')
 
 const tShirtImages = (id) => [
   `https://www.zazzle.com/rlv/svc/view?rlvnet=1&realview=113745894146800642&design=${id}&style=hanes_mens_crew_tshirt_5250&size=a_s&max_dim=325&bg=0xffffff`,
@@ -22,6 +23,9 @@ const fullFaceMaskImages = (id) => [
   `https://www.zazzle.com/rlv/svc/view?realview=113172235682006239&design=${id}&max_dim=325&bg=0xffffff`,
   `https://www.zazzle.com/rlv/svc/view?realview=113885022310819668&design=${id}&max_dim=325&bg=0xffffff`,
 ]
+
+
+
 
 const data = {
   patriot: [
@@ -49,6 +53,10 @@ const data = {
       id: 'wwg1wga-q',
       images: fullFaceMaskImages('14cb1052-0f6f-4eca-b584-bf8824127ccf'),
     },
+    {
+      id: 'afraid-of-feminism',
+      images: fullFaceMaskImages('1a72cc7c-8f8c-4260-bdd8-2fe0e41857c2'),
+    },
   ],
   safety: [
     {
@@ -60,15 +68,39 @@ const data = {
       images: fullFaceMaskImages('de02c477-1f2a-45a5-807f-02c1c0762496'),
     },
     {
+      id: 'infected2-mask',
+      images: fullFaceMaskImages('3a31d777-3ffb-437a-a072-8fd75f555e25')
+    },
+    {
       id: 'infected1-t',
       images: tShirtImages('58542316-bfc5-46dc-b99a-658002772cc5'),
+    },
+    {
+      id: 'infected2-t',
+      images: tShirtImages('353cabaa-f3ee-416f-9c8c-2b415ae10b07'),
     },
     {
       id: 'radio-wave-protection',
       images: fullFaceMaskImages('2d5da480-4278-4e44-9318-dfe650aac28e'),
     },
+    {
+      id: 'wear-your-mask',
+      images: fullFaceMaskImages('614d361d-be1e-4edf-84f4-e68c2fe36a9f'),
+    },
+    {
+      id: 'anti-facial1',
+      images: fullFaceMaskImages('26afe91c-be63-49c0-9f76-ab27160e3f71'),
+    },
   ],
   branded: [
+    {
+      id: 'fastcash-bw',
+      images: tShirtImages('f64ed6c7-cf64-4b23-8127-746a76169e82')
+    },
+    {
+      id: 'fastcash-bw-dark',
+      images: darkTshirtImages('751e51e6-3b74-411d-ae43-031055218869')
+    },
     {
       id: 'fastcash-lime',
       images: tShirtImages('ae7f66ce-d683-45ee-b458-848f3127fffe'),
@@ -83,7 +115,6 @@ const data = {
       id: 'wakka-wakka',
       images: fullFaceMaskImages('84086b27-9d4a-4a68-8d70-f373d48fe436'),
     },
-
     {
       id: 'smiling-eyes',
       images: fullFaceMaskImages('5c0ef824-8029-460a-bab6-8269ea420eb1'),
@@ -125,9 +156,15 @@ const pullImage = (url, name) => new Promise((res, rej) => {
     response.on('data', chunk => data.push(chunk))
 
     response.on('end', () => {
-      fs.writeFileSync(PATH + name, data.read())
-      console.log(`${url} -> ${PATH + name}`)
-      res(name)
+      // fs.writeFileSync(PATH + name, data.read())
+
+      sharp(data.read())
+        .resize(320, 320)
+        .toFile(PATH + name, err => {
+          if (err) console.log(err, url, name,'<<<<<<<<<<<<<<<<<<<<<')
+          res()
+        })
+
     })
   }).end()
 })
@@ -139,22 +176,18 @@ const allData = [
   ...data.safety,
 ]
 
-fs.readdir(PATH, (err, files) => {
-  if (err) throw new Error(err)
-  console.log('start...')
 
-  const promises = allData.map(item => {
-    console.log('collecting item', item.id)
-    const responses = item.images.map((image, i) => {
-      const name = item.id + '-' + i + '.jpeg'
-      console.log('pulling image', image)
+console.log('start...')
 
-      if (files.includes(name)) return Promise.resolve()
-      return pullImage(image, name)
-    })
-    return Promise.all(responses)
-  })
-  Promise.all(promises).then(() => {
-    process.exit()
-  })
+Promise.all(allData.map(item => {
+
+  return Promise.all(item.images.map((image, i) => {
+    const name = item.id + '-' + i + '.jpeg'
+
+    return pullImage(image, name)
+  }))
+})).then(() => {
+  console.log('completed')
+  // process.exit()
 })
+

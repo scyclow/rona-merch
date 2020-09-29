@@ -166,6 +166,8 @@ a {
 
 .brandedTitleMarquee {
   background-color: #000;
+  color: #00ffff;
+  text-shadow: 2px 2px #ff0000;
   border: 2px solid;
 }
 
