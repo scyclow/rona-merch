@@ -24,6 +24,7 @@
   "scripts": {
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
+    "img": "node scripts/pullImages.js",
     "build": "react-scripts build && cp ./build/index.html ./build/404.html && echo \"ronamerch.co\" > build/CNAME"
   },
   "eslintConfig": {

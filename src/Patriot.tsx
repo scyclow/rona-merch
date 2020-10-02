@@ -21,19 +21,19 @@ export default function Patriot() {
         </Marquee>
       </div>
       <Content>
-        <VerticalMarquee direction={-1} className="borderWhite">
+        <VerticalMarquee direction={-1} duration={48000} className="borderWhite">
           {shuffle(data.patriot.map(item => (
             <ItemFeature key={item.id} item={item}/>
           )))}
         </VerticalMarquee>
 
-        <VerticalMarquee direction={1} className="borderRed">
+        <VerticalMarquee direction={1} duration={48000} className="borderRed">
           {shuffle(data.patriot.map(item => (
             <ItemFeature key={item.id} item={item}/>
           )))}
         </VerticalMarquee>
 
-        <VerticalMarquee direction={-1} className="borderBlue">
+        <VerticalMarquee direction={-1} duration={48000} className="borderBlue">
           {shuffle(data.patriot.map(item => (
             <ItemFeature key={item.id} item={item}/>
           )))}

@@ -47,9 +47,7 @@ const fullFaceMaskImages = (id: string) => shuffle([
 
 // TODO
   // full masks
-    // - crazy for adrenachrome https://www.zazzle.com/pd/spp?dz=01d34249-179e-4d73-8af0-ca2eed56a9a5
     // - fake news
-    // - rona merch co https://www.zazzle.com/pd/spp?dz=9bc3dd90-6f52-4726-8814-44e43c4b8305
     // - pattern 1 https://www.zazzle.com/pd/spp?dz=a836f76a-c758-4de0-968f-ed4a8322134e
 
 const data: Data = {
@@ -73,7 +71,7 @@ const data: Data = {
       id: 'afraid-of-feminism',
       title: 'Afraid of Feminism Mask',
       link: '',
-      images: fullFaceMaskImages('proud-american-t'),
+      images: fullFaceMaskImages('afraid-of-feminism'),
       description: "The fabric of American society has changed drastically over the last 70 years, due in no small part to the rise of feminism. Let the world know that you're scared of change, and miss simpler times.",
       reviews: [
         {
@@ -213,6 +211,40 @@ const data: Data = {
         },
       ]
     },
+    {
+      id: 'adrenochrome',
+      title: 'Crazy For Adrenochrome Mask',
+      link: '',
+      images: fullFaceMaskImages('adrenochrome'),
+      description: `Adrenochrome is a chemical compound with the molecular formula C9H9NO3 produced by the oxidation of adrenaline (epinephrine). The derivative carbazochrome is a hemostatic medication. Despite a similarity in chemical names, it is unrelated to chrome or chromium.`,
+      reviews: [
+        {
+          author: 'Sarah_Johnson',
+          date: '10/2/20',
+          rating: 1,
+          content: `Disgusting`
+        },
+        {
+          author: 'TommyFlombego',
+          date: '10/2/20',
+          rating: 4,
+          content: `What a lot of people don't get is that this is tongue-in-cheek. No one in their right mind is crazy for adrenochrome. That is, unless they're crazy.`
+        },
+        {
+          author: 'SweetSalvation',
+          date: '10/2/20',
+          rating: 2,
+          content: `This description doesn't even get to the meat of what adrenochroms is or why it's important so let me educate anyone who might be reading this: the onyl reason anyone gives two licks about adrenochrome is because the Satanic pedophiles that run the world drink the blood directly out of the veins of terrified children to get their fix of adrenochrome to stay young and vigorous. When was the last time you took a look at Joe Biden it's clear as crystal that he's drinkin that kiddie blood.`
+        },
+        {
+          author: 'BullseyeBob',
+          date: '10/4/20',
+          rating: 3,
+          content: `There seems to be quite a bit of misinformation floating around out there. Adrenochromeis a chemical that's metabolized by the adrenoline of terrified children. This is why it's imperative that the global elite terrify their victims before consoming their blood.`
+        },
+      ]
+    },
+
   ]),
   safety: shuffle([
     {
@@ -409,6 +441,7 @@ const data: Data = {
     },
 
   ]),
+
   branded: shuffle([
     {
       id: 'fastcash-lime',
@@ -518,7 +551,62 @@ const data: Data = {
         }
       ],
     },
+    {
+      id: `ronamerch-mask`,
+      title: "Rona Merch Co. Mask Official",
+      link: '',
+      description: 'Strut your stuff with the OFFICIAL Rona Merch Co. face mask. Get in on the ground floor of the hottest new face mask brand, all while supporting small businesses throughout the pandemic.',
+      images: fullFaceMaskImages('ronamerch-mask'),
+      reviews: [
+        {
+          author: 'username',
+          date: '8/10/20',
+          rating: 5,
+          content: `I like this mask and the branding`
+        },
+        {
+          author: 'CrystalBell',
+          date: '8/12/20',
+          rating: 2,
+          content: 'This mask is a hot mess'
+        },
+        {
+          author: 'ActualPleiadian',
+          date: '9/3/20',
+          rating: 4,
+          content: `This mask looks great! I would definitely wear it!`
+        }
+      ],
+    },
+    {
+      id: `ronamerch-t`,
+      title: "Rona Merch Co. T Official",
+      link: '',
+      description: 'Strut your stuff with the OFFICIAL Rona Merch Co. T. Get in on the ground floor of the hottest new face mask brand, all while supporting small businesses throughout the pandemic.',
+      images: tShirtImages('ronamerch-t'),
+      reviews: [
+        {
+          author: 'username',
+          date: '8/10/20',
+          rating: 5,
+          content: `I like this mask and the branding`
+        },
+        {
+          author: 'fuckface99',
+          date: '8/21/20',
+          rating: 5,
+          content: 'THIS SHIRT ROCKS'
+        },
+        {
+          author: 'DumboTheClown',
+          date: '9/1/20',
+          rating: 5,
+          content: `Very stylish!`
+        }
+      ],
+    },
   ]),
+
   bargain: shuffle([
     {
       id: 'wakka-wakka',
@@ -548,7 +636,6 @@ const data: Data = {
         },
       ]
     },
-
     {
       id: 'smiling-eyes',
       title: 'Smiling Eyes Mask',
@@ -620,6 +707,21 @@ const data: Data = {
           content: `stupid`
         },
       ]
+    },
+    {
+      id: `pattern1`,
+      title: "Pattern 1",
+      link: '',
+      description: '',
+      images: tShirtImages('pattern1'),
+      reviews: [
+        {
+          author: 'TommyFlombego',
+          date: '9/11/20',
+          rating: 3,
+          content: `Do you see the all-seeing eye?`
+        },
+      ],
     },
   ]),
 }

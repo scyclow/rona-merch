@@ -57,6 +57,10 @@ const data = {
       id: 'afraid-of-feminism',
       images: fullFaceMaskImages('1a72cc7c-8f8c-4260-bdd8-2fe0e41857c2'),
     },
+    {
+      id: 'adrenochrome',
+      images: fullFaceMaskImages('195a30c2-41c0-4147-a363-454e1eded325'),
+    },
   ],
   safety: [
     {
@@ -109,6 +113,14 @@ const data = {
       id: `fastcash-colorful`,
       images: fullFaceMaskImages('2bfff509-dace-4287-886c-af100e2562f8'),
     },
+    {
+      id: 'ronamerch-mask',
+      images: fullFaceMaskImages('f2a2999a-7b19-4135-82a3-583f26033544'),
+    },
+    {
+      id: 'ronamerch-t',
+      images: tShirtImages('399af8ed-e7fa-4d0d-a170-adbbb999ae22'),
+    },
   ],
   bargain: [
     {
@@ -130,6 +142,10 @@ const data = {
     {
       id: 'cluck',
       images: fullFaceMaskImages('104479fc-5499-4e55-bdb4-2ce7f68a6c78'),
+    },
+    {
+      id: 'pattern1',
+      images: fullFaceMaskImages('c1737843-9996-405a-8ece-83393946e04b'),
     },
   ],
 }
