@@ -14,6 +14,7 @@ export type Item = {
   link: string
   description: string
   reviews: Array<Review>
+  emText?: string
 }
 
 export type Data = {
@@ -423,6 +424,7 @@ const data: Data = {
       id: 'anti-facial1',
       title: 'Anti Facial Recognition Mask 1',
       link: '',
+      emText: 'ANTI-FACIAL RECOG',
       images: tShirtImages('anti-facial1'),
       description: `Whether you're protesting for civil rights or freeing children from the grips of satanic pedophiles, one thing is constant: the government is increasingly using facial recognition technology to keep tabs on you and your political leanings. Using the latest advancements in anti-facial recognition technology, this mask will garble the signal of anyone watching you, making it hard to link you to groups considered problematic by authority figures.`,
       reviews: [
@@ -460,7 +462,8 @@ const data: Data = {
   branded: shuffle([
     {
       id: 'fastcash-lime',
-      title: 'FastCash Logo T Lime Green Purple',
+      emText: 'BEST SELLER',
+      title: 'FastCash Logo T Safety Green Purple',
       link: '',
       images: tShirtImages('fastcash-lime'),
       description: `Stand out from the crowd and let everyone know that you're a winner with the bank account to back it up. Great for biking safely at night -- drivers will think twice before they hit you with their vehicle, lest they find themselves in the middle of a costly lawsuit!`,

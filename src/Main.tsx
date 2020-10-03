@@ -200,6 +200,9 @@ function FeaturedItems() {
           <ItemFeature key={item.id} item={item}/>
         ))}
       </ImageMarquee>
+      <div className="entireCatalog">
+        <Link to="/items">{'View Full Product Catalog >'}</Link>
+      </div>
     </div>
   )
 }
@@ -677,17 +680,38 @@ export function MarqueeChild({ children, className, style }: ChildProps) {
   )
 }
 
-export function ItemFeature({ item, className, style, noLink }: { item: Item, noLink?: boolean } & StyleProps) {
+export function ItemFeature({ item, className, style, noLink, showTitle, border }: { item: Item, noLink?: boolean, showTitle?: boolean, border?: boolean } & StyleProps) {
+  const emTextElement = (
+    <div className="tilt">
+      <Marquee>
+        <span className="tiltText">{item.emText}</span>
+      </Marquee>
+    </div>
+  )
+
+  const borderStyle = {
+    border: border ? '4px solid' : '',
+    overflow: 'hidden'
+  }
   return (
-    <div className={`itemFeature ${className || ''}`} style={style}>
-      {!!noLink
-        ? (
-        <img src={item.images[0]} alt={item.title} />
-      ) : (
-        <Link to={`/items/${item.id}`}>
-          <img src={item.images[0]} alt={item.title} />
-        </Link>
-      )}
+    <div className={`itemFeature ${className || ''}`} style={{ ...style}}>
+      <div>
+        {!!noLink
+          ? (
+          <div style={borderStyle}>
+            {item.emText && emTextElement}
+            <img src={item.images[0]} alt={item.title} />
+          </div>
+        ) : (
+          <Link to={`/items/${item.id}`}>
+            <div style={borderStyle}>
+              {item.emText && emTextElement}
+              <img src={item.images[0]} alt={item.title} />
+            </div>
+            {showTitle && <div className="itemFeatureTitle">{item.title}</div>}
+          </Link>
+        )}
+      </div>
     </div>
   )
 }

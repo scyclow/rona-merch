@@ -15,7 +15,7 @@ export default function Item() {
 }
 
 
-function Header() {
+export function Header() {
   return (
     <Link to="/" className="itemHeader">
       <Logo size={70}/>
@@ -35,7 +35,7 @@ function Header() {
   )
 }
 
-function Wrapper({ children }: ChildProps) {
+export function Wrapper({ children }: ChildProps) {
   return (
     <div className="itemWrapper">
       {children}

@@ -23,7 +23,6 @@
   font-weight: 400;
   margin-top: 0.5em;
   margin-bottom: 0.75em;
-  /*border: ;*/
 }
 
 @media (max-width: 750px) {
@@ -139,7 +138,7 @@
   box-shadow: -2px 2px 3px #666;
 }
 
-.itemLeftCol:hover .buyNowLink {
+.buyNowLink:hover {
   transform: rotate(720deg);
 }
 

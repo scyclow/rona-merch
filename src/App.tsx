@@ -5,6 +5,7 @@ import Safety from './Safety'
 import Branded from './Branded'
 import Bargain from './Bargain'
 import Item from './Item'
+import AllItems from './AllItems'
 import { BrowserRouter, Route, Switch, useLocation } from 'react-router-dom'
 import './App.css'
 
@@ -22,7 +23,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div style={{ width: '100vw', overflow: 'hidden'}}>
+      <div style={{ width: '100vw', minHeight: '90vh', paddingBottom: 20, overflow: 'hidden'}}>
         <Switch>
           <Route path="/patriot">
             <Patriot />
@@ -42,6 +43,10 @@ export default function App() {
 
           <Route path="/items/:itemId">
             <Item />
+          </Route>
+
+          <Route exact path="/items">
+            <AllItems />
           </Route>
 
           <Route path="/">

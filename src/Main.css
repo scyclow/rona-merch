@@ -558,11 +558,17 @@ h4.rmName {
 
 .tilt {
   height: 0;
-  /*width: 750px;*/
+  width: 300px;
   position: relative;
-  left: -110px;
-  top: 42px;
+  right: 61px;
+  top: 89px;
   transform: rotate(-45deg);
+}
+
+.tiltText {
+  padding: 10px;
+  background-color: #fff;
+  line-height: 1.5;
 }
 
 .imageSectionTitle {
@@ -689,6 +695,7 @@ h4.rmName {
   cursor: pointer;
   display: inline-block;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .itemFeature:hover * {
@@ -705,6 +712,12 @@ h4.rmName {
   width: 250px;
   height: 250px;
   object-fit: contain;
+}
+
+.itemFeatureTitle {
+  /*font-size: 20px;*/
+  padding-top: 5px;
+  text-align: center;
 }
 
 
@@ -744,6 +757,11 @@ h4.rmName {
   100% {
     transform: translateY(-50%);
   }
+}
+
+.entireCatalog {
+  margin-top: 5px;
+  text-decoration: underline;
 }
 
 .topReviewTestemonial {
