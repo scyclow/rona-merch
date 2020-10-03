@@ -11,6 +11,11 @@ import './Patriot.css'
 
 
 export default function Patriot() {
+  const items = shuffle(data.patriot)
+
+  const firstSection = items.slice(0, Math.floor(items.length / 3))
+  const secondSection = items.slice(Math.floor(items.length / 3), Math.floor(items.length * 2 / 3))
+  const thirdSection = items.slice(Math.floor(items.length * 2 / 3), items.length)
   return (
     <>
       <Background />
@@ -22,21 +27,21 @@ export default function Patriot() {
       </div>
       <Content>
         <VerticalMarquee direction={-1} duration={48000} className="borderWhite">
-          {shuffle(data.patriot.map(item => (
+          {firstSection.map(item => (
             <ItemFeature key={item.id} item={item}/>
-          )))}
+          ))}
         </VerticalMarquee>
 
         <VerticalMarquee direction={1} duration={48000} className="borderRed">
-          {shuffle(data.patriot.map(item => (
+          {secondSection.map(item => (
             <ItemFeature key={item.id} item={item}/>
-          )))}
+          ))}
         </VerticalMarquee>
 
         <VerticalMarquee direction={-1} duration={48000} className="borderBlue">
-          {shuffle(data.patriot.map(item => (
+          {thirdSection.map(item => (
             <ItemFeature key={item.id} item={item}/>
-          )))}
+          ))}
         </VerticalMarquee>
 
       </Content>
@@ -56,9 +61,9 @@ function LogoLink() {
 
 function Background() {
   return (
-    <div className="background">
-      <div className="container">
-        <div className="rotate">
+    <div className="patriotBackground">
+      <div className="patriotContainer">
+        <div className="rotate45">
           <div className="flagStripe blue"></div>
           <div className="flagStripe red"></div>
           <div className="flagStripe white"></div>

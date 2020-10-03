@@ -3,3 +3,89 @@
   padding: 5px 20px;
   font-size: 14px;
 }
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 300ms;
+  pointer-events: none;
+}
+
+.modal.displayModal {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modalBackdrop {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000000;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+
+.modalContent {
+  min-width: 300px;
+  max-width: 1000px;
+  background-color: #fff;
+  z-index: 501;
+  border: 2px solid;
+  padding: 20px;
+  padding-top: 0;
+}
+
+
+.modalInput {
+  padding: 0.3em;
+  font-size: 25px;
+  border: 2px solid;
+  border-radius: 2px;
+  display: block;
+  margin: auto;
+  width: 280px;
+  transition: 300ms;
+}
+
+.signupButton {
+  cursor: pointer;
+  transition: 200ms;
+  font-size: 16px;
+  padding: 0.4em;
+  border: 2px solid;
+
+}
+.signupButton:hover {
+  background-color: #000;
+  border: 2px solid #000;
+  color: #fff;
+}
+
+.modalInput:focus, .modalInput:active {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+
+.modalTitle {
+  font-weight: 400;
+  text-align: center;
+  padding: 0.3em 1em;
+  line-height: 1.3;
+}
+
+h2.modalTitle {
+  font-size: 40px;
+}
+
+h3.modalTitle {
+  font-size: 20px;
+}

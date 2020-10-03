@@ -6,6 +6,7 @@ a {
 .link {
   color: blue;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .header {
@@ -153,6 +154,7 @@ a {
   border-top: 0;
   box-sizing: border-box;
   text-shadow: 3px 3px 0 #3C3B6E;
+  padding: 0.3em 0;
 }
 
 .patriotTitleMarqueeText {
@@ -166,9 +168,12 @@ a {
 
 .brandedTitleMarquee {
   background-color: #000;
-  color: #00ffff;
-  text-shadow: 2px 2px #ff0000;
-  border: 2px solid;
+  color: #00ff00;
+  text-shadow: 2px 2px #ff00ff;
+  border: 4px solid #ff00ff;
+  border-bottom: 0;
+  margin-bottom: -2px;
+  padding: 0.3em 0;
 }
 
 .brandedTitleMarqueeText {
@@ -184,21 +189,21 @@ a {
   height: 510px;
   width: 510px;
   display: grid;
-  grid-template-columns: 250px 250px;
-  grid-template-rows: 250px 250px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
 }
 
 .safetyGridSectionMobile {
   display: none;
-  height: 320px;
-  width: 320px;
+  height: 300px;
+  width: 300px;
   margin: auto;
 }
 
 .brandSectionSafety {
-  width: 510px;
+  width: 520px;
 }
 
 .brandSectionPatriot {
@@ -222,9 +227,11 @@ a {
 
 }
 
-.safetyTitleMarquee {
+.safetySectionBorder {
   animation: safetyBorder 1s linear infinite;
-  padding: 5px;
+}
+.safetyTitleMarquee {
+  padding: 0.3em 0;
 }
 
 .safetyTitleMarqueeText {
@@ -240,10 +247,10 @@ a {
   justify-content: center;
   animation: growShrink 2s ease-in-out infinite;
   font-size: 35px;
+  text-align: center;
 }
 
 .imageMarquee {
-  border: 4px solid;
   box-sizing: border-box;
   width: 100%;
   overflow: hidden;
@@ -695,7 +702,6 @@ h4.rmName {
   cursor: pointer;
   display: inline-block;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .itemFeature:hover * {
@@ -715,8 +721,7 @@ h4.rmName {
 }
 
 .itemFeatureTitle {
-  /*font-size: 20px;*/
-  padding-top: 5px;
+  padding: 5px 0;
   text-align: center;
 }
 

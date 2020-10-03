@@ -30,6 +30,37 @@ const seeThroughImages = (id) => [
   `https://www.zazzle.com/rlv/svc/view?realview=113057728169160550&design=${id}&rlvnet=1&style=plasticshield&max_dim=325&bg=0xffffff`
 ]
 
+const cottonImages = id => [
+  `https://www.zazzle.com/rlv/svc/view?realview=113126181203241620&design=${id}&rlvnet=1&style=cottonsingle&max_dim=325&bg=0xffffff`,
+  `https://www.zazzle.com/rlv/svc/view?realview=113358122767808310&design=${id}&rlvnet=1&style=cottonsingle&max_dim=325&bg=0xffffff`,
+  `https://www.zazzle.com/rlv/svc/view?realview=113394898562832201&design=${id}&rlvnet=1&style=cottonsingle&max_dim=325&bg=0xffffff`,
+]
+
+const tanktopImages = id => [
+  `https://www.zazzle.com/rlv/svc/view?rlvnet=1&realview=113537487484228100&design=${id}&style=nla_womens_racerback_jersey_tank_6633&max_dim=325&bg=0xffffff`,
+  `https://www.zazzle.com/rlv/svc/view?rlvnet=1&realview=113204766608328408&design=${id}&style=nla_womens_racerback_jersey_tank_6633&max_dim=325&bg=0xffffff`,
+  `https://www.zazzle.com/rlv/svc/view?rlvnet=1&realview=113671064563828031&design=${id}&style=nla_womens_racerback_jersey_tank_6633&max_dim=325&bg=0xffffff`,
+]
+
+const lunchBoxImages = id => [
+  `https://www.zazzle.com/rlv/svc/view?realview=113015877475585040&design=${id}&rlvnet=1&color=red&max_dim=325&bg=0xffffff`,
+  `https://www.zazzle.com/rlv/svc/view?realview=113662388414279797&design=${id}&rlvnet=1&color=red&max_dim=325&bg=0xffffff`,
+]
+
+const leggingImages = id => [
+  `https://www.zazzle.com/rlv/svc/view?realview=113524768959958640&design=${id}&rlvnet=1&style=ankle&size=a_xs&max_dim=325&bg=0xffffff`,
+  `https://www.zazzle.com/rlv/svc/view?realview=113013239298217507&design=${id}&rlvnet=1&style=ankle&size=a_xs&max_dim=325&bg=0xffffff`,
+  `https://www.zazzle.com/rlv/svc/view?realview=113906754440235256&design=${id}&rlvnet=1&style=ankle&size=a_xs&max_dim=325&bg=0xffffff`,
+  `https://www.zazzle.com/rlv/svc/view?realview=113776217357279109&design=${id}&rlvnet=1&style=ankle&size=a_xs&max_dim=325&bg=0xffffff`,
+]
+
+// TODO - folded
+// - American Flag https://www.zazzle.com/pd/spp?dz=67fca59a-e8aa-4ec4-a87c-471d0bd5eef1
+// - WWG1WGA https://www.zazzle.com/pd/spp?dz=954f865b-c44a-4c5f-a2a7-28445e79f543
+// - FastCash https://www.zazzle.com/pd/spp?dz=6e9251e1-fa05-4b4a-b3d0-60ba5304f2c1
+
+// TODO - hat
+// - https://www.zazzle.com/pd/spp?dz=f4720cb8-82aa-4ff1-a973-fb4101e22c0f
 
 
 const data = {
@@ -43,12 +74,8 @@ const data = {
       images: fullFaceMaskImages('68feda60-1da3-467f-b20e-ab8e8d8a161a'),
     },
     {
-      id: 'guns-n-beer-dark',
+      id: 'guns-n-beer',
       images: fullFaceMaskImages('fbfdbdb2-28b1-40af-86d7-2c4a85b71b00'),
-    },
-    {
-      id: 'guns-n-beer-white',
-      images: fullFaceMaskImages('fa40acb8-9a74-4a6b-9bbc-b5a236470135'),
     },
     {
       id: 'antifa-antico',
@@ -66,7 +93,29 @@ const data = {
       id: 'adrenochrome',
       images: fullFaceMaskImages('195a30c2-41c0-4147-a363-454e1eded325'),
     },
+    {
+      id: 'wwg1wga-flag',
+      images: cottonImages('e21d8573-0c8a-439c-9fd1-925cd0a42a5b'),
+    },
+    {
+      id: 'covid-2020',
+      images: cottonImages('783c89dc-5379-4124-84f9-01634615a704'),
+    },
+    {
+      id: 'hoax',
+      images: cottonImages('7a490c6f-91de-4084-9511-e0e146572823'),
+    },
+    {
+      id: 'usa',
+      images: fullFaceMaskImages('e78e7274-b85a-467d-9b1e-2c599977c8a5'),
+    },
+    {
+      id: 'antifa-antico-lunch',
+      images: lunchBoxImages('f337fa2e-b286-47b7-a4b8-ae40877bb6bb'),
+    },
   ],
+
+
   safety: [
     {
       id: 'gas-mask',
@@ -105,6 +154,7 @@ const data = {
       images: fullFaceMaskImages('603ad7c0-8898-4d93-8739-70d809affdce'),
     },
   ],
+
   branded: [
     {
       id: 'fastcash-bw',
@@ -132,14 +182,30 @@ const data = {
     },
     {
       id: 'fake-news',
-      images: tShirtImages('1a523fd9-cd3a-41e3-8102-9933eb48815b'),
+      images: fullFaceMaskImages('1a523fd9-cd3a-41e3-8102-9933eb48815b'),
     },
     {
       id: 'rm-see-through',
       images: seeThroughImages('f58689ad-14d1-49f4-aa88-4e9d8a2237c1'),
     },
-
+    {
+      id: 'fastcash-premium',
+      images: cottonImages('32425339-4886-4843-b418-51cd4fbafeb7'),
+    },
+    {
+      id: 'branded',
+      images: cottonImages('82ec9606-ffba-4922-92b4-69323563f3de'),
+    },
+    {
+      id: 'not-meddly',
+      images: cottonImages('5be6d22a-0810-40d2-a36b-d0b3f2cb9d81'),
+    },
+    {
+      id: 'fastcash-leggings',
+      images: leggingImages('b1ffb19d-536e-4cf6-b5da-f645dc4870e0'),
+    },
   ],
+
   bargain: [
     {
       id: 'wakka-wakka',
@@ -172,6 +238,10 @@ const data = {
     {
       id: 'useless',
       images: darkTshirtImages('0c4504a7-16e1-4d8b-85a5-e29fe29f6785'),
+    },
+    {
+      id: 'flash-sale',
+      images: tanktopImages('6a2fd9a0-c683-465c-b857-81c5b38c0aa7'),
     },
   ],
 }

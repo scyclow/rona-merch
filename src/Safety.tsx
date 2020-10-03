@@ -113,7 +113,7 @@ function CanvasBackground({ ref_ }: {ref_: React.Ref<any>}) {
     style={{ position: 'absolute', zIndex: -1}}
     ref={canvasRef}
     width={window.innerWidth}
-    height={window.innerHeight}
+    height={window.innerWidth}
   />
 }
 
@@ -126,13 +126,13 @@ function withCanvas(canvasElement: HTMLCanvasElement, init: InitFn, frame: Rende
 
   window.addEventListener('resize', () => {
     canvasElement.width = window.innerWidth
-    canvasElement.height = window.innerHeight
+    canvasElement.height = window.innerWidth
   })
 
   const start = Date.now()
 
   const draw = () => {
-    ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+    ctx.clearRect(0, 0, canvasElement.width, canvasElement.height);
     frame(ctx, Date.now() - start)
     window.requestAnimationFrame(draw)
   }

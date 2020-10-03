@@ -10,19 +10,22 @@ import './Branded.css'
 
 export default function Branded() {
   return (
-    <div className="brandedBackground">
-      <div className="header">
-        <LogoLink />
-        <MarqueeReverse className="brandedMarquee flashing headerTitlePadding" duration={3.5}>
-          <h1 className="rmName brandedTitle">BRANDED MERCH</h1>
-        </MarqueeReverse>
+    <>
+      <div className="brandedBackground">
+        <div className="header">
+          <LogoLink />
+          <MarqueeReverse className="brandedMarquee flashing headerTitlePadding" duration={3.5}>
+            <h1 className="rmName brandedTitle">BRANDED MERCH</h1>
+          </MarqueeReverse>
+        </div>
+        <Content>
+          {data.branded.map(item => (
+            <ItemFeature key={item.id} item={item} />
+          ))}
+        </Content>
       </div>
-      <Content>
-        {data.branded.map(item => (
-          <ItemFeature key={item.id} item={item} />
-        ))}
-      </Content>
-    </div>
+      <div style={{ height: 200, background: 'linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0))'}} />
+    </>
   )
 }
 

@@ -22,7 +22,7 @@ function Content() {
   return (
     <div className="allItemsContent">
       {allData.map(item =>
-          <ItemFeature item={item} key={item.id} showTitle border />
+        <ItemFeature item={item} key={item.id} showTitle border />
       )}
     </div>
   )

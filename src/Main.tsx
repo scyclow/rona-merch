@@ -195,11 +195,13 @@ function FeaturedItems() {
           <span style={{fontSize: 30}}>FEATURED ITEMS</span>
         </RotateZ>
       </div>
-      <ImageMarquee>
-        {shuffle(allData).slice(0, 7).map(item => (
-          <ItemFeature key={item.id} item={item}/>
-        ))}
-      </ImageMarquee>
+      <div style={{ border: '6px solid'}}>
+        <ImageMarquee>
+          {shuffle(allData).slice(0, 7).map(item => (
+            <ItemFeature key={item.id} item={item}/>
+          ))}
+        </ImageMarquee>
+      </div>
       <div className="entireCatalog">
         <Link to="/items">{'View Full Product Catalog >'}</Link>
       </div>
@@ -213,7 +215,7 @@ function Patriot() {
     <Link to="/patriot" className="brandSection brandSectionPatriot">
       <div>
         <PatriotTitle />
-        <VerticalMarquee style={{ height: windowWidth > 815 ? 800 : 400, boxSizing: 'content-box' }} duration={48000}>
+        <VerticalMarquee style={{ height: windowWidth > 815 ? 800 : 400, boxSizing: 'content-box', color: '#3C3B6E', borderTop: 0 }} duration={48000}>
           {shuffle(data.patriot.map(item => (
             <ItemFeature noLink key={item.id} item={item}/>
           )))}
@@ -228,11 +230,13 @@ function Branded() {
      <Link to="/branded" className="brandSection">
         <div>
           <BrandedTitle />
-          <ImageMarquee jerk duration={20}>
-            {shuffle(data.branded.map(item => (
-              <ItemFeature noLink key={item.id} item={item}/>
-            )))}
-          </ImageMarquee>
+          <div style={{ border: '4px solid #ff00ff'}}>
+            <ImageMarquee jerk duration={20}>
+              {shuffle(data.branded.map(item => (
+                <ItemFeature noLink key={item.id} item={item}/>
+              )))}
+            </ImageMarquee>
+          </div>
         </div>
       </Link>
   )
@@ -267,7 +271,7 @@ function Bargain() {
 function Safety() {
   return (
     <Link to="/safety" className="brandSection brandSectionSafety">
-      <div>
+      <div className="safetySectionBorder">
         <SafetyTitle />
         <div className="safetyGridSectionDesktop">
           <ImageRotate ms={3000} delay={0}>
@@ -694,7 +698,7 @@ export function ItemFeature({ item, className, style, noLink, showTitle, border 
     overflow: 'hidden'
   }
   return (
-    <div className={`itemFeature ${className || ''}`} style={{ ...style}}>
+    <div className={`itemFeature ${className || ''}`} style={style}>
       <div>
         {!!noLink
           ? (
@@ -716,19 +720,13 @@ export function ItemFeature({ item, className, style, noLink, showTitle, border 
   )
 }
 
-function BlinkLongHeader({children}: ChildProps) {
+export function BlinkLongHeader({children}: ChildProps) {
   return (
-    <div style={{ width: '100%', overflow: 'hidden', whiteSpace: 'nowrap'}}>
-      <h4 className="rmName blink" style={{animationDuration: '1s'}}>{children}</h4>
-      <h4 className="rmName blink" style={{animationDuration: '1s'}}>{children}</h4>
-      <h4 className="rmName blink" style={{animationDuration: '1s'}}>{children}</h4>
-      <h4 className="rmName blink" style={{animationDuration: '1s'}}>{children}</h4>
-      <h4 className="rmName blink" style={{animationDuration: '1s'}}>{children}</h4>
-      <h4 className="rmName blink" style={{animationDuration: '1s'}}>{children}</h4>
-      <h4 className="rmName blink" style={{animationDuration: '1s'}}>{children}</h4>
-      <h4 className="rmName blink" style={{animationDuration: '1s'}}>{children}</h4>
-      <h4 className="rmName blink" style={{animationDuration: '1s'}}>{children}</h4>
-      <h4 className="rmName blink" style={{animationDuration: '1s'}}>{children}</h4>
+    <div style={{ display: 'flex', justifyContent: 'center', overflow: 'hidden', whiteSpace: 'nowrap'}}>
+      <span className="blink" style={{animationDuration: '1.5s'}}>{children}</span>
+      <span className="blink" style={{animationDuration: '1.5s'}}>{children}</span>
+      <span className="blink" style={{animationDuration: '1.5s'}}>{children}</span>
+      <span className="blink" style={{animationDuration: '1.5s'}}>{children}</span>
     </div>
   )
 }
@@ -807,7 +805,7 @@ function ImageShrinkRotation({children, delay, ms, style}: {ms: number, delay?: 
     <div style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', ...style}}>
       <div className="imageShrinkRotation" style={{ transform: `scale(${scaleSize})`}}>
         {images.map((image, i) =>
-          <div style={{ display: i === ix % images.length ? 'block': 'none'}}>
+          <div key={i} style={{ display: i === ix % images.length ? 'block': 'none'}}>
             {image}
           </div>
         )}

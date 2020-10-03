@@ -52,6 +52,31 @@ const seeThroughImages = (id: string) => shuffle([
   process.env.PUBLIC_URL + '/' + id + '-2.jpeg',
 ])
 
+const cottonImages = (id: string) => shuffle([
+  process.env.PUBLIC_URL + '/' + id + '-0.jpeg',
+  process.env.PUBLIC_URL + '/' + id + '-1.jpeg',
+  process.env.PUBLIC_URL + '/' + id + '-2.jpeg',
+])
+
+
+const tanktopImages = (id: string) => shuffle([
+  process.env.PUBLIC_URL + '/' + id + '-0.jpeg',
+  process.env.PUBLIC_URL + '/' + id + '-1.jpeg',
+  process.env.PUBLIC_URL + '/' + id + '-2.jpeg',
+])
+
+const lunchBoxImages = (id: string) => shuffle([
+  process.env.PUBLIC_URL + '/' + id + '-0.jpeg',
+  process.env.PUBLIC_URL + '/' + id + '-1.jpeg',
+])
+
+const leggingImages = (id: string) => shuffle([
+  process.env.PUBLIC_URL + '/' + id + '-0.jpeg',
+  process.env.PUBLIC_URL + '/' + id + '-1.jpeg',
+  process.env.PUBLIC_URL + '/' + id + '-2.jpeg',
+  process.env.PUBLIC_URL + '/' + id + '-3.jpeg',
+])
+
 const data: Data = {
   patriot: shuffle([
     {
@@ -130,10 +155,10 @@ const data: Data = {
       ]
     },
     {
-      id: 'guns-n-beer-dark',
-      title: 'Guns N Beer Mask Dark',
+      id: 'guns-n-beer',
+      title: 'Guns N Beer Mask',
       link: '',
-      images: fullFaceMaskImages('guns-n-beer-dark'),
+      images: fullFaceMaskImages('guns-n-beer'),
       description: "Nothing is more American then drinking beer and shooting guns. let your neighbors know what you're really all about.",
       reviews: [
         {
@@ -147,21 +172,12 @@ const data: Data = {
           date: '9/27/20',
           rating: 5,
           content: `This is the first piece of gear we give our members here at the Kansas City Arm The Left chapter. As Chapter Lead it's my job to make sure that all members stay safe evern before they have a chance to exercise their Second Amendment rights.`
-        }
-      ]
-    },
-    {
-      id: 'guns-n-beer-white',
-      title: 'Guns N Beer Mask White',
-      link: '',
-      images: fullFaceMaskImages('guns-n-beer-white'),
-      description: "Nothing is more American then drinking beer and shooting guns. let your neighbors know what you're really all about.",
-      reviews: [
+        },
         {
           author: 'YeeHaw',
           date: '9/27/20',
           rating: 4,
-          content: `I don't think this one is as stylish as the black version, but it still gets the point across.`
+          content: `Definitely gets the point across.`
         }
       ]
     },
@@ -246,7 +262,120 @@ const data: Data = {
         },
       ]
     },
+    {
+      id: 'wwg1wga-flag',
+      title: 'WWG1WGA Flag Mask',
+      link: '',
+      images: cottonImages('wwg1wga-flag'),
+      description: `Celebrate the patriotic 1996 classic White Squall with this patriotic "Where We Go 1 We Go All" flag design.`,
+      reviews: [
+        {
+          author: 'TommyFlombego',
+          date: '8/21/20',
+          rating: 3,
+          content: `Eh, this one is sort of middle of the road. I'm not so sure that this will strike fear into the heart of the deep state`
+        },
 
+        {
+          author: 'DumboTheClown',
+          date: '9/21/20',
+          rating: 5,
+          content: `Very patriotic, and comfortable!`
+        },
+        {
+          author: 'fuckface99',
+          date: '9/23/20',
+          rating: 4,
+          content: `THIS DEAL IS A REAL STEAL`
+        },
+      ]
+    },
+    {
+      id: 'covid-2020',
+      title: 'Covid 2020 Cotton Mask',
+      link: '',
+      images: cottonImages('covid-2020'),
+      description: `Nothing captures the zeitgeist of 2020 like this hilarious satirical cotton mask, drawing attention to both the global pandemic that changed life as we know it and the American presidential election of 2020.`,
+      reviews: [
+        {
+          author: 'username',
+          date: '10/14/20',
+          rating: 5,
+          content: `biting satire`
+        },
+
+        {
+          author: 'SweetSalvation',
+          date: '10/16/20',
+          rating: 5,
+          content: `I'd sooner vote for corona virus than for Sleepy Joe Biden that's for damn sure!`
+        },
+      ]
+    },
+    {
+      id: 'hoax',
+      title: 'HOAX Cotton Mask',
+      link: '',
+      images: cottonImages('hoax'),
+      description: `Hedge your bets by telling the world that you think COVID-19 is just a silly hoax, all while protecting yourself and other from the deadly virus if you happen to be incorrect. You can't lose!`,
+      reviews: [
+        {
+          author: 'DumboTheClown',
+          date: '9/5/20',
+          rating: 5,
+          content: `I can't lose!`
+        },
+
+        {
+          author: 'BullseyeBob',
+          date: '9/16/20',
+          rating: 5,
+          content: `This is one of the few face masks that really falls in line with my sensibilities. I most certainly think that COVID-19 is a hoax, but not in the way that most people think. The virus is absolutely floating around out there, but let's jsut say that the government hasn't been 100% up front with us about its effects on the human body. Additionally, there are a million reasons why you should wear a face mask aside from the "novel" coronavirus. It's just common sense.`
+        },
+      ]
+    },
+    {
+      id: 'usa',
+      title: 'USA Mask',
+      link: '',
+      images: fullFaceMaskImages('usa'),
+      description: `Honor the greatest country in the world by proudly displaying its initials across your face. Perfect for international travel.`,
+      reviews: [
+        {
+          author: 'Hubert',
+          date: '7/4/20',
+          rating: 3,
+          content: `A little too modernist for my taste, but not terrible.`
+        },
+      ]
+    },
+    {
+      id: 'antifa-antico-lunch',
+      title: 'Antifascist Anticommunist Lunchbox',
+      link: '',
+      images: lunchBoxImages('antifa-antico-lunch'),
+      description: `Be the coolest one amongst your co workers when you whip out this exciting new lunchbox. Coupled with the antifa-antico face mask, there will be no mistaking it: You don't like fascists or communists.`,
+      reviews: [
+        {
+          author: 'SweetSalvation',
+          date: '8/23/20',
+          rating: 5,
+          content: `I pulled this one out the other day when I was eating lunch with the boys and they all got a real hoot out of it except for phil because he's a pinko`
+        },
+        {
+          author: 'haris',
+          date: '8/29/20',
+          rating: 2,
+          content: `I thought this was supposed to come with an apple, but it didn't`
+        },
+        {
+          author: 'anushv',
+          date: '9/23/20',
+          rating: 1,
+          content: `This is dumb. Antico is an idea, not an organization`
+        },
+      ]
+    },
   ]),
   safety: shuffle([
     {
@@ -628,7 +757,7 @@ const data: Data = {
       title: "Fake News Mask",
       link: '',
       description: 'As the informational landscape of America shifts away from truth and closer to fiction, this mask serves as a reminder to remain vigilant and skeptical of misinformation.',
-      images: tShirtImages('fake-news'),
+      images: fullFaceMaskImages('fake-news'),
       reviews: [
         {
           author: 'SweetSalvation',
@@ -656,6 +785,58 @@ const data: Data = {
           date: '9/1/20',
           rating: 5,
           content: `When I sneeze the Rona Merch logo protects my friends!`
+        },
+      ],
+    },
+    {
+      id: 'fastcash-premium',
+      title: "FastCash Premium Cotton Mask",
+      link: '',
+      description: `A formal face mask for the most formal occasions. Pair this elegent beauty with a tux or black dress of your choosing. Or, wear it along with your New Yorker "all black" outfit. Either way, you'll be making one thing clear: you like making money, and you're good at it.`,
+      images: cottonImages('fastcash-premium'),
+      reviews: [
+        {
+          author: 'VinceSlickson',
+          date: '7/1/20',
+          rating: 5,
+          content: `Wow, simply impecable.`
+        },
+        {
+          author: 'PickleNY',
+          date: '7/8/20',
+          rating: 5,
+          content: `This mask is so cool that I'd pay $20 for it if I could!`
+        },
+      ],
+    },
+    {
+      id: 'not-meddly',
+      title: "Not A Security Meddly Cotton Mask",
+      link: '',
+      emText: 'LIMITED EDITION',
+      description: `The famous Not A Security (NOT) ERC-20 token releases it's limited edition Logo Meddly Cotton Face Mask. Purchase while supplies last!`,
+      images: cottonImages('not-meddly'),
+      reviews: [
+        {
+          author: 'DumboTheClown',
+          date: '8/8/20',
+          rating: 5,
+          content: `What a cool collection of logos!`
+        },
+      ],
+    },
+    {
+      id: 'fastcash-leggings',
+      title: "FastCash Leggings",
+      link: '',
+      description: `Perfect for yoga, running, or working out`,
+      images: cottonImages('fastcash-leggings'),
+      reviews: [
+        {
+          author: 'Ever_Wondering',
+          date: '8/9/20',
+          rating: 5,
+          content: `I LOVE this. Definitely going to wear this on my next outting.`
         },
       ],
     },
@@ -811,6 +992,50 @@ const data: Data = {
           rating: 1,
           content: `stupid`
         },
+      ]
+    },
+    {
+      id: 'branded',
+      title: 'Branded Cotton Mask',
+      link: '',
+      images: seeThroughImages('branded'),
+      description: `Be the life of the party as all your friends try to scan your face at your next social gathering`,
+      reviews: [
+        {
+          author: 'stupid',
+          date: '10/2/20',
+          rating: 1,
+          content: `stupid`
+        },
+      ]
+    },
+    {
+      id: 'flash-sale',
+      title: 'Flash Sale Tanktop',
+      link: '',
+      emText: 'SEXY',
+      images: tanktopImages('flash-sale'),
+      description: `This sexy little number is one of the hottest selling items of the summer. Wear it to the beach, or to imporess a special someone at home.`,
+      reviews: [
+        {
+          author: 'heatherhot6',
+          date: '7/12/20',
+          rating: 1,
+          content: `sexy`
+        },
+        {
+          author: 'StarSeeker',
+          date: '8/10/20',
+          rating: 5,
+          content: `This is the only shirt I can truly breathe in.`
+        },
+        {
+          author: 'TommyFlombego',
+          date: '8/31/20',
+          rating: 1,
+          content: `How old is this model and you're calling her sexy? Is she supposed to "flash" me? Gross.`
+        },
+
       ]
     },
   ]),

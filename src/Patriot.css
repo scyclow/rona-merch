@@ -1,11 +1,20 @@
 
+.patriotBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
 
-.container {
+.patriotContainer {
   max-width: 360px;
   display: flex;
   justify-content: center;
 }
-.rotate {
+.rotate45 {
   display: inline-block;
   transform: rotate(-45deg);
 }
@@ -54,7 +63,6 @@
 }
 .borderBlue {
   border-color: #3C3B6E;
-
 }
 
 .borderWhite {
