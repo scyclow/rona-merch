@@ -45,10 +45,11 @@ const fullFaceMaskImages = (id: string) => shuffle([
   process.env.PUBLIC_URL + '/' + id + '-5.jpeg',
 ])
 
-// TODO
-  // full masks
-    // - fake news
-    // - pattern 1 https://www.zazzle.com/pd/spp?dz=a836f76a-c758-4de0-968f-ed4a8322134e
+const seeThroughImages = (id: string) => shuffle([
+  process.env.PUBLIC_URL + '/' + id + '-0.jpeg',
+  process.env.PUBLIC_URL + '/' + id + '-1.jpeg',
+  process.env.PUBLIC_URL + '/' + id + '-2.jpeg',
+])
 
 const data: Data = {
   patriot: shuffle([
@@ -439,7 +440,21 @@ const data: Data = {
         },
       ]
     },
-
+    {
+      id: '5g-bad',
+      title: '5G Bad mask',
+      link: '',
+      images: tShirtImages('5g-bad'),
+      description: `With the fifth generation of telecom infrastucture upon us, it's natural to have your doubts regarding it's effects on public safety. `,
+      reviews: [
+        {
+          author: 'EnergyMatters',
+          date: '8/15/20',
+          rating: 2,
+          content: `Given how sensitive I am to elctro magnetic frequencies (EMFs), this type of mask obviously appeals to me. However, I have to say that this mask fails to live up to my expectations. Wearing this mask only reduces my headaches by 16%... which is better than nothing, but not quite as effective as some of the other products in the Rona Merch catalogue.`
+        },
+      ]
+    },
   ]),
 
   branded: shuffle([
@@ -605,6 +620,42 @@ const data: Data = {
         }
       ],
     },
+    {
+      id: `fake-news`,
+      title: "Fake News Mask",
+      link: '',
+      description: 'As the informational landscape of America shifts away from truth and closer to fiction, this mask serves as a reminder to remain vigilant and skeptical of misinformation.',
+      images: tShirtImages('fake-news'),
+      reviews: [
+        {
+          author: 'SweetSalvation',
+          date: '9/16/20',
+          rating: 5,
+          content: `Nothin gets me riled up more than seeing all the propaganda being served up on a hot platter by all the FAKE news organizations on the CNN show which is why I get all my news from trusted sources that don't hate America.`
+        },
+        {
+          author: 'WendyPilsen',
+          date: '9/21/20',
+          rating: 5,
+          content: `I get all my news from fake bullshit news: http://fakebullshit.news`
+        },
+      ],
+    },
+    {
+      id: 'rm-see-through',
+      title: "Rona Merch See Through Mask",
+      link: '',
+      description: '',
+      images: tShirtImages('rm-see-through'),
+      reviews: [
+        {
+          author: 'DumboTheClown',
+          date: '9/1/20',
+          rating: 5,
+          content: `When I sneeze the Rona Merch logo protects my friends!`
+        },
+      ],
+    },
   ]),
 
   bargain: shuffle([
@@ -722,6 +773,42 @@ const data: Data = {
           content: `Do you see the all-seeing eye?`
         },
       ],
+    },
+    {
+      id: 'smarty-pants',
+      title: 'Smarty Pants See Through Mask',
+      link: '',
+      images: seeThroughImages('smarty-pants'),
+      description: `Who says you can't be safe AND smart? Embrace your inner nerd with this chic see through mask.`,
+      reviews: [
+        {
+          author: 'stupid',
+          date: '9/28/20',
+          rating: 1,
+          content: `stupid`
+        },
+      ]
+    },
+    {
+      id: 'useless',
+      title: 'Useless T',
+      link: '',
+      images: darkTshirtImages('useless'),
+      description: ``,
+      reviews: [
+        {
+          author: 'DontCallMeRaul',
+          date: '9/13/20',
+          rating: 5,
+          content: `This shirt is great!`
+        },
+        {
+          author: 'stupid',
+          date: '9/31/20',
+          rating: 1,
+          content: `stupid`
+        },
+      ]
     },
   ]),
 }

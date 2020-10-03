@@ -24,6 +24,11 @@ const fullFaceMaskImages = (id) => [
   `https://www.zazzle.com/rlv/svc/view?realview=113885022310819668&design=${id}&max_dim=325&bg=0xffffff`,
 ]
 
+const seeThroughImages = (id) => [
+  `https://www.zazzle.com/rlv/svc/view?realview=113501735933371664&design=${id}&rlvnet=1&style=plasticshield&max_dim=325&bg=0xffffff`,
+  `https://www.zazzle.com/rlv/svc/view?realview=113183111711656308&design=${id}&rlvnet=1&style=plasticshield&max_dim=325&bg=0xffffff`,
+  `https://www.zazzle.com/rlv/svc/view?realview=113057728169160550&design=${id}&rlvnet=1&style=plasticshield&max_dim=325&bg=0xffffff`
+]
 
 
 
@@ -95,6 +100,10 @@ const data = {
       id: 'anti-facial1',
       images: fullFaceMaskImages('26afe91c-be63-49c0-9f76-ab27160e3f71'),
     },
+    {
+      id: '5g-bad',
+      images: fullFaceMaskImages('603ad7c0-8898-4d93-8739-70d809affdce'),
+    },
   ],
   branded: [
     {
@@ -121,6 +130,15 @@ const data = {
       id: 'ronamerch-t',
       images: tShirtImages('399af8ed-e7fa-4d0d-a170-adbbb999ae22'),
     },
+    {
+      id: 'fake-news',
+      images: tShirtImages('1a523fd9-cd3a-41e3-8102-9933eb48815b'),
+    },
+    {
+      id: 'rm-see-through',
+      images: seeThroughImages('f58689ad-14d1-49f4-aa88-4e9d8a2237c1'),
+    },
+
   ],
   bargain: [
     {
@@ -147,9 +165,16 @@ const data = {
       id: 'pattern1',
       images: fullFaceMaskImages('c1737843-9996-405a-8ece-83393946e04b'),
     },
+    {
+      id: 'smarty-pants',
+      images: seeThroughImages('6600da7b-16ab-4d6a-be8b-62073678458c'),
+    },
+    {
+      id: 'useless',
+      images: darkTshirtImages('0c4504a7-16e1-4d8b-85a5-e29fe29f6785'),
+    },
   ],
 }
-
 
 // const pullImage = (url, path, cb) => {
 //   request.head(url, (err, res, body) => {
