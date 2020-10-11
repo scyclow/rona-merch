@@ -26,19 +26,19 @@ export default function Patriot() {
         </Marquee>
       </div>
       <Content>
-        <VerticalMarquee direction={-1} duration={48000} className="borderWhite">
+        <VerticalMarquee style={{ height: 900 }} direction={-1} duration={30000} className="borderWhite">
           {firstSection.map(item => (
             <ItemFeature key={item.id} item={item}/>
           ))}
         </VerticalMarquee>
 
-        <VerticalMarquee direction={1} duration={48000} className="borderRed">
+        <VerticalMarquee style={{ height: 900 }} direction={1} duration={30000} className="borderRed">
           {secondSection.map(item => (
             <ItemFeature key={item.id} item={item}/>
           ))}
         </VerticalMarquee>
 
-        <VerticalMarquee direction={-1} duration={48000} className="borderBlue">
+        <VerticalMarquee style={{ height: 900 }} direction={-1} duration={30000} className="borderBlue">
           {thirdSection.map(item => (
             <ItemFeature key={item.id} item={item}/>
           ))}

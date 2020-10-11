@@ -1,3 +1,4 @@
+
 .itemHeader {
   display: flex;
   align-items: center;
@@ -118,6 +119,11 @@
   font-size: 12px;
   border-top: 2px solid;
   padding: 3px 7px;
+  background-color: #f6f6f6;
+}
+
+.nightmode .reviewData {
+  background-color: #363636;
 }
 
 .buyNowSection {
@@ -142,10 +148,15 @@
   transform: rotate(720deg);
 }
 
+.customizeLink {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 .reviews {
   border: 1px dotted;
   padding: 10px;
-  background-color: #fff;
 }
 
 .reviewInput {
@@ -164,4 +175,15 @@
 
 .errorText {
   color: red;
+}
+
+.socialShareSection {
+  margin-top: 30px;
+}
+.socialShare {
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 0.5em;
 }

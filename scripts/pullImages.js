@@ -54,10 +54,15 @@ const leggingImages = id => [
   `https://www.zazzle.com/rlv/svc/view?realview=113776217357279109&design=${id}&rlvnet=1&style=ankle&size=a_xs&max_dim=325&bg=0xffffff`,
 ]
 
-// TODO - folded
-// - American Flag https://www.zazzle.com/pd/spp?dz=67fca59a-e8aa-4ec4-a87c-471d0bd5eef1
-// - WWG1WGA https://www.zazzle.com/pd/spp?dz=954f865b-c44a-4c5f-a2a7-28445e79f543
-// - FastCash https://www.zazzle.com/pd/spp?dz=6e9251e1-fa05-4b4a-b3d0-60ba5304f2c1
+//
+const foldedImages = id => [
+  `https://www.zazzle.com/rlv/svc/view?realview=113156190017753094&design=${id}&rlvnet=1&style=cover&max_dim=325&bg=0xffffff`,
+  `https://www.zazzle.com/rlv/svc/view?realview=113954814847055817&design=${id}&rlvnet=1&style=cover&max_dim=325&bg=0xffffff`,
+  `https://www.zazzle.com/rlv/svc/view?realview=113087419112987185&design=${id}&rlvnet=1&style=cover&max_dim=325&bg=0xffffff`,
+  `https://www.zazzle.com/rlv/svc/view?realview=113972851875306112&design=${id}&rlvnet=1&style=cover&max_dim=325&bg=0xffffff`,
+  `https://www.zazzle.com/rlv/svc/view?realview=113697978004291095&design=${id}&rlvnet=1&style=cover&max_dim=325&bg=0xffffff`,
+]
+
 
 // TODO - hat
 // - https://www.zazzle.com/pd/spp?dz=f4720cb8-82aa-4ff1-a973-fb4101e22c0f
@@ -113,9 +118,21 @@ const data = {
       id: 'antifa-antico-lunch',
       images: lunchBoxImages('f337fa2e-b286-47b7-a4b8-ae40877bb6bb'),
     },
+    {
+      id: 'real-americans',
+      images: foldedImages('f93031c7-63fa-4638-b858-0b77cb3f3935')
+    },
+    {
+      // TODO Description
+      id: 'american-flag',
+      images: foldedImages('085a6f86-31ac-4b69-a840-b124ed6cd37f')
+    },
+    {
+      // TODO Description
+      id: 'wwg1wga-text',
+      images: foldedImages('0b19fa58-a7b1-4d02-95ba-d449d0fe0b27')
+    },
   ],
-
-
   safety: [
     {
       id: 'gas-mask',
@@ -153,20 +170,37 @@ const data = {
       id: '5g-bad',
       images: fullFaceMaskImages('603ad7c0-8898-4d93-8739-70d809affdce'),
     },
+    {
+      // TODO Description
+      id: 'emf-tower',
+      images: foldedImages('ef9ccd32-7218-487e-bf0a-505f6d193f02'),
+    },
+    {
+      // TODO Description
+      id: 'sovereign-mask',
+      images: foldedImages('25a0e91a-269e-44f3-b1b4-128f4015c81f'),
+    },
+    {
+      // TODO Description
+      id: 'sovereign-t',
+      images: tShirtImages('714d0a19-a658-4b59-a26c-b76d5105d71c'),
+    },
   ],
+
 
   branded: [
     {
-      id: 'fastcash-bw',
-      images: tShirtImages('f64ed6c7-cf64-4b23-8127-746a76169e82')
+      id: 'fastcash-t',
+      images: tShirtImages('f70c9ef9-ef33-4650-811d-996b7d950e77')
+    },
+
+    {
+      id: 'fastcash-plus-t',
+      images: tShirtImages('4e7633ae-d0c8-4a19-b836-e505cd064b78')
     },
     {
-      id: 'fastcash-bw-dark',
-      images: darkTshirtImages('751e51e6-3b74-411d-ae43-031055218869')
-    },
-    {
-      id: 'fastcash-lime',
-      images: tShirtImages('ae7f66ce-d683-45ee-b458-848f3127fffe'),
+      id: 'fastcash-super-plus-t',
+      images: darkTshirtImages('ae7f66ce-d683-45ee-b458-848f3127fffe'),
     },
     {
       id: `fastcash-colorful`,
@@ -203,6 +237,16 @@ const data = {
     {
       id: 'fastcash-leggings',
       images: leggingImages('b1ffb19d-536e-4cf6-b5da-f645dc4870e0'),
+    },
+    {
+      // TODO Description
+      id: 'fastcash-logo-folded',
+      images: foldedImages('0879f6cd-29f7-4010-bafd-d61342cba79d'),
+    },
+    {
+      // TODO Description
+      id: 'not-mask',
+      images: foldedImages('b91236de-375e-41a3-a609-80964bd6d13c'),
     },
   ],
 
@@ -243,6 +287,27 @@ const data = {
       id: 'flash-sale',
       images: tanktopImages('6a2fd9a0-c683-465c-b857-81c5b38c0aa7'),
     },
+    {
+      // TODO Description
+      id: 'dollar-dollar',
+      images: foldedImages('ceb90d71-eff8-4e65-b385-70eb2c024a97'),
+    },
+    // {
+    //   // TODO Description
+    //   id: 'dollar-dollar',
+    //   images: foldedImages('7d886f55-efff-4d53-b6d2-ef69670b8653'),
+    // },
+    {
+      // TODO Description
+      id: 'knotty-mask',
+      images: foldedImages('3ba9f754-a976-47e5-8004-868dd5c9c867'),
+    },
+    {
+      // TODO Description
+      id: 'mask-mask',
+      images: fullFaceMaskImages('9766814c-94df-477b-9b1d-3a1327aa7ea3'),
+    },
+
   ],
 }
 
@@ -259,7 +324,7 @@ const data = {
 
 // pullImage(fullFaceMaskImages('104479fc-5499-4e55-bdb4-2ce7f68a6c78')[0], './assets/test.jpeg')
 
-const PATH = './public/'
+const PATH = './public/images/'
 const pullImage = (url, name) => new Promise((res, rej) => {
   https.request(url, response => {
     const data = new Stream()

@@ -9,6 +9,10 @@ a {
   cursor: pointer;
 }
 
+.nightmode .link {
+  color: #9999ff
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -100,6 +104,7 @@ a {
 .verticalSection {
   margin: auto;
   margin-bottom: 20px;
+  margin-top: 50px;
   width: 100%;
   max-width: 1450px;
   display: flex;
@@ -107,12 +112,22 @@ a {
   align-items: center;
 }
 
-.brandSection {
+@media (max-width: 720px) {
+  .verticalSection {
+    margin-top: 40px;
+  }
+}
+
+.brandSection, .bargainSection {
   width: calc(100% - 350px);
   margin-bottom: 20px;
 }
 
-
+@media (max-width: 720px) {
+  .bargainSection {
+    margin-top: 50px;
+  }
+}
 
 .fillerSection {
   margin-bottom: 20px;
@@ -122,7 +137,7 @@ a {
   .verticalSection {
     flex-direction: column;
   }
-  .brandSection {
+  .brandSection, .bargainSection {
     width: 100%;
   }
 }
@@ -524,10 +539,6 @@ h4.rmName {
 }
 
 .content {
-  /*display: flex;*/
-  /*flex-wrap: wrap;*/
-  /*justify-content: space-around;*/
-  /*align-items: center;*/
   margin: 20px;
 }
 
@@ -567,8 +578,8 @@ h4.rmName {
   height: 0;
   width: 300px;
   position: relative;
-  right: 61px;
-  top: 89px;
+  right: 63px;
+  top: 87px;
   transform: rotate(-45deg);
 }
 
@@ -576,6 +587,12 @@ h4.rmName {
   padding: 10px;
   background-color: #fff;
   line-height: 1.5;
+  color: #000;
+}
+
+.nightmode .tiltText {
+  background-color: #000;
+  color: #fff;
 }
 
 .imageSectionTitle {

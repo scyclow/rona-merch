@@ -93,6 +93,8 @@ function CanvasBackground({ ref_ }: {ref_: React.Ref<any>}) {
       ctx.beginPath();
       ctx.globalAlpha = 1 - (radius / window.innerWidth)
       ctx.arc(x, y, radius, 0, 2 * Math.PI);
+      // @ts-ignore
+      ctx.strokeStyle = window.nightmode ? "#ffffff" : '#000000'
       ctx.stroke();
 
       // ctx.beginPath();

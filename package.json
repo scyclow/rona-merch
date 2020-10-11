@@ -11,13 +11,16 @@
     "@types/node": "^12.12.53",
     "@types/react": "^16.9.44",
     "@types/react-dom": "^16.9.8",
+    "@types/react-helmet": "^6.1.0",
     "@types/react-router-dom": "^5.1.5",
     "gh-pages": "^3.1.0",
     "lodash": "^4.17.20",
     "react": "^17.0.0-rc.0",
     "react-dom": "^17.0.0-rc.0",
+    "react-helmet": "^6.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.3",
+    "react-snapshot": "^1.3.0",
     "sharp": "^0.26.1",
     "typescript": "^3.7.5"
   },
@@ -25,7 +28,7 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "img": "node scripts/pullImages.js",
-    "build": "react-scripts build && cp ./build/index.html ./build/404.html && echo \"ronamerch.co\" > build/CNAME"
+    "build": "react-scripts build && react-snapshot &&cp ./build/index.html ./build/404.html && echo \"ronamerch.co\" > build/CNAME"
   },
   "eslintConfig": {
     "extends": "react-app"

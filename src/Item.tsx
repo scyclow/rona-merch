@@ -3,14 +3,53 @@ import { Link, Redirect, useParams } from 'react-router-dom'
 import { ChildProps, Marquee, Arrows, ImageRotate} from './Main'
 import Logo from './Logo'
 import './Item.css'
-import {allData } from './data'
+import {allData, Item } from './data'
+import {Helmet} from 'react-helmet'
 
-export default function Item() {
+
+const getText = (tree: any)=>{
+  if(typeof tree === 'string'){
+    return tree;
+  }
+  return tree.children.map((child: any)=>{
+    return getText(child);
+  }).join('');
+}
+
+export default function ItemElem() {
+  const { itemId } = useParams()
+  const item = allData.find(i => i.id === itemId)
+
   return (
-    <Wrapper>
-      <Header/>
-      <Content />
-    </Wrapper>
+    <>
+      <Helmet>
+        <meta name="twitter:image" content={'https://ronamerch.co' + item?.images[item.primaryIx]} />
+        <meta name="og:image" property="og:image" content={'https://ronamerch.co' + item?.images[item.primaryIx]}/>
+        <meta name="og:image:alt" content="Rona Merch Co. Logo" />
+
+        <meta name="title" content={item?.title || 'Rona Merch Item'} />
+        <meta name="og:title" content={item?.title || 'Rona Merch Item'} />
+        <meta name="twitter:title" content={item?.title || 'Rona Merch Item'} />
+        <meta property="og:site_name" content="Rona Merch Co." />
+
+        <meta name="twitter:description" content={getText(item?.description || 'Rona Merch Item')} />
+        <meta name="description" content={getText(item?.description || 'Rona Merch Item')} />
+        <meta name="og:description" content={getText(item?.description || 'Rona Merch Item')} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:type" content="website" />
+
+        <meta property="og:url" content={`https://ronamerch.co/items/${item?.id}`} />
+        <meta name="twitter:url" content={`https://ronamerch.co/items/${item?.id}`} />
+
+        <title>{item?.title || 'Rona Merch Item'}</title>
+      </Helmet>
+
+      <Wrapper>
+        <Header/>
+        <Content item={item} />
+      </Wrapper>
+    </>
   )
 }
 
@@ -43,9 +82,8 @@ export function Wrapper({ children }: ChildProps) {
   )
 }
 
-function Content() {
-  const { itemId } = useParams()
-  const item = allData.find(i => i.id === itemId)
+function Content({ item }: {item?: Item}) {
+
   if (!item) return <Redirect to="/" />
 
   return (
@@ -53,19 +91,36 @@ function Content() {
       <h1 className="itemTitle">{item.title}</h1>
       <div className="contentGrid">
         <div className="itemLeftCol">
-          <a href={item.link}>
+          <a href={item.link} rel="noopener" target="_blank">
             <ImageRotate ms={4000}>
               {item.images.map((image, i) => (
                 <img className="itemImage" src={image} alt={item.title + i} key={item.title + i} />
               ))}
             </ImageRotate>
             <div className="itemImage" style={{}}/>
-            <div style={{marginTop: 10}}>
+            <div style={{marginTop: 5}}>
+              <div className="customizeLink">CUSTOMIZE ></div>
+            </div>
+            <div style={{marginTop: 15}}>
               <Arrows>
                 <div className="buyNowLink">BUY<br/> NOW</div>
               </Arrows>
             </div>
           </a>
+          <div className="socialShareSection">
+            <div className="socialShare">
+              <a href="https://friendworld.social/threads/new" target="_blank" rel="noreferrer">Share on Friendworld</a>
+            </div>
+            <div className="socialShare">
+              <a href={`mailto:?Subject=Check%20out%20this%20awesome%20merch%3A&Body=This%20would%20look%20great%20on%20you%2C%20don%27t%20you%20think%3F%20${window.location.href}`} target="_blank" rel="noreferrer">Share with Email</a>
+            </div>
+            <div className="socialShare">
+              <a href={`https://twitter.com/`} target="_blank" rel="noreferrer">Share on Twitter</a>
+            </div>
+            <div className="socialShare">
+              <a href={`https://facebook.com/`} target="_blank" rel="noreferrer">Share on Facebook</a>
+            </div>
+          </div>
         </div>
 
         <div>
@@ -80,7 +135,7 @@ function Content() {
               <div key={review.content} className="review">
                 <h4 className="reviewRating">{review.rating} Stars!</h4>
                 <p className="reviewContent">{review.content}</p>
-                <div className="reviewData" style={{backgroundColor: '#f6f6f6'}}>
+                <div className="reviewData">
                   <a href={`https://friendworld.social/users/${review.author}`} target="_blank">
                     <div className="link">{review.author}</div>
                     <div style={{ marginTop: 3 }}>{new Date(review.date).toISOString()}</div>

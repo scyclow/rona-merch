@@ -4,6 +4,10 @@
   font-size: 14px;
 }
 
+.footerSection {
+  margin-bottom: 5px;
+}
+
 .modal {
   height: 100vh;
   width: 100vw;
@@ -41,6 +45,10 @@
   border: 2px solid;
   padding: 20px;
   padding-top: 0;
+}
+
+.nightmode .modalContent {
+  background-color: #000;
 }
 
 

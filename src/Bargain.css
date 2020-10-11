@@ -21,9 +21,28 @@
   50% { transform: rotate(15deg); }
 }
 
+.rotatingTilt {
+  animation: rotatingTilt 25s ease-in-out infinite;
+}
+
+@keyframes rotatingTilt {
+  0%, 100% { transform: rotate(35deg); }
+  50% { transform: rotate(-25deg); }
+}
+
+.bargainBackground {
+  position: absolute;
+  top: 0;
+  padding-top: 250px;
+  z-index: -1;
+  width: 100vw;
+  height: 150vh;
+  overflow: hidden;
+}
+
 .bargainContent {
   margin: auto;
-  margin-top: 20px;
+  margin-top: 50px;
   display: grid;
   grid-gap: 15px;
   grid-template-columns: 308px 308px 308px;

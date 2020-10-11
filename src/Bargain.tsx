@@ -16,23 +16,7 @@ export default function Bargain() {
           <h1 className="rmName bargainTitle">BARGAIN BIN</h1>
         </div>
       </div>
-
-
-      <TiltedMarquee rotate={30}>
-        <h3 className="rmName">CATCH THE DEALS WHILE YOU CAN!!</h3>
-      </TiltedMarquee>
-
-      <TiltedMarquee rotate={35} style={{marginLeft: 5}}>
-        <h3 className="rmName">CATCH THE DEALS WHILE YOU CAN!!</h3>
-      </TiltedMarquee>
-
-      <TiltedMarquee rotate={25} style={{marginLeft: 10}}>
-        <h3 className="rmName">CATCH THE DEALS WHILE YOU CAN!!</h3>
-      </TiltedMarquee>
-
-      <TiltedMarquee rotate={-23} style={{marginLeft: -20}}>
-        <h3 className="rmName">CATCH THE DEALS WHILE YOU CAN!!</h3>
-      </TiltedMarquee>
+      <Background />
 
       <Content>
         {data.bargain.map(item => (
@@ -40,6 +24,40 @@ export default function Bargain() {
         ))}
       </Content>
     </>
+  )
+}
+
+function Background() {
+  return (
+    <div className="bargainBackground">
+      <TiltedMarquee className="rotatingTilt">
+        <h3 className="rmName">CATCH THE DEALS WHILE YOU CAN!!</h3>
+      </TiltedMarquee>
+
+      <TiltedMarquee className="rotatingTilt" style={{animationDelay: '-2s', marginTop: 20, marginLeft: 5}}>
+        <h3 className="rmName">CATCH THE DEALS WHILE YOU CAN!!</h3>
+      </TiltedMarquee>
+
+      <TiltedMarquee className="rotatingTilt" style={{animationDelay: '-5s', marginTop: 25, marginLeft: 10}}>
+        <h3 className="rmName">CATCH THE DEALS WHILE YOU CAN!!</h3>
+      </TiltedMarquee>
+
+      <TiltedMarquee className="rotatingTilt" style={{animationDelay: '-12.5s', marginTop: 30, marginLeft: -20}}>
+        <h3 className="rmName">CATCH THE DEALS WHILE YOU CAN!!</h3>
+      </TiltedMarquee>
+
+      <TiltedMarquee className="rotatingTilt" style={{animationDelay: '-7.5s', marginTop: 35, marginLeft: -20}}>
+        <h3 className="rmName">CATCH THE DEALS WHILE YOU CAN!!</h3>
+      </TiltedMarquee>
+
+      <TiltedMarquee className="rotatingTilt" style={{animationDelay: '-14.5s', marginTop: 50, marginLeft: -20}}>
+        <h3 className="rmName">CATCH THE DEALS WHILE YOU CAN!!</h3>
+      </TiltedMarquee>
+
+      <TiltedMarquee className="rotatingTilt" style={{animationDelay: '-1.5s', marginTop: 60, marginLeft: -20}}>
+        <h3 className="rmName">CATCH THE DEALS WHILE YOU CAN!!</h3>
+      </TiltedMarquee>
+    </div>
   )
 }
 

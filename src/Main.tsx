@@ -5,10 +5,15 @@ import Logo from './Logo'
 
 import logoNight from './logo-night.svg'
 import flashSale from './flashSale.svg'
+import flashSaleNight from './flashSaleNight.svg'
 import './Main.css'
 import data, { Item, allData } from './data'
 
 export default function Main() {
+  // @ts-ignore
+  const [isNightmode, setIsNightmode] = useState(window.nightmode)
+  const flashSaleSvg = isNightmode ? flashSaleNight : flashSale
+
   return (
     <div className="app">
       <header className="header">
@@ -28,7 +33,6 @@ export default function Main() {
           <FeaturedItems />
         </VerticalSection>
 
-
         <VerticalSection>
           <Patriot/>
           <div style={{ display: 'flex', flexDirection: 'column'}}>
@@ -39,7 +43,7 @@ export default function Main() {
       </Content>
 
       <MarqueeReverse duration={20}>
-        <a href="https://www.economist.com/finance-and-economics/2020/08/22/why-the-economic-value-of-a-face-mask-is-5614?fsrc=scn/tw/te/bl/ed/clothofgoldwhytheeconomicvalueofafacemaskis5614financeeconomics" target="_blank">
+        <a href="https://www.economist.com/finance-and-economics/2020/08/22/why-the-economic-value-of-a-face-mask-is-5614?fsrc=scn/tw/te/bl/ed/clothofgoldwhytheeconomicvalueofafacemaskis5614financeeconomics" target="_blank" rel="noopener">
           <h4 className="rmName">
             "THE VALUE OF A GOOD FACE MASK IS MORE THAN $56" --
             <span className="link" style={{ paddingLeft: 3}}>The Economist</span>
@@ -50,7 +54,17 @@ export default function Main() {
       <Content>
         <VerticalSection>
           <Branded />
-          <img className="imageSpin siteImage animationReverse" src={flashSale} />
+          <img
+            className="imageSpin siteImage animationReverse"
+            style={{ cursor: 'pointer'}}
+            src={flashSaleSvg}
+            onClick={() => {
+              document.body.className = isNightmode ? '' : 'nightmode';
+              // @ts-ignore
+              window.nightmode = !isNightmode
+              setIsNightmode(!isNightmode)
+            }}
+          />
         </VerticalSection>
 
         <VerticalSection>
@@ -231,7 +245,7 @@ function Branded() {
         <div>
           <BrandedTitle />
           <div style={{ border: '4px solid #ff00ff'}}>
-            <ImageMarquee jerk duration={20}>
+            <ImageMarquee jerk duration={20} childStyle={{marginRight: 0, borderRight: '4px solid #ff00ff'}}>
               {shuffle(data.branded.map(item => (
                 <ItemFeature noLink key={item.id} item={item}/>
               )))}
@@ -244,22 +258,27 @@ function Branded() {
 
 function Bargain() {
   const windowWidth = useResponsive()
+  const bargainItems = shuffle(data.bargain)
+  const bargainItems2 = [
+    ...bargainItems.slice(Math.floor(bargainItems.length * 0.5), bargainItems.length),
+    ...bargainItems.slice(0, Math.floor(bargainItems.length * 0.5)),
+  ]
   return (
-    <Link to="/bargain" className="brandSection">
+    <Link to="/bargain" className="bargainSection">
       <div>
         <BargainTitle />
         <div className="bargainImageSection">
           <ImageShrinkRotation ms={3000} delay={0}>
-            {shuffle(data.bargain.map(item => (
+            {bargainItems.map(item => (
               <ItemFeature noLink key={item.id} item={item}/>
-            )))}
+            ))}
           </ImageShrinkRotation>
 
           {windowWidth >= 600 && (
             <ImageShrinkRotation ms={3000} delay={500}>
-              {shuffle(data.bargain.map(item => (
+              {bargainItems2.map(item => (
                 <ItemFeature noLink key={item.id} item={item}/>
-              )))}
+              ))}
             </ImageShrinkRotation>
           )}
         </div>
@@ -269,41 +288,56 @@ function Bargain() {
 }
 
 function Safety() {
+
+  const safetyProducts = shuffle(data.safety)
+  const safetyProducts1 = safetyProducts
+  const safetyProducts2 = [
+    ...safetyProducts.slice(Math.floor(safetyProducts.length * 0.25), safetyProducts.length),
+    ...safetyProducts.slice(0, Math.floor(safetyProducts.length * 0.25)),
+  ]
+  const safetyProducts3 = [
+    ...safetyProducts.slice(Math.floor(safetyProducts.length * 0.5), safetyProducts.length),
+    ...safetyProducts.slice(0, Math.floor(safetyProducts.length * 0.5)),
+  ]
+  const safetyProducts4 = [
+    ...safetyProducts.slice(Math.floor(safetyProducts.length * 0.75), safetyProducts.length),
+    ...safetyProducts.slice(0, Math.floor(safetyProducts.length * 0.75)),
+  ]
   return (
     <Link to="/safety" className="brandSection brandSectionSafety">
       <div className="safetySectionBorder">
         <SafetyTitle />
         <div className="safetyGridSectionDesktop">
           <ImageRotate ms={3000} delay={0}>
-            {shuffle(data.safety.map(item => (
+            {safetyProducts1.map(item => (
               <ItemFeature noLink className="itemFeatureSm" key={item.id} item={item}/>
-            )))}
+            ))}
           </ImageRotate>
 
           <ImageRotate ms={3000} delay={50}>
-            {shuffle(data.safety.map(item => (
+            {safetyProducts2.map(item => (
               <ItemFeature noLink className="itemFeatureSm" key={item.id} item={item}/>
-            )))}
+            ))}
           </ImageRotate>
 
           <ImageRotate ms={3000} delay={100}>
-            {shuffle(data.safety.map(item => (
+            {safetyProducts3.map(item => (
               <ItemFeature noLink className="itemFeatureSm" key={item.id} item={item}/>
-            )))}
+            ))}
           </ImageRotate>
 
           <ImageRotate ms={3000} delay={150}>
-            {shuffle(data.safety.map(item => (
+            {safetyProducts4.map(item => (
               <ItemFeature noLink className="itemFeatureSm" key={item.id} item={item}/>
-            )))}
+            ))}
           </ImageRotate>
         </div>
 
         <div className="safetyGridSectionMobile">
           <ImageRotate ms={3000} delay={0}>
-            {shuffle(data.safety.map(item => (
+            {safetyProducts.map(item => (
               <ItemFeature noLink key={item.id} item={item}/>
-            )))}
+            ))}
           </ImageRotate>
         </div>
       </div>
@@ -326,8 +360,11 @@ function TopReviews() {
           </TiltedMarquee>
           <div style={{ width: 250}}>
             <ImageRotate ms={5000}>
-              <div className="topReviewTestemonial" >Thes products are great! 10/10, would definitely buy again!" -- Wendy Pilson</div>
-              <div className="topReviewTestemonial" >The best face masks on the web. Period." -- Joe Schmoe</div>
+              <div className="topReviewTestemonial">"These products are great! 10/10, would definitely buy again!" <br/>-- Wendy Pilson</div>
+              <div className="topReviewTestemonial">"The best face masks on the web. Period." <br/>-- Joe Schmoe</div>
+              <div className="topReviewTestemonial">"Such high quality. Great prices too!" <br/>-- Sarah Johnson</div>
+              <div className="topReviewTestemonial">"I love it!" <br/>-- Phil Jackson</div>
+              <div className="topReviewTestemonial">"Everything I've ever wanted in a face mask" <br/>-- Barbra Willson</div>
             </ImageRotate>
           </div>
 
@@ -406,14 +443,14 @@ function BargainTitle() {
 }
 
 
-function ImageMarquee({ children, jerk, duration }: { children: Array<React.ReactNode>, jerk?: boolean, duration?: number}) {
+function ImageMarquee({ children, jerk, duration, className, style, childStyle, childClassName }: ChildProps & { children: Array<React.ReactNode>, jerk?: boolean, duration?: number, childStyle?: ChildProps['style'], childClassName?: ChildProps['className']}) {
   const rand = useRef<number>(Math.random()).current
   duration = duration || children.length * 6
   const animationDuration = duration + 's'
   const animationDelay = (duration * rand * -1) + 's'
   const jerkit = jerk ? 'Jerk' : ''
   return (
-    <div className="imageMarquee">
+    <div className={"imageMarquee " + className} style={style}>
       <div
         className={`imageMarqueeInner${jerkit}`}
         style={{ animationDuration, animationDelay }}
@@ -423,7 +460,7 @@ function ImageMarquee({ children, jerk, duration }: { children: Array<React.Reac
           style={{ animationDuration, animationDelay }}
         >
           {children.map((child, i) => (
-            <span key={'marquee'+i} className="imageMarqueeChild">
+            <span key={'marquee'+i} className={"imageMarqueeChild " + childClassName} style={childStyle} >
               {child}
             </span>
           )
@@ -509,10 +546,10 @@ function GrowShrinkShake({ text }: {text: string | [string, string]}) {
   const t = typeof text === 'string' ? [text, text] : text
   return (
     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around', height: 300, marginTop: 20}}>
-      <div className="growShrinkShake" style={{ display: "block", textAlign: "center", fontSize: 60, textShadow: '5px 5px 0 #ffffff'}}>
+      <div className="growShrinkShake" style={{ display: "block", textAlign: "center", fontSize: 60 }}>
         {t[0]}
       </div>
-      <div className="growShrinkShakeDelayed" style={{ display: "block", textAlign: "center", fontSize: 50, left: 120, textShadow: '5px 5px 0 #ffffff'}}>
+      <div className="growShrinkShakeDelayed" style={{ display: "block", textAlign: "center", fontSize: 50, left: 120 }}>
         {t[1]}
       </div>
     </div>
@@ -687,7 +724,7 @@ export function MarqueeChild({ children, className, style }: ChildProps) {
 export function ItemFeature({ item, className, style, noLink, showTitle, border }: { item: Item, noLink?: boolean, showTitle?: boolean, border?: boolean } & StyleProps) {
   const emTextElement = (
     <div className="tilt">
-      <Marquee>
+      <Marquee style={{ border: '1px solid' }}>
         <span className="tiltText">{item.emText}</span>
       </Marquee>
     </div>
@@ -697,6 +734,9 @@ export function ItemFeature({ item, className, style, noLink, showTitle, border 
     border: border ? '4px solid' : '',
     overflow: 'hidden'
   }
+
+  const imgSrc = item.images[item.primaryIx]
+
   return (
     <div className={`itemFeature ${className || ''}`} style={style}>
       <div>
@@ -704,13 +744,13 @@ export function ItemFeature({ item, className, style, noLink, showTitle, border 
           ? (
           <div style={borderStyle}>
             {item.emText && emTextElement}
-            <img src={item.images[0]} alt={item.title} />
+            <img src={imgSrc} alt={item.title} />
           </div>
         ) : (
           <Link to={`/items/${item.id}`}>
             <div style={borderStyle}>
               {item.emText && emTextElement}
-              <img src={item.images[0]} alt={item.title} />
+              <img src={imgSrc} alt={item.title} />
             </div>
             {showTitle && <div className="itemFeatureTitle">{item.title}</div>}
           </Link>
@@ -735,7 +775,7 @@ export function VerticalMarquee({children, className, direction, duration, style
   duration = duration || 24000
 
   const images = children.map((child, i) => (
-    <div key={'vm'+i} className="itemFeature" style={{ marginTop: 10 }}>
+    <div key={'vm'+i} style={{ marginTop: 10 }}>
       {child}
     </div>
   ))
@@ -765,9 +805,9 @@ function useResponsive() {
   return width
 }
 
-export function TiltedMarquee({ children, style, rotate }: {rotate?: number} & ChildProps) {
+export function TiltedMarquee({ children, className, style, rotate }: {rotate?: number} & ChildProps) {
   return (
-    <div style={{ transform: `rotate(${-1*(rotate || 0)}deg)`, ...style }}>
+    <div className={className} style={{ transform: `rotate(${-1*(rotate || 0)}deg)`, ...style }}>
       <Marquee style={{ overflow: 'visible', width: 10, position: 'relative', left: -100}}>
         {children}
       </Marquee>

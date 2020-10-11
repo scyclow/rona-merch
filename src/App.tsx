@@ -6,9 +6,11 @@ import Branded from './Branded'
 import Bargain from './Bargain'
 import Item from './Item'
 import AllItems from './AllItems'
-import { BrowserRouter, Route, Switch, useLocation } from 'react-router-dom'
+import { BrowserRouter, Route, Switch, useLocation, Link } from 'react-router-dom'
 import './App.css'
 import X from './x.svg'
+import {Helmet} from 'react-helmet'
+
 
 export function ScrollToTop() {
   const { pathname } = useLocation();
@@ -25,6 +27,8 @@ export default function App() {
     <BrowserRouter>
       <ScrollToTop />
       <Modal wait={120000} />
+      <Link to="/test/1" style={{display: 'none'}} />
+
       <div style={{ width: '100vw', minHeight: '90vh', paddingBottom: 20, overflow: 'hidden'}}>
         <Switch>
           <Route path="/patriot">
@@ -51,13 +55,36 @@ export default function App() {
             <AllItems />
           </Route>
 
+          <Route path="/test/:test" component={({ match }: any) => <>
+            <Helmet>
+              <meta name="twitter:image" content="https://steviep.xyz/test/logorm.png" />
+              <meta name="twitter:card" content="summary_large_image" />
+              <meta name="twitter:description" content={`test content ${match.params.test}`} />
+              <meta id="twittertitle" name="twitter:title" content="stufsfsdff" />
+              <title>{match.params.test}</title>
+            </Helmet>
+            <div>test {match.params.test}</div>
+
+          </>} />
+
           <Route path="/">
             <Main />
           </Route>
 
         </Switch>
       </div>
-      <footer className="footer">(c) RonaMerch.co</footer>
+      <footer className="footer" style={{textAlign: 'right'}}>
+        <div className="footerSection">
+          <a className="link" href="mailto:ronamerch.co@gmail.com" target="_blank" rel="noopener">Contact</a>
+        </div>
+        <div className="footerSection">
+          <a className="link" href="https://github.com/scyclow/rona-merch" target="_blank" rel="noopener">Contribute to RonaMerch Co.</a>
+        </div>
+        <div className="footerSection">
+          <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="noopener" target="_blank">All content on this website is licensed under a <span className="link">CC BY-NC-ND</span> license.</a>
+        </div>
+        <div className="footerSection">(c) RonaMerch.co 2020</div>
+      </footer>
     </BrowserRouter>
   )
 }
@@ -66,6 +93,9 @@ function Modal({ wait }: { wait: number }) {
   const [show, setShow] = useState(false)
   const [emailValue, setEmailValue] = useState('')
   const [fade, setFade] = useState(false)
+
+  // @ts-ignore
+  const isNightmode = window.nightmode
 
   useEffect(() => {
     setTimeout(() => {
@@ -104,12 +134,20 @@ function Modal({ wait }: { wait: number }) {
       <div className="modalBackdrop" onClick={onClose} />
       <div className="modalContent">
         <div style={{ display: 'flex', justifyContent: 'flex-end'}}>
-          <img
-            style={{ width: 20, height: 20, padding: 20, paddingRight: 0, cursor: 'pointer' }}
-            src={X}
-            alt="x"
-            onClick={onClose}
-          />
+          {isNightmode
+            ? <span
+                style={{ width: 20, height: 20, padding: 20, paddingRight: 0, cursor: 'pointer' }}
+                onClick={onClose}
+              >
+                {'X'}
+              </span>
+            : <img
+                style={{ width: 20, height: 20, padding: 20, paddingRight: 0, cursor: 'pointer' }}
+                src={X}
+                alt="x"
+                onClick={onClose}
+              />
+          }
         </div>
         <div>
           <BlinkLongHeader>
@@ -128,7 +166,7 @@ function Modal({ wait }: { wait: number }) {
           <div style={{display: 'flex', justifyContent: 'center', marginBottom: 15}}>
             <button className="signupButton" onClick={submitEmail}>SIGN UP</button>
           </div>
-          <h3 className="modalTitle">Don't see an item you want? <br/> <a className="link">Drop us a line</a></h3>
+          <h3 className="modalTitle">Don't see an item you want? <br/> <a className="link" href="mailto:ronamerch.co@gmail.com" target="_blank" rel="noopener">Drop us a line</a></h3>
 
         </div>
       </div>
