@@ -3,9 +3,9 @@ import React from 'react'
 export default function Logo({ fill, stroke, size, className }: {className?: string, size?: number, stroke?: string, fill?: string }) {
 
   // @ts-ignore
-  const fillColor = fill ?? window.nightmode ? '#000000' : '#ffffff'
+  const fillColor = fill ?? (window.nightmode ? '#000000' : '#ffffff')
   // @ts-ignore
-  const strokeColor = stroke ?? window.nightmode ? '#ffffff' : '#000000'
+  const strokeColor = stroke ?? (window.nightmode ? '#ffffff' : '#000000')
   size = size || 638
   return (
     <svg className={`logo imageSpin ${className || ''}`} width={size} height={size} viewBox="0 0 638 638" xmlns="http://www.w3.org/2000/svg">

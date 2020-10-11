@@ -28,7 +28,8 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "img": "node scripts/pullImages.js",
-    "build": "react-scripts build && react-snapshot &&cp ./build/index.html ./build/404.html && echo \"ronamerch.co\" > build/CNAME"
+    "build": "react-scripts build && react-snapshot && cp ./build/index.html ./build/404.html && echo \"ronamerch.co\" > build/CNAME",
+    "snapshot": "react-snapshot"
   },
   "eslintConfig": {
     "extends": "react-app"

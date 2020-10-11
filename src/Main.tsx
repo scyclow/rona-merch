@@ -29,6 +29,7 @@ export default function Main() {
         </a>
       </Marquee>
       <Content>
+
         <VerticalSection>
           <FeaturedItems />
         </VerticalSection>
@@ -52,6 +53,7 @@ export default function Main() {
       </MarqueeReverse>
 
       <Content>
+
         <VerticalSection>
           <Branded />
           <img

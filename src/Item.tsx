@@ -8,10 +8,14 @@ import {Helmet} from 'react-helmet'
 
 
 const getText = (tree: any)=>{
-  if(typeof tree === 'string'){
+  if (typeof tree === 'string' || !tree){
     return tree;
   }
-  return tree.children.map((child: any)=>{
+
+  if (typeof tree.props.children === 'string') {
+    return tree.props.children
+  }
+  return tree.props.children.map((child: any)=>{
     return getText(child);
   }).join('');
 }

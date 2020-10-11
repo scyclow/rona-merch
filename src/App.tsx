@@ -27,7 +27,6 @@ export default function App() {
     <BrowserRouter>
       <ScrollToTop />
       <Modal wait={120000} />
-      <Link to="/test/1" style={{display: 'none'}} />
 
       <div style={{ width: '100vw', minHeight: '90vh', paddingBottom: 20, overflow: 'hidden'}}>
         <Switch>
@@ -54,18 +53,6 @@ export default function App() {
           <Route exact path="/items">
             <AllItems />
           </Route>
-
-          <Route path="/test/:test" component={({ match }: any) => <>
-            <Helmet>
-              <meta name="twitter:image" content="https://steviep.xyz/test/logorm.png" />
-              <meta name="twitter:card" content="summary_large_image" />
-              <meta name="twitter:description" content={`test content ${match.params.test}`} />
-              <meta id="twittertitle" name="twitter:title" content="stufsfsdff" />
-              <title>{match.params.test}</title>
-            </Helmet>
-            <div>test {match.params.test}</div>
-
-          </>} />
 
           <Route path="/">
             <Main />
