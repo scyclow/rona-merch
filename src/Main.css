@@ -297,7 +297,7 @@ a {
 
 .imageMarqueeChild {
   display: inline-block;
-  margin-right: 25px;
+  /*margin-right: 25px;*/
 }
 
 .productImage {

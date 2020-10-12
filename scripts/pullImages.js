@@ -63,9 +63,16 @@ const foldedImages = id => [
   `https://www.zazzle.com/rlv/svc/view?realview=113697978004291095&design=${id}&rlvnet=1&style=cover&max_dim=325&bg=0xffffff`,
 ]
 
+// 5569f287-c67e-46dd-b1ef-f593dfcef9fd
+const hatImages = id => [
+  `https://www.zazzle.com/rlv/svc/view?rlvnet=1&realview=113647281033678299&design=${id}&style=trucker_hat&color=white_black&max_dim=325&bg=0xffffff`,
+  `https://www.zazzle.com/rlv/svc/view?rlvnet=1&realview=113240240869341705&design=${id}&style=trucker_hat&color=white_black&max_dim=325&bg=0xffffff`,
+  `https://www.zazzle.com/rlv/svc/view?rlvnet=1&realview=113308264365003772&design=${id}&style=trucker_hat&color=white_black&max_dim=325&bg=0xffffff`,
+]
 
-// TODO - hat
-// - https://www.zazzle.com/pd/spp?dz=f4720cb8-82aa-4ff1-a973-fb4101e22c0f
+// TODO
+// - fastcash folded text
+// - shirt shirt
 
 
 const data = {
@@ -185,9 +192,12 @@ const data = {
       id: 'sovereign-t',
       images: tShirtImages('714d0a19-a658-4b59-a26c-b76d5105d71c'),
     },
+    {
+      // TODO Description
+      id: 'boo-hoo',
+      images: foldedImages('4c18d8e8-e60f-466f-892b-eaccc54f438f'),
+    },
   ],
-
-
   branded: [
     {
       id: 'fastcash-t',
@@ -196,11 +206,12 @@ const data = {
 
     {
       id: 'fastcash-plus-t',
-      images: tShirtImages('4e7633ae-d0c8-4a19-b836-e505cd064b78')
+      images: darkTshirtImages('522778e4-3ea9-447f-bf22-e8787ca77cf3')
     },
+
     {
       id: 'fastcash-super-plus-t',
-      images: darkTshirtImages('ae7f66ce-d683-45ee-b458-848f3127fffe'),
+      images: tShirtImages('ae7f66ce-d683-45ee-b458-848f3127fffe'),
     },
     {
       id: `fastcash-colorful`,
@@ -246,9 +257,20 @@ const data = {
     {
       // TODO Description
       id: 'not-mask',
-      images: foldedImages('b91236de-375e-41a3-a609-80964bd6d13c'),
+      images: fullFaceMaskImages('b91236de-375e-41a3-a609-80964bd6d13c'),
+    },
+    {
+      // TODO Description
+      id: 'not-t',
+      images: darkTshirtImages('abb9ada4-5dab-4044-acb4-0d97f4cbfe97'),
+    },
+    {
+      // TODO Description
+      id: 'fastcash-text-folded',
+      images: foldedImages('dff56b11-96d1-4752-97a1-38b5230d663d'),
     },
   ],
+
 
   bargain: [
     {
@@ -306,6 +328,16 @@ const data = {
       // TODO Description
       id: 'mask-mask',
       images: fullFaceMaskImages('9766814c-94df-477b-9b1d-3a1327aa7ea3'),
+    },
+    {
+      // TODO Description
+      id: 'shale-bad',
+      images: darkTshirtImages('b9ba6d23-ec23-4d35-9c08-8dafb47a7712'),
+    },
+    {
+      // TODO Description
+      id: 'hat-hat',
+      images: hatImages('5569f287-c67e-46dd-b1ef-f593dfcef9fd'),
     },
 
   ],

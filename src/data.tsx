@@ -16,6 +16,7 @@ export type Item = {
   description: React.ReactNode
   reviews: Array<Review>
   emText?: string
+  featured?: boolean
 }
 
 export type Data = {
@@ -85,6 +86,11 @@ const foldedImages = (id: string) => [
   process.env.PUBLIC_URL + '/images/' + id + '-3.jpeg',
   process.env.PUBLIC_URL + '/images/' + id + '-4.jpeg',
 ]
+const hatImages = (id: string) => [
+  process.env.PUBLIC_URL + '/images/' + id + '-0.jpeg',
+  process.env.PUBLIC_URL + '/images/' + id + '-1.jpeg',
+  process.env.PUBLIC_URL + '/images/' + id + '-2.jpeg',
+ ]
 
 
 const data: Data = {
@@ -333,6 +339,7 @@ const data: Data = {
     },
     {
       id: 'hoax',
+      featured: true,
       title: 'HOAX Cotton Mask',
       link: '',
       primaryIx: 1,
@@ -380,7 +387,7 @@ const data: Data = {
       id: 'real-americans',
       title: 'Real Americans Mask',
       link: '',
-      primaryIx: 1,
+      primaryIx: 2,
       images: fullFaceMaskImages('real-americans'),
       description: `Real Americans know that individual liberty is the first and foremost driving force of what they do in public. No one can tell you what to do because you're an American. And with that freedom comes the responsability of not infringing on anyone else's liberty, no matter the cost. So when it comes to the global spread of a deadly infectous disease that's hidden in plain sight, real Americans know that that it's their responsability, as an American, to take all the necessary precautions. Real Americans wear face masks, and this mask is the perfect way to fulfil your duty as a Real American.`,
       reviews: [
@@ -426,13 +433,48 @@ const data: Data = {
         },
       ]
     },
+
+    // TODO Description
+    {
+      id: 'american-flag',
+      title: 'American Flag Pleated Mask',
+      link: '',
+      primaryIx: 1,
+      images: foldedImages('american-flag'),
+      description: ``,
+      reviews: [
+        {
+          author: 'stupid',
+          date: '10/2/20',
+          rating: 1,
+          content: `stupid`
+        },
+      ]
+    },
+    {
+      id: 'wwg1wga-text',
+      title: 'WWG1WGA Text Pleated Mask',
+      link: '',
+      primaryIx: 1,
+      images: foldedImages('wwg1wga-text'),
+      description: ``,
+      reviews: [
+        {
+          author: 'stupid',
+          date: '10/2/20',
+          rating: 1,
+          content: `stupid`
+        },
+      ]
+    },
   ],
   safety: [
     {
       id: 'gas-mask',
+      featured: true,
       title: 'Gas Mask Mask',
       link: '',
-      primaryIx: 0,
+      primaryIx: 3,
       images: fullFaceMaskImages('gas-mask'),
       description: `Whether you're braving the California wild fires, getting teargassed by the police, or simply browsing through your local COVID-19-invected super market, this face mask offers an extra layer of protection above the competition. Don't leave home without it!`,
       reviews: [
@@ -466,7 +508,7 @@ const data: Data = {
       id: 'infected1-mask',
       title: 'Infected Mask 1',
       link: '',
-      primaryIx: 3,
+      primaryIx: 4,
       images: fullFaceMaskImages('infected1-mask'),
       description: `There's only one sure-fire way to make sure that people stay 6 feet away from you -- and that's by implying that you may be infected with COVID-19. `,
       reviews: [
@@ -514,6 +556,7 @@ const data: Data = {
     },
     {
       id: 'infected1-t',
+      featured: true,
       title: 'Infected T 1',
       link: '',
       primaryIx: 0,
@@ -586,9 +629,10 @@ const data: Data = {
     },
     {
       id: 'wear-your-mask',
+      featured: true,
       title: 'Wear Your Mask Mask',
       link: '',
-      primaryIx: 4,
+      primaryIx: 0,
       images: fullFaceMaskImages('wear-your-mask'),
       description: `Sometimes you just want to let your mask do the talking for you. Perfect for long subway rides or grocery shopping when you want to give nearby non-mask-wearing bystanders a reminder that they should wear their fucking mask.`,
       reviews: [
@@ -633,7 +677,7 @@ const data: Data = {
       id: '5g-bad',
       title: '5G Bad mask',
       link: '',
-      primaryIx: 3,
+      primaryIx: 1,
       images: fullFaceMaskImages('5g-bad'),
       description: `With the fifth generation of telecom infrastucture upon us, it's natural to have your doubts regarding it's effects on public safety. `,
       reviews: [
@@ -642,6 +686,76 @@ const data: Data = {
           date: '8/15/20',
           rating: 2,
           content: `Given how sensitive I am to elctro magnetic frequencies (EMFs), this type of mask obviously appeals to me. However, I have to say that this mask fails to live up to my expectations. Wearing this mask only reduces my headaches by 16%... which is better than nothing, but not quite as effective as some of the other products in the Rona Merch catalogue.`
+        },
+      ]
+    },
+
+
+    // TODO Description
+    {
+      id: 'sovereign-t',
+      title: 'Sovereign Citizen T',
+      link: '',
+      primaryIx: 1,
+      images: tShirtImages('sovereign-t'),
+      description: ``,
+      reviews: [
+        {
+          author: 'stupid',
+          date: '10/2/20',
+          rating: 1,
+          content: `stupid`
+        },
+      ]
+    },
+
+    {
+      id: 'sovereign-mask',
+      title: 'Sovereign Citizen Pleated Mask',
+      link: '',
+      primaryIx: 0,
+      images: foldedImages('sovereign-mask'),
+      description: ``,
+      reviews: [
+        {
+          author: 'stupid',
+          date: '10/2/20',
+          rating: 1,
+          content: `stupid`
+        },
+      ]
+    },
+
+    {
+      id: 'emf-tower',
+      title: 'EMF Tower Pleated Mask',
+      link: '',
+      primaryIx: 2,
+      images: foldedImages('emf-tower'),
+      description: ``,
+      reviews: [
+        {
+          author: 'stupid',
+          date: '10/2/20',
+          rating: 1,
+          content: `stupid`
+        },
+      ]
+    },
+    {
+      id: 'boo-hoo',
+      title: 'Boo Hoo Anti Facial Recognition Mask',
+      emText: 'ANTI-FACIAL RECOG',
+      link: '',
+      primaryIx: 2,
+      images: foldedImages('boo-hoo'),
+      description: ``,
+      reviews: [
+        {
+          author: 'stupid',
+          date: '10/2/20',
+          rating: 1,
+          content: `stupid`
         },
       ]
     },
@@ -654,6 +768,7 @@ const data: Data = {
     // NOT-logo "Text redacted for legal reasons"
     {
       id: 'fastcash-super-plus-t',
+      featured: true,
       emText: 'BEST SELLER',
       title: 'FastCash Super Plus Logo T',
       primaryIx: 0,
@@ -726,7 +841,7 @@ const data: Data = {
       id: 'fastcash-plus-t',
       title: 'FastCash Plus Logo T',
       link: '',
-      primaryIx: 2,
+      primaryIx: 0,
       images: darkTshirtImages('fastcash-plus-t'),
       // description: `Nothing beats the classic style of the Black/White FastCashMoneyPlus logo T. No frills. All business. Break out this sleek dark rendition for any occasion`,
       description: ``,
@@ -769,6 +884,7 @@ const data: Data = {
     },
     {
       id: `ronamerch-mask`,
+      featured: true,
       title: "Rona Merch Co. Mask Official",
       link: '',
       primaryIx: 4,
@@ -916,6 +1032,72 @@ const data: Data = {
         },
       ],
     },
+    // TODO descriptions, comments
+    {
+      id: 'fastcash-logo-folded',
+      title: 'Fast Logo Pleated Mask',
+      link: '',
+      primaryIx: 1,
+      images: foldedImages('fastcash-logo-folded'),
+      description: ``,
+      reviews: [
+        {
+          author: 'stupid',
+          date: '10/2/20',
+          rating: 1,
+          content: `stupid`
+        },
+      ]
+    },
+
+    {
+      id: 'not-mask',
+      title: 'NOT Logo Mask',
+      link: '',
+      primaryIx: 1,
+      images: fullFaceMaskImages('not-mask'),
+      description: ``,
+      reviews: [
+        {
+          author: 'stupid',
+          date: '10/2/20',
+          rating: 1,
+          content: `stupid`
+        },
+      ]
+    },
+   {
+      id: 'not-t',
+      title: 'NOT T',
+      link: '',
+      primaryIx: 0,
+      images: fullFaceMaskImages('not-t'),
+      description: ``,
+      reviews: [
+        {
+          author: 'stupid',
+          date: '10/2/20',
+          rating: 1,
+          content: `stupid`
+        },
+      ]
+    },
+   {
+      id: 'fastcash-text-folded',
+      title: 'FastCash Text Pleated Mask',
+      link: '',
+      primaryIx: 1,
+      images: foldedImages('fastcash-text-folded'),
+      description: ``,
+      reviews: [
+        {
+          author: 'stupid',
+          date: '10/2/20',
+          rating: 1,
+          content: `stupid`
+        },
+      ]
+    },
   ],
 
   bargain: [
@@ -950,6 +1132,7 @@ const data: Data = {
     },
     {
       id: 'smiling-eyes',
+      featured: true,
       title: 'Smiling Eyes Mask',
       link: '',
       primaryIx: 2,
@@ -1121,7 +1304,88 @@ const data: Data = {
           rating: 1,
           content: `How old is this model and you're calling her sexy? Is she supposed to "flash" me? Gross.`
         },
+      ]
+    },
 
+    // TODO descriptions,comments
+    {
+      id: 'dollar-dollar',
+      title: 'Dollar Dollar Pleated Mask',
+      link: '',
+      primaryIx: 0,
+      images: foldedImages('dollar-dollar'),
+      description: ``,
+      reviews: [
+        {
+          author: 'stupid',
+          date: '10/2/20',
+          rating: 1,
+          content: `stupid`
+        },
+      ]
+    },
+    {
+      id: 'knotty-mask',
+      title: 'Knotty Pleated Mask',
+      link: '',
+      primaryIx: 1,
+      images: foldedImages('knotty-mask'),
+      description: ``,
+      reviews: [
+        {
+          author: 'stupid',
+          date: '10/2/20',
+          rating: 1,
+          content: `stupid`
+        },
+      ]
+    },
+    {
+      id: 'mask-mask',
+      title: 'Mask Mask',
+      link: '',
+      primaryIx: 0,
+      images: fullFaceMaskImages('mask-mask'),
+      description: ``,
+      reviews: [
+        {
+          author: 'stupid',
+          date: '10/2/20',
+          rating: 1,
+          content: `stupid`
+        },
+      ]
+    },
+    {
+      id: 'shale-bad',
+      title: 'Shale Bad T',
+      link: '',
+      primaryIx: 0,
+      images: darkTshirtImages('shale-bad'),
+      description: ``,
+      reviews: [
+        {
+          author: 'stupid',
+          date: '10/2/20',
+          rating: 1,
+          content: `stupid`
+        },
+      ]
+    },
+    {
+      id: 'hat-hat',
+      title: 'Hat Hat',
+      link: '',
+      primaryIx: 1,
+      images: hatImages('hat-hat'),
+      description: ``,
+      reviews: [
+        {
+          author: 'stupid',
+          date: '10/2/20',
+          rating: 1,
+          content: `stupid`
+        },
       ]
     },
   ],

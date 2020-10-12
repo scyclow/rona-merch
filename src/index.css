@@ -54,7 +54,17 @@ table {
   border-spacing: 0;
 }
 
+::selection {
+  background-color: #000;
+  color: #fff;
+}
+
 .nightmode {
   background-color: #000;
   color: #fff;
+}
+
+.nightmode ::selection {
+  background-color: #fff;
+  color: #000;
 }

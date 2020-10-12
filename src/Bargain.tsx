@@ -20,7 +20,7 @@ export default function Bargain() {
 
       <Content>
         {data.bargain.map(item => (
-          <ItemFeature key={item.id} item={item} />
+          <ItemFeature key={item.id} item={item} style={{border: '2px solid'}}/>
         ))}
       </Content>
     </>

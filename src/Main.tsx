@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import {shuffle} from 'lodash'
 import Logo from './Logo'
 
+
 import logoNight from './logo-night.svg'
 import flashSale from './flashSale.svg'
 import flashSaleNight from './flashSaleNight.svg'
@@ -21,7 +22,7 @@ export default function Main() {
         <Title />
       </header>
       <Marquee duration={20}>
-        <a href="http://fakebullshit.news" target="_blank">
+        <a href="http://fakebullshit.news/articles/small-business-thrives" target="_blank">
           <h4 className="rmName">
             "Without a doubt, Rona Merch Co. offers the hottest selection of stylish face masks on the internet -- and at ROCK BOTTOM prices to boot!"
             <span className="link" style={{paddingLeft: 3}}>Patrick Swanson (FB News)</span>
@@ -204,17 +205,19 @@ function Title() {
 }
 
 function FeaturedItems() {
+  const items = shuffle(allData.filter(i => i.featured))
+
   return (
     <div style={{ width: '100%' }}>
-      <div style={{marginBottom: 10}}>
+      <div style={{marginBottom: 15}}>
         <RotateZ>
           <span style={{fontSize: 30}}>FEATURED ITEMS</span>
         </RotateZ>
       </div>
       <div style={{ border: '6px solid'}}>
         <ImageMarquee>
-          {shuffle(allData).slice(0, 7).map(item => (
-            <ItemFeature key={item.id} item={item}/>
+          {items.map(item => (
+            <ItemFeature key={item.id} item={item} style={{marginRight: 5}}/>
           ))}
         </ImageMarquee>
       </div>
@@ -233,7 +236,7 @@ function Patriot() {
         <PatriotTitle />
         <VerticalMarquee style={{ height: windowWidth > 815 ? 800 : 400, boxSizing: 'content-box', color: '#3C3B6E', borderTop: 0 }} duration={48000}>
           {shuffle(data.patriot.map(item => (
-            <ItemFeature noLink key={item.id} item={item}/>
+            <ItemFeature noLink key={item.id} item={item} style={{ borderTop: '4px solid #3c3b6e' }}/>
           )))}
         </VerticalMarquee>
       </div>
@@ -269,17 +272,17 @@ function Bargain() {
     <Link to="/bargain" className="bargainSection">
       <div>
         <BargainTitle />
-        <div className="bargainImageSection">
+        <div className="bargainImageSection" style={{ marginTop: 20}}>
           <ImageShrinkRotation ms={3000} delay={0}>
             {bargainItems.map(item => (
-              <ItemFeature noLink key={item.id} item={item}/>
+              <ItemFeature noLink key={item.id} item={item} style={{border: '2px solid'}}/>
             ))}
           </ImageShrinkRotation>
 
           {windowWidth >= 600 && (
             <ImageShrinkRotation ms={3000} delay={500}>
               {bargainItems2.map(item => (
-                <ItemFeature noLink key={item.id} item={item}/>
+                <ItemFeature noLink key={item.id} item={item} style={{border: '2px solid'}}/>
               ))}
             </ImageShrinkRotation>
           )}
@@ -462,7 +465,7 @@ function ImageMarquee({ children, jerk, duration, className, style, childStyle, 
           style={{ animationDuration, animationDelay }}
         >
           {children.map((child, i) => (
-            <span key={'marquee'+i} className={"imageMarqueeChild " + childClassName} style={childStyle} >
+            <span key={'marquee'+i} className={"imageMarqueeChild " + childClassName||''} style={childStyle} >
               {child}
             </span>
           )
@@ -734,27 +737,30 @@ export function ItemFeature({ item, className, style, noLink, showTitle, border 
 
   const borderStyle = {
     border: border ? '4px solid' : '',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    height: 300
   }
 
   const imgSrc = item.images[item.primaryIx]
+
+  const imageElem = (
+    <>
+      <div style={borderStyle}>
+        {item.emText && emTextElement}
+        <img src={imgSrc} alt={item.title} />
+      </div>
+      {showTitle && <div className="itemFeatureTitle">{item.title}</div>}
+    </>
+  )
 
   return (
     <div className={`itemFeature ${className || ''}`} style={style}>
       <div>
         {!!noLink
-          ? (
-          <div style={borderStyle}>
-            {item.emText && emTextElement}
-            <img src={imgSrc} alt={item.title} />
-          </div>
-        ) : (
+          ? imageElem
+          : (
           <Link to={`/items/${item.id}`}>
-            <div style={borderStyle}>
-              {item.emText && emTextElement}
-              <img src={imgSrc} alt={item.title} />
-            </div>
-            {showTitle && <div className="itemFeatureTitle">{item.title}</div>}
+            {imageElem}
           </Link>
         )}
       </div>
@@ -777,7 +783,7 @@ export function VerticalMarquee({children, className, direction, duration, style
   duration = duration || 24000
 
   const images = children.map((child, i) => (
-    <div key={'vm'+i} style={{ marginTop: 10 }}>
+    <div key={'vm'+i}>
       {child}
     </div>
   ))
