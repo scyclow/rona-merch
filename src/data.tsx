@@ -774,8 +774,7 @@ const data: Data = {
       primaryIx: 0,
       link: '',
       images: tShirtImages('fastcash-super-plus-t'),
-      description: ``,
-      // description: `Stand out from the crowd and let everyone know that you're a winner with the bank account to back it up. Great for biking safely at night -- drivers will think twice before they hit you with their vehicle, lest they find themselves in the middle of a costly lawsuit!`,
+      description: <>The gold standard of FastCash Logo Ts, with an inverse-color text shadow along with the the back investment text. Now available in SAFETY GREEN, allowing you to stand out from the crowd -- all while letting everyone know that you're a winner with the bank account to back it up. Great for biking safely at night. Drivers will think twice before they hit you with their vehicle, lest they find themselves in the middle of a costly lawsuit!<br/><a className="link" href="http://fastcashmoneyplus.biz" target="_blank">Sponsored by FastCashMoneyPlus.biz</a></>,
       reviews: [
         {
           author: 'pastisfuture',
@@ -815,7 +814,7 @@ const data: Data = {
       link: 'https://www.zazzle.com/fast_cash_logo_t_t_shirt-235242209585069073',
       primaryIx: 1,
       images: tShirtImages('fastcash-t'),
-      description: `Get the most bang for your buck with this thrifty FastCash Logo T. Not quite as flashy as the FastCash Plus and FastCash Super Plus Ts, but still a great deal. A great bargain of an investment`,
+      description: <>Get the most bang for your buck with this thrifty FastCash Logo T. Not quite as flashy as the FastCash Plus and FastCash Super Plus Ts, but still a great deal. A great bargain of an investment<br/><a className="link" href="http://fastcashmoneyplus.biz" target="_blank">Sponsored by FastCashMoneyPlus.biz</a></>,
       reviews: [
         {
           author: 'VinceSlickson',
@@ -843,8 +842,7 @@ const data: Data = {
       link: '',
       primaryIx: 0,
       images: darkTshirtImages('fastcash-plus-t'),
-      // description: `Nothing beats the classic style of the Black/White FastCashMoneyPlus logo T. No frills. All business. Break out this sleek dark rendition for any occasion`,
-      description: ``,
+      description: <>The Swiss-Army knife of FastCash logo Ts. The addition of the iconic FastCashMoneyPlus investment text on the back makes this a nice upgrade from the standard FastCash T, even if it doesn't have the flair of the text shadow found on the FastCash Super Plus T. No frills. All business. Break out this sleek dark rendition for any occasion<br/><a className="link" href="http://fastcashmoneyplus.biz" target="_blank">Sponsored by FastCashMoneyPlus.biz</a></>,
       reviews: [
         {
           author: 'VinceSlickson',
@@ -944,7 +942,7 @@ const data: Data = {
       title: "Fake News Mask",
       link: '',
       primaryIx: 5,
-      description: 'As the informational landscape of America shifts away from truth and closer to fiction, this mask serves as a reminder to remain vigilant and skeptical of misinformation.',
+      description: <>As the informational landscape of America shifts away from truth and closer to fiction, this mask serves as a reminder to remain vigilant and skeptical of misinformation. <br/><a className="link" href="http://fakebullshit.news" target="_blank">Sponsored by FakeBullshit.news</a></>,
       images: fullFaceMaskImages('fake-news'),
       reviews: [
         {

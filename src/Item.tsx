@@ -15,6 +15,11 @@ const getText = (tree: any)=>{
   if (typeof tree.props.children === 'string') {
     return tree.props.children
   }
+
+  if (!tree.props.children) {
+    return
+  }
+
   return tree.props.children.map((child: any)=>{
     return getText(child);
   }).join('');
@@ -90,6 +95,7 @@ function Content({ item }: {item?: Item}) {
 
   if (!item) return <Redirect to="/" />
 
+  const description: any = item?.description || 'DESCRIPTION MISSING'
   return (
     <div>
       <h1 className="itemTitle">{item.title}</h1>
@@ -130,7 +136,7 @@ function Content({ item }: {item?: Item}) {
         <div>
           <div className="description">
             <h2 className="itemSectionHeader">PRODUCT DESCRIPTION</h2>
-            <p className="descriptionText">{item.description || 'DESCRIPTION MISSING'}</p>
+            <p className="descriptionText">{description}</p>
           </div>
           <h2 className="itemSectionHeader">REVIEWS</h2>
           <div className="reviews">
