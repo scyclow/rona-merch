@@ -4,7 +4,6 @@ import {shuffle} from 'lodash'
 import Logo from './Logo'
 
 
-import logoNight from './logo-night.svg'
 import flashSale from './flashSale.svg'
 import flashSaleNight from './flashSaleNight.svg'
 import './Main.css'

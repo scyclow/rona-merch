@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import {Helmet} from 'react-helmet'
 import Main, {BlinkLongHeader} from './Main'
 import Patriot from './Patriot'
 import Safety from './Safety'
@@ -9,7 +10,8 @@ import AllItems from './AllItems'
 import { BrowserRouter, Route, Switch, useLocation, Link } from 'react-router-dom'
 import './App.css'
 import X from './x.svg'
-import {Helmet} from 'react-helmet'
+import Logo from './Logo'
+
 
 
 export function ScrollToTop() {
@@ -22,7 +24,67 @@ export function ScrollToTop() {
   return null;
 }
 
+const fmtTime = (n: number) => {
+  const r = Math.floor(n)
+  if (r < 10) return '0' + r
+  else return '' + r
+}
+function Countdown() {
+  const launch = new Date('2020-10-16T16:00:00.000Z')
+  const now = new Date()
+  // @ts-ignore
+  const diff = (launch - now) / 1000
+
+  const d = diff / 86400
+  const h = (d - Math.floor(d)) * 24
+  const m = (h - Math.floor(h)) * 60
+  const s = (m - Math.floor(m)) * 60
+
+  const [days, setDays] = useState(d)
+  const [hours, setHours] = useState(h)
+  const [minutes, setMinutes] = useState(m)
+  const [seconds, setSeconds] = useState(s)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = new Date()
+      // @ts-ignore
+      const diff = (launch - now) / 1000
+      const d = diff / 86400
+      const h = (d - Math.floor(d)) * 24
+      const m = (h - Math.floor(h)) * 60
+      const s = (m - Math.floor(m)) * 60
+
+      setDays(d)
+      setHours(h)
+      setMinutes(m)
+      setSeconds(s)
+    }, 1000)
+
+    return () => clearInterval(interval)
+  })
+  return (
+    <div style={{ fontSize: 50, fontWeight: 500, marginTop: '0.5em' }}>
+      {fmtTime(days)}
+      <span className="blink">:</span>
+      {fmtTime(hours)}
+      <span className="blink">:</span>
+      {fmtTime(minutes)}
+      <span className="blink">:</span>
+      {fmtTime(seconds)}
+    </div>
+  )
+}
+
 export default function App() {
+  if (process.env.NODE_ENV === 'production') {
+    return (
+      <div style={{ width: '100vw', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+        <Logo />
+        <Countdown />
+      </div>
+    )
+  }
   return (
     <BrowserRouter>
       <ScrollToTop />

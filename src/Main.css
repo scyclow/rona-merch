@@ -75,6 +75,7 @@ a {
 .logo {
   display: inline-block;
   max-width: 425px;
+  max-height: 425px;
   /*width: 100%;*/
   pointer-events: none;
 }
@@ -86,7 +87,8 @@ a {
   }
   .logo {
     max-height: 250px;
-    margin: auto;
+    max-width: 250px;
+    /*margin: auto;*/
   }
 }
 

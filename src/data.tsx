@@ -689,43 +689,62 @@ const data: Data = {
         },
       ]
     },
-
-
-    // TODO Description
     {
       id: 'sovereign-t',
       title: 'Sovereign Citizen T',
       link: '',
       primaryIx: 1,
       images: tShirtImages('sovereign-t'),
-      description: ``,
+      description: `Clearly declare your sovereignty from any nation that treads on you with this Sovereign Citizen T. Don't leave home without it! Perfect for any type of protest with police presence.`,
       reviews: [
         {
-          author: 'stupid',
-          date: '10/2/20',
-          rating: 1,
-          content: `stupid`
+          author: 'Ech0mike',
+          date: '8/5/20',
+          rating: 4,
+          content: `I squinted really hard and was able to make out the following text on this t shirt: "Am I being detained? Are you now trying to fabricate probable cause by making false statements into the free exercise any way to you. No law can convert the Articulable probable cause that authorizes you alleging gave you have your name and accost me? do not ask me to search me to possibly incriminate me, so please do you probable cause that could or information are you to violate my right to believe that I being detained? From this point forward I being detained? What facts or alleged privilege. And no law can convert the Articulable probable cause that I have your unlawful efforts to fabricate probable cause that authorizes you have committed or information are you have a court of this point forward I have a properly signed and false allegations against me? Am I have your unlawful efforts to fabricate probable cause to believe that I being detained? Can I have a properly signed and accost me? do you have committed or alleged privilege. And no law can convert the Articulable probable cause by making false statements into the Articulable probable cause to waive any other right to violate my rights? Am I being detained? What facts or to produce anything and give it requires me in any information or am about to continue in your unlawful efforts to stop and give it to continue in order to search me in order to search me in your unlawful efforts to violate my property? Am I being detained? Are From this point forward I have your name and false statements into the record and my fundamentally protected right to waive any other right into a recording being detained? Can I have already invoked my property? Am I being detained? Are fully aware that I have your unlawful efforts to believe that I being detained? What facts or arrest me? do not consent to assistance of any way to fabricate probable cause by making false statements into the record and false statements into a crime. And no law is the record and my property? Am I being detained? Can I being made of this point forward I being detained? Can I have your unlawful efforts to possibly incriminate me, so please do not ask me in order to stop and give it to fabricate probable cause that I have committed or am about to providing you to providing you have your name and badge number? Is there a court of counsel? Do you probable cause to assistance of law or arrest me? Am I being made of this encounter? Am I being detained? Am I have already invoked my fundamentally protected right or to produce anything and give it to continue in order to possibly incriminate me, so please do you to violate my rights? Am I being detained?"`
         },
+        {
+          author: 'octofuzz',
+          date: '8/8/20',
+          rating: 2,
+          content: `I don't think this shirt will get you off the hook for anything. If the above commenter is right, this is just pure gibberish. Reads like something a machine wrote...`
+        },
+        {
+          author: 'pastisfuture',
+          date: '8/16/20',
+          rating: 4,
+          content: `I've been thinking a lot about this lately, and I think I'm going to purchase this t shirt. It's the least I can do to express the fact that society is a total fabrication. None of these laws are written in the cosmos. Why should I be subject to the arbitrary rules that others decided to enforce?`
+        }
       ]
     },
-
     {
       id: 'sovereign-mask',
       title: 'Sovereign Citizen Pleated Mask',
       link: '',
       primaryIx: 0,
       images: foldedImages('sovereign-mask'),
-      description: ``,
+      description: `Declare your sovereignty from any nation that treads on you with this Sovereign Citizen mask. Upon being stopped by a police officer, simply point to your face to express that they have no legal power over you. Perfect for any type of protest with police presence.`,
       reviews: [
         {
-          author: 'stupid',
-          date: '10/2/20',
-          rating: 1,
-          content: `stupid`
+          author: 'Ech0mike',
+          date: '8/5/20',
+          rating: 4,
+          content: `Just like with the t shirt, I was able to figure out the text on this mask through a combination of squinting and machine learning: "Am I being detained? Can I have your name and badge number? Is there a recording being made of this encounter? Am I being detained? What facts or information are you alleging gave you probable cause to stop and accost me? do you have a properly signed and issued warrant authorizing you to search me or my property? Am I being detained? What is the Articulable probable cause that leads you to believe that I have committed or am about to commit a crime that authorizes you to stop and detain or arrest me? Am I being detained? From this point forward I do not consent to providing you with any information or documents that could or will be used against me in a court of law or to possibly incriminate me, so please do not ask me to produce anything and give it to you. No law is valid if it requires me in any way to waive any fundamentally protected right in order to exercise any other right or alleged privilege. And no law can convert the free exercise of any right into a crime. Are fully aware that I have already invoked my fundamentally protected right to remain silent and my right to assistance of counsel? Do you intend to continue in your unlawful efforts to violate my rights? Am I being detained? Am I being detained? Are you now trying to fabricate probable cause by making false statements into the record and false allegations against me?"`
         },
+        {
+          author: 'SweetSalvation',
+          date: '8/15/20',
+          rating: 5,
+          content: `If and when the Socialist Democrats ever take power then that'll be the day that I don't consider myself a citizen of this fine nation any more so I keep one of these masks with me in my back pocket all the time.`
+        },
+        {
+          author: 'pastisfuture',
+          date: '8/16/20',
+          rating: 4,
+          content: `I'm not sure if I consider myself a sovereign citizen, or what. But I still think it's important to keep in mind that the only power police have over you is determined by a social construct. We're born into this society with no say about it, and for some reason we're expected to follow the rules? I don't think so. The humans of the pre agricultural days didn't have police officers, and they roamed the same land we stand on today under an entirely different legal framework. `
+        }
       ]
     },
-
     {
       id: 'emf-tower',
       title: 'EMF Tower Pleated Mask',
@@ -735,13 +754,14 @@ const data: Data = {
       description: ``,
       reviews: [
         {
-          author: 'stupid',
-          date: '10/2/20',
+          author: 'EnergyMatters',
+          date: '8/27/20',
           rating: 1,
-          content: `stupid`
+          content: `No no no no no, I don't like this one at all...`
         },
       ]
     },
+    // TODO Description
     {
       id: 'boo-hoo',
       title: 'Boo Hoo Anti Facial Recognition Mask',
@@ -1030,37 +1050,53 @@ const data: Data = {
         },
       ],
     },
-    // TODO descriptions, comments
     {
       id: 'fastcash-logo-folded',
       title: 'Fast Logo Pleated Mask',
       link: '',
       primaryIx: 1,
       images: foldedImages('fastcash-logo-folded'),
-      description: ``,
+      description: <>Make a statement with this fashionable FastCash Logo Pleated Mask. Perfect for standing out from the crowd on a crowded summer beach, or at a late summer backyard BBQ party. <br/><a className="link" href="http://fastcashmoneyplus.biz" target="_blank">Sponsored by FastCashMoneyPlus.biz</a></>,
       reviews: [
         {
-          author: 'stupid',
-          date: '10/2/20',
-          rating: 1,
-          content: `stupid`
+          author: 'jonesBeachHead',
+          date: '8/2/20',
+          rating: 4,
+          content: `This doesn't exactly match my bathing suit, but I suppose it's fine for what it is.`
+        },
+        {
+          author: 'fuckface99',
+          date: '8/23/20',
+          rating: 5,
+          content: `I FEEL LIKE MY FACE IS GOING TO FUCKING EXPLOAD WHENEVER I WEAR THIS MASK`
+        },
+        {
+          author: 'ippso_facto',
+          date: '9/12/20',
+          rating: 5,
+          content: `It's not summer any more, but it's still fashionable!`
         },
       ]
     },
-
     {
       id: 'not-mask',
       title: 'NOT Logo Mask',
       link: '',
       primaryIx: 1,
       images: fullFaceMaskImages('not-mask'),
-      description: ``,
+      description: `Sponsored by the famous Not A Security (NOT) ERC-20 token.`,
       reviews: [
         {
-          author: 'stupid',
-          date: '10/2/20',
-          rating: 1,
-          content: `stupid`
+          author: 'BullseyeBob',
+          date: '9/27/20',
+          rating: 3,
+          content: `Not many people know this, but this logo originates from the well-known Not A Security (NOT) ERC-20 pyramid scheme. According to some inside sources, the creator of this token is facing intense legal action from the SEC and needed to auction off some of the IP form the project to help pay for his legal fees. A good friend of mine was left "holding the bag" and lost a non-trivial sum of money with this scheme, so I can't say I'm a fan... even if the logo is as good as it is.`
+        },
+        {
+          author: 'TommyFlombego',
+          date: '9/28/20',
+          rating: 5,
+          content: `Great logo. Good for "seeing" what's really going on around you.`
         },
       ]
     },
@@ -1069,30 +1105,48 @@ const data: Data = {
       title: 'NOT T',
       link: '',
       primaryIx: 0,
-      images: fullFaceMaskImages('not-t'),
-      description: ``,
+      images: darkTshirtImages('not-t'),
+      description: `Sponsored by the famous Not A Security (NOT) ERC-20 token.`,
       reviews: [
         {
-          author: 'stupid',
-          date: '10/2/20',
-          rating: 1,
-          content: `stupid`
+          author: 'StarSeeker',
+          date: '8/1/20',
+          rating: 5,
+          content: `I'm feeling some fantastic energy from this shirt. Absolutely stellar`
+        },
+        {
+          author: 'octofuzz',
+          date: '8/11/20',
+          rating: 4,
+          content: `I'm not a huge fan of NOT for obvious reasons, but even I have to admit that this is a pretty cool looking t shirt.`
         },
       ]
     },
-   {
+    {
       id: 'fastcash-text-folded',
       title: 'FastCash Text Pleated Mask',
       link: '',
-      primaryIx: 1,
+      primaryIx: 0,
       images: foldedImages('fastcash-text-folded'),
-      description: ``,
+      description: <a className="link" href="http://fastcashmoneyplus.biz" target="_blank">Sponsored by FastCashMoneyPlus.biz</a>,
       reviews: [
         {
-          author: 'stupid',
-          date: '10/2/20',
-          rating: 1,
-          content: `stupid`
+          author: 'VinceSlickson',
+          date: '8/16/20',
+          rating: 5,
+          content: `Now THIS is a statement mask! Anyone who wears this is clearly broadcasting to the world that they're a winner. What mroe cna I say?`
+        },
+        {
+          author: 'WendyPilsen',
+          date: '8/20/20',
+          rating: 5,
+          content: `This mask is safe, comfortable, and a great deal.`
+        },
+        {
+          author: 'ray',
+          date: '8/23/20',
+          rating: 5,
+          content: `I was reccomended this mask and I purchased it. I wear it fondly.`
         },
       ]
     },
@@ -1305,20 +1359,31 @@ const data: Data = {
       ]
     },
 
-    // TODO descriptions,comments
     {
       id: 'dollar-dollar',
       title: 'Dollar Dollar Pleated Mask',
       link: '',
       primaryIx: 0,
       images: foldedImages('dollar-dollar'),
-      description: ``,
+      description: `Whenever you wear this Dollar Dollar Bill mask, it looks like you're wearing actualy dollar bills wrapped around your face. It's a real hoot!`,
       reviews: [
         {
-          author: 'stupid',
-          date: '10/2/20',
-          rating: 1,
-          content: `stupid`
+          author: 'DumboTheClown',
+          date: '9/21/20',
+          rating: 5,
+          content: `I like money!`
+        },
+        {
+          author: 'ActualPleiadian',
+          date: '9/21/20',
+          rating: 5,
+          content: `lmao 👌👌👌`
+        },
+        {
+          author: 'VinceSlickson',
+          date: '9/21/20',
+          rating: 3,
+          content: `Honestly, I wouldn't wear this mask out of the house. It's not quite as flashy as the $50 and $100 bill masks I've been seeing all over the place. But it's a good mask to wear to bed, espescially if it matches your PJs.`
         },
       ]
     },
@@ -1328,13 +1393,13 @@ const data: Data = {
       link: '',
       primaryIx: 1,
       images: foldedImages('knotty-mask'),
-      description: ``,
+      description: `Show off your favorite quarantine hobby: knot tying!`,
       reviews: [
         {
-          author: 'stupid',
-          date: '10/2/20',
-          rating: 1,
-          content: `stupid`
+          author: 'Hubert',
+          date: '10/12/20',
+          rating: 2,
+          content: `I don't care much for BDSM myself, but the Mrs likes it plenty, so I do it for her.`
         },
       ]
     },
@@ -1344,13 +1409,25 @@ const data: Data = {
       link: '',
       primaryIx: 0,
       images: fullFaceMaskImages('mask-mask'),
-      description: ``,
+      description: `Whether you're at the latest masquerade or just attending a local Halloween party, this mask is perfect for obscuring your face. `,
       reviews: [
         {
           author: 'stupid',
           date: '10/2/20',
           rating: 1,
           content: `stupid`
+        },
+        {
+          author: 'Hubert',
+          date: '10/12/20',
+          rating: 1,
+          content: `I dont' get it, it's just a mask on a mask.`
+        },
+        {
+          author: 'octofuzz',
+          date: '10/13/20',
+          rating: 1,
+          content: `What is this garbage? I'd never wear this on my face`
         },
       ]
     },
@@ -1363,10 +1440,10 @@ const data: Data = {
       description: ``,
       reviews: [
         {
-          author: 'stupid',
-          date: '10/2/20',
-          rating: 1,
-          content: `stupid`
+          author: 'octofuzz',
+          date: '10/13/20',
+          rating: 4,
+          content: `Honestly, this shirt is how I feel these days. The world is burning while plenty of Capitalist fat cats laugh their way to the bank by stealing the earth's resources. `
         },
       ]
     },

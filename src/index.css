@@ -1,15 +1,9 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
-  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  font-family: 'Helvetica Neue', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /*color: white;
-  background-color: #222;
-  border-color: #fff;*/
-}
-p {
-  /*font-family: 'Roboto Slab', 'Helvetica Neue', sans-serif;*/
 }
 
 html, body, div, span, applet, object, iframe,
