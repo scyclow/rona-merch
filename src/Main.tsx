@@ -250,9 +250,9 @@ function Branded() {
           <BrandedTitle />
           <div style={{ border: '4px solid #ff00ff'}}>
             <ImageMarquee jerk duration={20} childStyle={{marginRight: 0, borderRight: '4px solid #ff00ff'}}>
-              {shuffle(data.branded.map(item => (
+              {shuffle(data.branded).slice(0, 12).map(item => (
                 <ItemFeature noLink key={item.id} item={item}/>
-              )))}
+              ))}
             </ImageMarquee>
           </div>
         </div>

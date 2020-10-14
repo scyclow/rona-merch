@@ -14,6 +14,7 @@ if (hours < 5 || hours >= 22) {
   window.nightmode = true
 }
 
+
 render(
   <React.StrictMode>
     <App />

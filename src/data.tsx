@@ -139,7 +139,7 @@ const data: Data = {
       link: '',
       primaryIx: 1,
       images: fullFaceMaskImages('george-cat'),
-      description: <>Have you seen the cat? As most proponents of Henry George's Land Value Tax will tell you, once you "see the cat" and understand how deeply the LVT aligns with American values, you can't "unsee" it. Rock this vintage looks to tell everyone around you that you stand for Free Land, Free Trade, and Free People</>,
+      description: <>Have you seen the cat? As most proponents of Henry George's Land Value Tax will tell you, once you "see the cat" and understand how deeply the LVT aligns with American values, you can't "unsee" it. Rock this vintage look to tell everyone around you that you stand for Free Land, Free Trade, and Free People</>,
       reviews: [
         {
           author: 'octofuzz',

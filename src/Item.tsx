@@ -5,6 +5,7 @@ import Logo from './Logo'
 import './Item.css'
 import {allData, Item } from './data'
 import {Helmet} from 'react-helmet'
+import analytics from './analytics'
 
 
 const getText = (tree: any)=>{
@@ -95,13 +96,26 @@ function Content({ item }: {item?: Item}) {
 
   if (!item) return <Redirect to="/" />
 
+  const trackLinkClick = () => {
+    analytics('?buy=' + item.id)
+    // // @ts-ignore
+    // const g = window?.ga?.getAll?.()?.[0]
+    // // @ts-ignore
+    // g?.send({
+    //   hitType: 'event',
+    //   eventCategory: 'Zazzle',
+    //   eventAction: 'click',
+    //   eventValue: item.id
+    // })
+  }
+
   const description: any = item?.description || 'DESCRIPTION MISSING'
   return (
     <div>
       <h1 className="itemTitle">{item.title}</h1>
       <div className="contentGrid">
         <div className="itemLeftCol">
-          <a href={item.link} rel="noopener" target="_blank">
+          <a href={item.link} rel="noopener" target="_blank" onClick={trackLinkClick}>
             <ImageRotate ms={4000}>
               {item.images.map((image, i) => (
                 <img className="itemImage" src={image} alt={item.title + i} key={item.title + i} />

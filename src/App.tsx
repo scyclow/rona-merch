@@ -7,10 +7,11 @@ import Branded from './Branded'
 import Bargain from './Bargain'
 import Item from './Item'
 import AllItems from './AllItems'
-import { BrowserRouter, Route, Switch, useLocation, Link } from 'react-router-dom'
+import { BrowserRouter, Route, Switch, useLocation, Link, useHistory } from 'react-router-dom'
 import './App.css'
 import X from './x.svg'
 import Logo from './Logo'
+import analytics from './analytics'
 
 
 
@@ -76,17 +77,29 @@ function Countdown() {
   )
 }
 
+function Analytics() {
+  const history = useHistory()
+  useEffect(() => {
+    history.listen((location) => {
+      analytics(location.pathname + location.search + location.hash)
+    })
+  })
+
+  return null
+}
+
 export default function App() {
-  if (process.env.NODE_ENV === 'production') {
-    return (
-      <div style={{ width: '100vw', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-        <Logo />
-        <Countdown />
-      </div>
-    )
-  }
+  // if (process.env.NODE_ENV === 'production') {
+  //   return (
+  //     <div style={{ width: '100vw', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+  //       <Logo />
+  //       <Countdown />
+  //     </div>
+  //   )
+  // }
   return (
     <BrowserRouter>
+      <Analytics />
       <ScrollToTop />
       <Modal wait={120000} />
 
@@ -228,6 +241,14 @@ async function postEmail(email: string) {
   const headers = { 'Content-Type': 'application/json' }
   const body = JSON.stringify({ email, pin: 'no pin'})
 
+  // @ts-ignore
+  window?.ga?.('send', {
+    hitType: 'event',
+    eventCategory: 'email',
+    eventAction: 'subscribe',
+    eventValue: email
+  })
+
   const response = await fetch(
     'https://fastcashmoneyplus.herokuapp.com/api/users',
     {
@@ -236,5 +257,6 @@ async function postEmail(email: string) {
       method
     }
   )
+
   return response.json()
 }
