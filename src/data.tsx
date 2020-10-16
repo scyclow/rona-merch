@@ -90,7 +90,12 @@ const hatImages = (id: string) => [
   process.env.PUBLIC_URL + '/images/' + id + '-0.jpeg',
   process.env.PUBLIC_URL + '/images/' + id + '-1.jpeg',
   process.env.PUBLIC_URL + '/images/' + id + '-2.jpeg',
- ]
+]
+
+const womanShirt = (id: string) => [
+  process.env.PUBLIC_URL + '/images/' + id + '-0.jpeg',
+  process.env.PUBLIC_URL + '/images/' + id + '-1.jpeg',
+]
 
 
 const data: Data = {
@@ -359,6 +364,18 @@ const data: Data = {
           rating: 5,
           content: `This is one of the few face masks that really falls in line with my sensibilities. I most certainly think that COVID-19 is a hoax, but not in the way that most people think. The virus is absolutely floating around out there, but let's jsut say that the government hasn't been 100% up front with us about its effects on the human body. Additionally, there are a million reasons why you should wear a face mask aside from the "novel" coronavirus. It's just common sense.`
         },
+        {
+          author: 'schoonerscaptain',
+          date: '9/19/20',
+          rating: 3,
+          content: `Wait, is the mask a hoax or is covid a hoax? I don't get it.`
+        },
+        {
+          author: 'FrankFrankson',
+          date: '9/27/20',
+          rating: 4,
+          content: `The straps were a little too small for my ears, resulting in a tight fit. But that's my fault since I chose the 6.5 inch straps at checkout. Don't make the same mistake I did!`
+        },
       ]
     },
     {
@@ -438,16 +455,28 @@ const data: Data = {
     {
       id: 'american-flag',
       title: 'American Flag Pleated Mask',
-      link: '',
+      link: 'Nothing is as iconic as the American flag. Wear it proudly across your face to pledge your allegiance to the greatest country on earth.',
       primaryIx: 1,
       images: foldedImages('american-flag'),
       description: ``,
       reviews: [
         {
+          author: 'anushv',
+          date: '9/23/20',
+          rating: 3,
+          content: `Can I still wear this if I'm Canadian?`
+        },
+        {
           author: 'stupid',
           date: '10/2/20',
           rating: 1,
           content: `stupid`
+        },
+        {
+          author: 'SweetSalvation',
+          date: '10/3/20',
+          rating: 5,
+          content: `This mask aint stupid like some of the other reviewers are saying it's a proud display that you're an American, and nothing less`
         },
       ]
     },
@@ -460,10 +489,16 @@ const data: Data = {
       description: ``,
       reviews: [
         {
-          author: 'stupid',
-          date: '10/2/20',
-          rating: 1,
-          content: `stupid`
+          author: 'DumboTheClown',
+          date: '9/21/20',
+          rating: 3,
+          content: `I don't get it. What does this mean?`
+        },
+        {
+          author: 'TeachersPet',
+          date: '9/24/20',
+          rating: 3,
+          content: `I hear you loud and clear!`
         },
       ]
     },
@@ -514,21 +549,15 @@ const data: Data = {
       reviews: [
         {
           author: 'HunterMcFarlane',
-          date: '7/5/20',
+          date: '7/16/20',
           rating: -1,
-          content: `Very dissapointing. This mask was NOT INFECTED, much like the title promises. I tried to infect my kids with it so they could build their antibodies, but now they are totally fine. WOULD NOT BUY THIS PRODUCT AGAIN!`
+          content: `Again, very dissapointed with this product, as well as the INFECTED line of merchandise. As with the T shirt, this mask failed to infect my kids with anything. `
         },
         {
-          author: 'TargetedTom',
-          date: '8/31/20',
-          rating: 4,
-          content: `There's this one guy who lives in my building who won't leave me the f_ck alone... That is, until I started wearing this mask. I still see him more than I'd like, but at least now he sure as hell stays 6 feet away from me.`
-        },
-        {
-          author: 'CrystalBell',
-          date: '9/2/20',
+          author: 'DontCallMeRaul',
+          date: '8/1/20',
           rating: 2,
-          content: `I find this tasteless, to be perfectly honest. Tons of bad energy here. Would not reccomend`
+          content: `Honestly, I'm not the biggest fan of this "infected" merch. I think it's stupid`
         },
       ]
     },
@@ -565,15 +594,21 @@ const data: Data = {
       reviews: [
         {
           author: 'HunterMcFarlane',
-          date: '7/16/20',
-          rating: 3,
-          content: `Again, very dissapointed with this product, as well as the INFECTED line of merchandise. As with the mask, this T shirt failed to infect my kids with anything. However, my daghter really likes the color and the design. She thinks it's "edgy". `
+          date: '7/5/20',
+          rating: 2,
+          content: `Very dissapointing. This shirt was NOT INFECTED, much like the title promises. I tried to infect my kids with it so they could build their antibodies, but now they are totally fine. WOULD NOT BUY THIS PRODUCT AGAIN! However, unfortunately for me, my daghter really likes the color and the design of this ugly shirt. She thinks it's "edgy" and won't stop wearing it around the house. At least someone likes it. `
         },
         {
-          author: 'DontCallMeRaul',
-          date: '8/1/20',
+          author: 'TargetedTom',
+          date: '8/31/20',
+          rating: 4,
+          content: `There's this one guy who lives in my building who won't leave me the f_ck alone... That is, until I started wearing this shirt. I still see him more than I'd like, but at least now he sure as hell stays 6 feet away from me.`
+        },
+        {
+          author: 'CrystalBell',
+          date: '9/2/20',
           rating: 2,
-          content: `Honestly, I'm not the biggest fan of this "infected" merch. I think it's stupid`
+          content: `I find this tasteless, to be perfectly honest. Tons of bad energy here. Would not reccomend`
         },
       ]
     },
@@ -647,6 +682,24 @@ const data: Data = {
           date: '9/2/20',
           rating: 5,
           content: `This mask is pretty solid overall. It definitely gets the point across. Sometimes when I'm riding the subway and I see an idiot not wearing their mask, I'll look them directly in the eyes and point at my face. Works every time.`
+        },
+        {
+          author: 'Maxxx',
+          date: '9/13/20',
+          rating: 2,
+          content: `I don't like this one`
+        },
+        {
+          author: 'SweetSalvation',
+          date: '9/13/20',
+          rating: 1,
+          content: `You can't tell me what to do I'm an American citizen and here in America it's illegal to infringe on my rights as an American citizen you should take this mask off the store`
+        },
+        {
+          author: 'schoonerscaptain',
+          date: '9/15/20',
+          rating: 3,
+          content: `I don't know what to make of this one, to be honest`
         },
       ]
     },
@@ -926,7 +979,13 @@ const data: Data = {
           date: '9/3/20',
           rating: 4,
           content: `This mask looks great! I would definitely wear it!`
-        }
+        },
+        {
+          author: 'FrankFrankson',
+          date: '9/26/20',
+          rating: 5,
+          content: `It looks even better if you change the background to black and the logo to white at checkout. Almost like the website's night mode. Very cool!`
+        },
       ],
     },
     {
@@ -984,7 +1043,7 @@ const data: Data = {
       title: "Rona Merch See Through Mask",
       link: '',
       primaryIx: 0,
-      description: '',
+      description: 'Who says sneeze guards need to be lame? With the Rona Merch See Through Mask, you can protect everyone around you from unwanted sneezes and more... all while donning the Rona Merch logo!',
       images: seeThroughImages('rm-see-through'),
       reviews: [
         {
@@ -992,6 +1051,18 @@ const data: Data = {
           date: '9/1/20',
           rating: 5,
           content: `When I sneeze the Rona Merch logo protects my friends!`
+        },
+        {
+          author: 'FrankFrankson',
+          date: '10/1/20',
+          rating: 5,
+          content: `This is great! I've been looking for a sneeze guard mask that wasn't quite as boring as the rest of them. This fits that bill. The sharp RM logo really complements my facial structure.`
+        },
+        {
+          author: 'username',
+          date: '10/11/20',
+          rating: 3,
+          content: `the logo is too big`
         },
       ],
     },
@@ -1197,6 +1268,24 @@ const data: Data = {
           rating: 5,
           content: `This mask makes me happy!`
         },
+        {
+          author: 'TommyFlombego',
+          date: '10/5/20',
+          rating: 1,
+          content: `I'm sick of all propaganda on this website. It's time someone spoke the truth about that's happening here. Hasn't anyone wondered why all these crappy face masks are so expensive? Well I'll tell you: RonaMerchCo is just a front for a global child sex trafficking ring. These listings are clearly not for the shown products, but rather for live human beings. When you put the pieces together it's fairly obvious. Smiling Eyes? Wakka Wakka? Not so subtle if you ask me. If you want more details message my friendworld account.`
+        },
+        {
+          author: 'WendyPilsen',
+          date: '10/18/20',
+          rating: 5,
+          content: `Charming`
+        },
+        {
+          author: 'SuperCatMeow',
+          date: '10/19/20',
+          rating: 5,
+          content: `You know what they say: Smiling Eyes equals a Smiling Face`
+        },
       ]
     },
     {
@@ -1250,14 +1339,7 @@ const data: Data = {
       primaryIx: 1,
       images: fullFaceMaskImages('cluck'),
       description: ``,
-      reviews: [
-        {
-          author: 'stupid',
-          date: '9/28/20',
-          rating: 2,
-          content: `stupid`
-        },
-      ]
+      reviews: []
     },
     {
       id: `pattern1`,
@@ -1461,6 +1543,41 @@ const data: Data = {
           rating: 1,
           content: `stupid`
         },
+        {
+          author: 'FrankFrankson',
+          date: '10/11/20',
+          rating: 4,
+          content: `I was skeptical at first, but this hat really won me over. Not only is it well-made, but it's comfortable too!`
+        },
+      ]
+    },
+    {
+      id: 'super-spreader',
+      title: 'Super Spreader T',
+      link: '',
+      primaryIx: 0,
+      images: womanShirt('super-spreader'),
+      description: ``,
+      reviews: [
+        {
+          author: 'StarSeeker',
+          date: '9/25/20',
+          rating: 5,
+          content: `Wonderful`
+        },
+        {
+          author: 'WendyPilsen',
+          date: '9/27/20',
+          rating: 4,
+          content: `Very comfortable and a nice soft shade of blue`
+        },
+        {
+          author: 'PissinOnUHoes69',
+          date: '9/27/20',
+          rating: 1,
+          content: `What a completely inappropriate and sexist thing to put on a t shirt!`
+        },
+
       ]
     },
   ],

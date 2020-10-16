@@ -40,6 +40,7 @@
 }
 
 .safetyBorder {
+  border: 5px dashed;
   animation: safetyBorder 1s linear infinite;
   padding: 10px;
 

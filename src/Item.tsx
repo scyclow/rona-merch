@@ -155,6 +155,9 @@ function Content({ item }: {item?: Item}) {
           <h2 className="itemSectionHeader">REVIEWS</h2>
           <div className="reviews">
             <a href="https://friendworld.social/" target="_blank"><h3 className="itemSectionSubHeader">Powered by <span className="link">friendworld.social</span></h3></a>
+            {!item.reviews.length && (
+              <h2 style={{ textAlign: 'center', fontSize: 25, marginBottom: 15}}>No reviews for this item yet.</h2>
+            )}
             {item.reviews.map(review => (
               <div key={review.content} className="review">
                 <h4 className="reviewRating">{review.rating} Stars!</h4>

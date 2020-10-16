@@ -63,12 +63,18 @@ const foldedImages = id => [
   `https://www.zazzle.com/rlv/svc/view?realview=113697978004291095&design=${id}&rlvnet=1&style=cover&max_dim=325&bg=0xffffff`,
 ]
 
-// 5569f287-c67e-46dd-b1ef-f593dfcef9fd
 const hatImages = id => [
   `https://www.zazzle.com/rlv/svc/view?rlvnet=1&realview=113647281033678299&design=${id}&style=trucker_hat&color=white_black&max_dim=325&bg=0xffffff`,
   `https://www.zazzle.com/rlv/svc/view?rlvnet=1&realview=113240240869341705&design=${id}&style=trucker_hat&color=white_black&max_dim=325&bg=0xffffff`,
   `https://www.zazzle.com/rlv/svc/view?rlvnet=1&realview=113308264365003772&design=${id}&style=trucker_hat&color=white_black&max_dim=325&bg=0xffffff`,
 ]
+
+
+const womanShirt = id => [
+  `https://www.zazzle.com/rlv/svc/view?rlvnet=1&realview=113969212191856268&design=${id}&style=hanes_womens_crew_tshirt_5680&size=a_s&color=lightblue&max_dim=325&bg=0xffffff`,
+  `https://www.zazzle.com/rlv/svc/view?rlvnet=1&realview=113253585147919601&design=${id}&style=hanes_womens_crew_tshirt_5680&size=a_s&color=lightblue&max_dim=325&bg=0xffffff`
+]
+
 
 // TODO
 // - fastcash folded text
@@ -270,8 +276,6 @@ const data = {
       images: foldedImages('dff56b11-96d1-4752-97a1-38b5230d663d'),
     },
   ],
-
-
   bargain: [
     {
       id: 'wakka-wakka',
@@ -310,36 +314,29 @@ const data = {
       images: tanktopImages('6a2fd9a0-c683-465c-b857-81c5b38c0aa7'),
     },
     {
-      // TODO Description
       id: 'dollar-dollar',
       images: foldedImages('ceb90d71-eff8-4e65-b385-70eb2c024a97'),
     },
-    // {
-    //   // TODO Description
-    //   id: 'dollar-dollar',
-    //   images: foldedImages('7d886f55-efff-4d53-b6d2-ef69670b8653'),
-    // },
     {
-      // TODO Description
       id: 'knotty-mask',
       images: foldedImages('3ba9f754-a976-47e5-8004-868dd5c9c867'),
     },
     {
-      // TODO Description
       id: 'mask-mask',
       images: fullFaceMaskImages('9766814c-94df-477b-9b1d-3a1327aa7ea3'),
     },
     {
-      // TODO Description
       id: 'shale-bad',
       images: darkTshirtImages('b9ba6d23-ec23-4d35-9c08-8dafb47a7712'),
     },
     {
-      // TODO Description
       id: 'hat-hat',
       images: hatImages('5569f287-c67e-46dd-b1ef-f593dfcef9fd'),
     },
-
+    {
+      id: 'super-spreader',
+      images: womanShirt('df865af7-c848-4f68-ba0e-cdf4b98ad567'),
+    },
   ],
 }
 

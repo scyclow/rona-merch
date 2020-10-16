@@ -16,6 +16,8 @@ export default function Patriot() {
   const firstSection = items.slice(0, Math.floor(items.length / 3))
   const secondSection = items.slice(Math.floor(items.length / 3), Math.floor(items.length * 2 / 3))
   const thirdSection = items.slice(Math.floor(items.length * 2 / 3), items.length)
+
+  const verticalHeight = (firstSection.length - 0.5) * 300
   return (
     <>
       <Background />
@@ -26,26 +28,24 @@ export default function Patriot() {
         </Marquee>
       </div>
       <Content>
-        <VerticalMarquee style={{ height: 900 }} direction={-1} duration={30000} className="borderWhite">
+        <VerticalMarquee style={{ height: verticalHeight }} direction={-1} duration={40000} className="borderWhite">
           {firstSection.map(item => (
             <ItemFeature key={item.id} item={item}/>
           ))}
         </VerticalMarquee>
 
-        <VerticalMarquee style={{ height: 900 }} direction={1} duration={30000} className="borderRed">
+        <VerticalMarquee style={{ height: verticalHeight }} direction={1} duration={40000} className="borderRed">
           {secondSection.map(item => (
             <ItemFeature key={item.id} item={item}/>
           ))}
         </VerticalMarquee>
 
-        <VerticalMarquee style={{ height: 900 }} direction={-1} duration={30000} className="borderBlue">
+        <VerticalMarquee style={{ height: verticalHeight }} direction={-1} duration={40000} className="borderBlue">
           {thirdSection.map(item => (
             <ItemFeature key={item.id} item={item}/>
           ))}
         </VerticalMarquee>
-
       </Content>
-
     </>
   )
 }
