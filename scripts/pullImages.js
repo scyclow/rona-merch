@@ -315,8 +315,9 @@ const data = {
     },
     {
       id: 'dollar-dollar',
-      images: foldedImages('ceb90d71-eff8-4e65-b385-70eb2c024a97'),
+      images: foldedImages('3ed0044b-3556-4d7f-b571-35a5885f2fa4'),
     },
+
     {
       id: 'knotty-mask',
       images: foldedImages('3ba9f754-a976-47e5-8004-868dd5c9c867'),

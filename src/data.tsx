@@ -532,7 +532,7 @@ const data: Data = {
           content: `I wouldn't leave home without it!`
         },
         {
-          author: 'octoFuzz',
+          author: 'octofuzz',
           date: '9/30/20',
           rating: 3,
           content: `I don't get it -- is the picture of the gas mask supposed to make this mask safer? In any case, I suppose it looks cool.`
@@ -1583,6 +1583,7 @@ const data: Data = {
   ],
 }
 
+
 export default data
 export const allData = [
   ...data.patriot,
@@ -1590,3 +1591,11 @@ export const allData = [
   ...data.branded,
   ...data.bargain,
 ]
+
+const users: any = allData.reduce((users: any, item: Item) => {
+  item.reviews.forEach((review) => {
+    users[review.author] = users[review.author] ? [...users[review.author], review.date] : [review.date]
+  })
+  return users
+}, {} as any)
+
