@@ -30,11 +30,11 @@ const fmtTime = (n: number) => {
   if (r < 10) return '0' + r
   else return '' + r
 }
-function Countdown() {
-  const launch = new Date('2020-10-16T16:00:00.000Z')
+
+function Countdown({ expiration }: {expiration: Date}) {
   const now = new Date()
   // @ts-ignore
-  const diff = (launch - now) / 1000
+  const diff = (expiration - now) / 1000
 
   const d = diff / 86400
   const h = (d - Math.floor(d)) * 24
@@ -50,7 +50,7 @@ function Countdown() {
     const interval = setInterval(() => {
       const now = new Date()
       // @ts-ignore
-      const diff = (launch - now) / 1000
+      const diff = (expiration - now) / 1000
       const d = diff / 86400
       const h = (d - Math.floor(d)) * 24
       const m = (h - Math.floor(h)) * 60
@@ -65,14 +65,17 @@ function Countdown() {
     return () => clearInterval(interval)
   })
   return (
-    <div style={{ fontSize: 50, fontWeight: 500, marginTop: '0.5em' }}>
-      {fmtTime(days)}
-      <span className="blink">:</span>
-      {fmtTime(hours)}
-      <span className="blink">:</span>
-      {fmtTime(minutes)}
-      <span className="blink">:</span>
-      {fmtTime(seconds)}
+    <div style={{ width: '100vw', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+      <Logo className="countdownLogo" />
+      <div style={{ fontSize: 50, fontWeight: 500, marginTop: '0.5em' }}>
+        {fmtTime(days)}
+        <span className="blink">:</span>
+        {fmtTime(hours)}
+        <span className="blink">:</span>
+        {fmtTime(minutes)}
+        <span className="blink">:</span>
+        {fmtTime(seconds)}
+      </div>
     </div>
   )
 }
@@ -89,14 +92,17 @@ function Analytics() {
 }
 
 export default function App() {
-  // if (process.env.NODE_ENV === 'production') {
-    // return (
-    //   <div style={{ width: '100vw', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-    //     <Logo />
-    //     <Countdown />
-    //   </div>
-    // )
-  // }
+  const expiration = new Date('2020-10-23T20:00:00.000Z')
+  const isBeta = window.location.search.includes('beta=true')
+
+  if (
+    process.env.NODE_ENV === 'production' &&
+    new Date() <= expiration &&
+    !isBeta
+  ) {
+    return <Countdown expiration={expiration} />
+  }
+
   return (
     <BrowserRouter>
       <Analytics />
@@ -127,6 +133,10 @@ export default function App() {
 
           <Route exact path="/items">
             <AllItems />
+          </Route>
+
+          <Route path="/countdown">
+            <Countdown expiration={expiration} />
           </Route>
 
           <Route path="/">

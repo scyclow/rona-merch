@@ -97,3 +97,11 @@ h2.modalTitle {
 h3.modalTitle {
   font-size: 20px;
 }
+
+
+@media (max-width: 500px) {
+  .countdownLogo {
+    max-width: 80vw;
+    max-height: 80vw;
+  }
+}
