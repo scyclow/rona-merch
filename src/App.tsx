@@ -33,6 +33,10 @@ const fmtTime = (n: number) => {
 
 function Countdown({ expiration }: {expiration: Date}) {
   const now = new Date()
+
+  // @ts-ignore
+  const [isNightmode, setIsNightmode] = useState(window.nightmode)
+
   // @ts-ignore
   const diff = (expiration - now) / 1000
 
@@ -66,7 +70,14 @@ function Countdown({ expiration }: {expiration: Date}) {
   })
   return (
     <div style={{ width: '100vw', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-      <Logo className="countdownLogo" />
+      <span style={{cursor: 'pointer'}} onClick={() => {
+        document.body.className = isNightmode ? '' : 'nightmode';
+        // @ts-ignore
+        window.nightmode = !isNightmode
+        setIsNightmode(!isNightmode)
+      }}>
+        <Logo className="countdownLogo" />
+      </span>
       <div style={{ fontSize: 50, fontWeight: 500, marginTop: '0.5em' }}>
         {fmtTime(days)}
         <span className="blink">:</span>
@@ -94,6 +105,7 @@ function Analytics() {
 export default function App() {
   const expiration = new Date('2020-10-23T20:00:00.000Z')
   const isBeta = window.location.search.includes('beta=true')
+  // @ts-ignore
 
   if (
     process.env.NODE_ENV === 'production' &&
