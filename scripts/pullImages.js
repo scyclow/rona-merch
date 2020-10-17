@@ -177,7 +177,7 @@ const data = {
     },
     {
       id: 'anti-facial1',
-      images: fullFaceMaskImages('26afe91c-be63-49c0-9f76-ab27160e3f71'),
+      images: fullFaceMaskImages('96cc1af8-520b-49ef-a441-bdf817f691dc'),
     },
     {
       id: '5g-bad',
@@ -258,8 +258,9 @@ const data = {
     {
       // TODO Description
       id: 'fastcash-logo-folded',
-      images: foldedImages('0879f6cd-29f7-4010-bafd-d61342cba79d'),
+      images: foldedImages('6cae8a35-4cca-4eb0-9809-316ae1a517f7'),
     },
+
     {
       // TODO Description
       id: 'not-mask',
@@ -295,7 +296,7 @@ const data = {
     },
     {
       id: 'cluck',
-      images: fullFaceMaskImages('104479fc-5499-4e55-bdb4-2ce7f68a6c78'),
+      images: fullFaceMaskImages('7a3e5889-e7d9-4d4c-ad5d-f03187c74772'),
     },
     {
       id: 'pattern1',
@@ -315,7 +316,7 @@ const data = {
     },
     {
       id: 'dollar-dollar',
-      images: foldedImages('3ed0044b-3556-4d7f-b571-35a5885f2fa4'),
+      images: foldedImages('5a62804d-b552-4b83-8997-c99048b152c7'),
     },
 
     {

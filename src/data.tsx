@@ -103,7 +103,8 @@ const data: Data = {
     {
       id: 'proud-american-t',
       title: 'Proud American T',
-      link: '',
+      // TODO replace link with rf code
+      link: 'https://www.zazzle.com/store/fastcashmoneyplus?rf=238012063771219973',
       primaryIx: 0,
       images: tShirtImages('proud-american-t'),
       description: "There's no better way to show the world that you're a proud American than by flaunting it with this stunning image of America's mascot: the majestic Bald Eagle",
@@ -144,7 +145,7 @@ const data: Data = {
       link: '',
       primaryIx: 1,
       images: fullFaceMaskImages('george-cat'),
-      description: <>Have you seen the cat? As most proponents of Henry George's Land Value Tax will tell you, once you "see the cat" and understand how deeply the LVT aligns with American values, you can't "unsee" it. Rock this vintage look to tell everyone around you that you stand for Free Land, Free Trade, and Free People</>,
+      description: <>Have you seen the cat? As most proponents of Henry George's Land Value Tax will tell you, once you "see the cat" and understand how deeply the LVT aligns with American values, you can't "unsee" it. Rock this vintage look to tell everyone around you that you stand for Free Land, Free Trade, and Free People.</>,
       reviews: [
         {
           author: 'octofuzz',
@@ -184,7 +185,7 @@ const data: Data = {
       link: '',
       primaryIx: 1,
       images: fullFaceMaskImages('guns-n-beer'),
-      description: "Nothing is more American then drinking beer and shooting guns. let your neighbors know what you're really all about.",
+      description: "Nothing is more American then drinking beer and shooting guns. Let your neighbors know what you're really all about.",
       reviews: [
         {
           author: 'HankWilson77',
@@ -212,7 +213,7 @@ const data: Data = {
       link: '',
       primaryIx: 1,
       images: fullFaceMaskImages('antifa-antico'),
-      description: "Real Americans hate Fascism as much as they hate Communism. Show the world that you're a real American with this sleek modernist design. #WWG1WGA",
+      description: "Real Americans hate Fascism as much as they hate Communism. Show the world that you're a real American with this sleek modernist design.",
       reviews: [
         {
           author: 'SweetSalvation',
@@ -365,14 +366,20 @@ const data: Data = {
           content: `This is one of the few face masks that really falls in line with my sensibilities. I most certainly think that COVID-19 is a hoax, but not in the way that most people think. The virus is absolutely floating around out there, but let's jsut say that the government hasn't been 100% up front with us about its effects on the human body. Additionally, there are a million reasons why you should wear a face mask aside from the "novel" coronavirus. It's just common sense.`
         },
         {
+          author: 'HarryManson',
+          date: '9/23/20',
+          rating: 5,
+          content: `Since the end of 2019 I've been living in an alternate reality on Tuesdays and Thursdays. Today's a Wednesday, so I'm a little disoriented from the switching back and forth and forgot which reality is the real alternate and which is the real one. But one of them doesn't have any of this covid nonsense going on. Life carries on as normal and people don't wear masks all day. If folks in the other reality don't need to wear masks and they're all fine, then I don't think the people in this reality need to wear them either. But people in non-alternate reality yell at me when I don't wear a mask and keep it over my nose, so I do it anyhow. If that makes people feel better, then so be it.`
+        },
+        {
           author: 'schoonerscaptain',
-          date: '9/19/20',
+          date: '9/29/20',
           rating: 3,
           content: `Wait, is the mask a hoax or is covid a hoax? I don't get it.`
         },
         {
           author: 'FrankFrankson',
-          date: '9/27/20',
+          date: '10/05/20',
           rating: 4,
           content: `The straps were a little too small for my ears, resulting in a tight fit. But that's my fault since I chose the 6.5 inch straps at checkout. Don't make the same mistake I did!`
         },
@@ -406,7 +413,7 @@ const data: Data = {
       link: '',
       primaryIx: 2,
       images: fullFaceMaskImages('real-americans'),
-      description: `Real Americans know that individual liberty is the first and foremost driving force of what they do in public. No one can tell you what to do because you're an American. And with that freedom comes the responsability of not infringing on anyone else's liberty, no matter the cost. So when it comes to the global spread of a deadly infectous disease that's hidden in plain sight, real Americans know that that it's their responsability, as an American, to take all the necessary precautions. Real Americans wear face masks, and this mask is the perfect way to fulfil your duty as a Real American.`,
+      description: `Real Americans know that individual liberty is the first and foremost driving force of what they do in public. No one can tell you what to do because you're an American. And with that freedom comes the responsibility of not infringing on anyone else's liberty, no matter the cost. So when it comes to the global spread of a deadly infectious disease that's hidden in plain sight, real Americans know that that it's their responsibility, as an American, to take all the necessary precautions. Real Americans wear face masks, and this mask is the perfect way to fulfill your duty as a Real American.`,
       reviews: [
         {
           author: 'DumboTheClown',
@@ -425,7 +432,8 @@ const data: Data = {
     {
       id: 'antifa-antico-lunch',
       title: 'Antifascist Anticommunist Lunchbox',
-      link: '',
+      // TODO replace link with rf code
+      link: 'https://www.zazzle.com/store/fastcashmoneyplus?rf=238012063771219973',
       primaryIx: 0,
       images: lunchBoxImages('antifa-antico-lunch'),
       description: `Be the coolest one amongst your co workers when you whip out this exciting new lunchbox. Coupled with the antifa-antico face mask, there will be no mistaking it: You don't like fascists or communists.`,
@@ -486,7 +494,7 @@ const data: Data = {
       link: '',
       primaryIx: 1,
       images: foldedImages('wwg1wga-text'),
-      description: ``,
+      description: `Celebrate the patriotic 1996 classic White Squall with this patriotic design.`,
       reviews: [
         {
           author: 'DumboTheClown',
@@ -526,10 +534,22 @@ const data: Data = {
           content: `DON'T LEAVE HOME WITHOUT IT!`
         },
         {
+          author: 'PickleNY',
+          date: '9/28/20',
+          rating: 3,
+          content: `Is this mask N95 or higher?`
+        },
+        {
           author: 'DumboTheClown',
-          date: '9/20/20',
+          date: '10/05/20',
           rating: 5,
           content: `I wouldn't leave home without it!`
+        },
+        {
+          author: 'SweetSalvation',
+          date: '10/07/20',
+          rating: 1,
+          content: `I don't like this mask or anyone wearing it i can hardly breathe whenever this damn contraption is on my face!`
         },
         {
           author: 'octofuzz',
@@ -587,7 +607,8 @@ const data: Data = {
       id: 'infected1-t',
       featured: true,
       title: 'Infected T 1',
-      link: '',
+      // TODO replace link with rf code
+      link: 'https://www.zazzle.com/infected_1_t_t_shirt-235814952342562374',
       primaryIx: 0,
       images: tShirtImages('infected1-t'),
       description: `There's only one sure-fire way to make sure that people stay 6 feet away from you -- and that's by implying that you may be infected with COVID-19. `,
@@ -610,12 +631,19 @@ const data: Data = {
           rating: 2,
           content: `I find this tasteless, to be perfectly honest. Tons of bad energy here. Would not reccomend`
         },
+        {
+          author: 'SweetSalvation',
+          date: '9/20/20',
+          rating: 2,
+          content: `You look like a goddamn pumpkin wearing this outfit`
+        },
       ]
     },
     {
       id: 'infected2-t',
       title: 'Infected T 2',
-      link: '',
+      // TODO replace link with rf code
+      link: 'https://www.zazzle.com/store/fastcashmoneyplus?rf=238012063771219973',
       primaryIx: 1,
       images: tShirtImages('infected2-t'),
       description: `There's only one sure-fire way to make sure that people stay 6 feet away from you -- and that's by implying that you may be infected with COVID-19. `,
@@ -665,11 +693,11 @@ const data: Data = {
     {
       id: 'wear-your-mask',
       featured: true,
-      title: 'Wear Your Mask Mask',
+      title: 'Wear Your F*cking Mask Mask',
       link: '',
       primaryIx: 0,
       images: fullFaceMaskImages('wear-your-mask'),
-      description: `Sometimes you just want to let your mask do the talking for you. Perfect for long subway rides or grocery shopping when you want to give nearby non-mask-wearing bystanders a reminder that they should wear their fucking mask.`,
+      description: `Sometimes you want to let your mask do the talking for you. Give those around you a friendly reminder to wear their face mask in public. Perfect for long subway rides, grocery shopping, and large crowds.`,
       reviews: [
         {
           author: 'YeeHaw',
@@ -732,7 +760,7 @@ const data: Data = {
       link: '',
       primaryIx: 1,
       images: fullFaceMaskImages('5g-bad'),
-      description: `With the fifth generation of telecom infrastucture upon us, it's natural to have your doubts regarding it's effects on public safety. `,
+      description: `With the fifth generation of telecom infrastructure upon us, it's natural to have your doubts regarding it's effects on public safety. `,
       reviews: [
         {
           author: 'EnergyMatters',
@@ -745,7 +773,8 @@ const data: Data = {
     {
       id: 'sovereign-t',
       title: 'Sovereign Citizen T',
-      link: '',
+      // TODO replace link with rf code
+      link: 'https://www.zazzle.com/store/fastcashmoneyplus?rf=238012063771219973',
       primaryIx: 1,
       images: tShirtImages('sovereign-t'),
       description: `Clearly declare your sovereignty from any nation that treads on you with this Sovereign Citizen T. Don't leave home without it! Perfect for any type of protest with police presence.`,
@@ -822,7 +851,7 @@ const data: Data = {
       link: '',
       primaryIx: 2,
       images: foldedImages('boo-hoo'),
-      description: ``,
+      description: `Hide your face while communicating to all machine learning algorithms that facial recognition technology makes you sad.`,
       reviews: [
         {
           author: 'stupid',
@@ -845,7 +874,8 @@ const data: Data = {
       emText: 'BEST SELLER',
       title: 'FastCash Super Plus Logo T',
       primaryIx: 0,
-      link: '',
+      // TODO replace link with rf code
+      link: 'https://www.zazzle.com/fastcash_super_plus_logo_t_t_shirt-235045975521459095',
       images: tShirtImages('fastcash-super-plus-t'),
       description: <>The gold standard of FastCash Logo Ts, with an inverse-color text shadow along with the the back investment text. Now available in SAFETY GREEN, allowing you to stand out from the crowd -- all while letting everyone know that you're a winner with the bank account to back it up. Great for biking safely at night. Drivers will think twice before they hit you with their vehicle, lest they find themselves in the middle of a costly lawsuit!<br/><a className="link" href="http://fastcashmoneyplus.biz" target="_blank">Sponsored by FastCashMoneyPlus.biz</a></>,
       reviews: [
@@ -884,6 +914,7 @@ const data: Data = {
     {
       id: 'fastcash-t',
       title: 'FastCash Logo T',
+      // TODO replace link with rf code
       link: 'https://www.zazzle.com/fast_cash_logo_t_t_shirt-235242209585069073',
       primaryIx: 1,
       images: tShirtImages('fastcash-t'),
@@ -912,10 +943,11 @@ const data: Data = {
     {
       id: 'fastcash-plus-t',
       title: 'FastCash Plus Logo T',
-      link: '',
+      // TODO replace link with rf code
+      link: 'https://www.zazzle.com/fastcash_plus_t_t_shirt-235678722604773750',
       primaryIx: 0,
       images: darkTshirtImages('fastcash-plus-t'),
-      description: <>The Swiss-Army knife of FastCash logo Ts. The addition of the iconic FastCashMoneyPlus investment text on the back makes this a nice upgrade from the standard FastCash T, even if it doesn't have the flair of the text shadow found on the FastCash Super Plus T. No frills. All business. Break out this sleek dark rendition for any occasion<br/><a className="link" href="http://fastcashmoneyplus.biz" target="_blank">Sponsored by FastCashMoneyPlus.biz</a></>,
+      description: <>The Swiss-Army knife of FastCash logo Ts. The addition of the iconic FastCashMoneyPlus investment text on the back makes this a nice upgrade from the standard FastCash T, even if it doesn't have the flair of the text shadow found on the FastCash Super Plus T. No frills. All business. Break out this sleek dark rendition for any occasion.<br/><a className="link" href="http://fastcashmoneyplus.biz" target="_blank">Sponsored by FastCashMoneyPlus.biz</a></>,
       reviews: [
         {
           author: 'VinceSlickson',
@@ -966,7 +998,7 @@ const data: Data = {
           author: 'username',
           date: '8/10/20',
           rating: 5,
-          content: `I like this mask and the branding`
+          content: `i like this mask and the branding`
         },
         {
           author: 'CrystalBell',
@@ -991,7 +1023,8 @@ const data: Data = {
     {
       id: `ronamerch-t`,
       title: "Rona Merch Co. T Official",
-      link: '',
+      // TODO replace link with rf code
+      link: 'https://www.zazzle.com/store/fastcashmoneyplus?rf=238012063771219973',
       primaryIx: 0,
       description: 'Strut your stuff with the OFFICIAL Rona Merch Co. T. Get in on the ground floor of the hottest new face mask brand, all while supporting small businesses throughout the pandemic.',
       images: tShirtImages('ronamerch-t'),
@@ -1000,7 +1033,7 @@ const data: Data = {
           author: 'username',
           date: '8/10/20',
           rating: 5,
-          content: `I like this mask and the branding`
+          content: `i like this mask and the branding`
         },
         {
           author: 'fuckface99',
@@ -1041,7 +1074,10 @@ const data: Data = {
     {
       id: 'rm-see-through',
       title: "Rona Merch See Through Mask",
-      link: '',
+      // THIS IS actually sold out
+      // TODO replace link with rf code
+      link: 'https://www.zazzle.com/z/yj1wuoo2?rf=238012063771219973',
+      emText: 'SOLD OUT',
       primaryIx: 0,
       description: 'Who says sneeze guards need to be lame? With the Rona Merch See Through Mask, you can protect everyone around you from unwanted sneezes and more... all while donning the Rona Merch logo!',
       images: seeThroughImages('rm-see-through'),
@@ -1061,7 +1097,7 @@ const data: Data = {
         {
           author: 'username',
           date: '10/11/20',
-          rating: 3,
+          rating: 5,
           content: `the logo is too big`
         },
       ],
@@ -1071,7 +1107,7 @@ const data: Data = {
       title: "FastCash Premium Cotton Mask",
       link: '',
       primaryIx: 2,
-      description: `A formal face mask for the most formal occasions. Pair this elegent beauty with a tux or black dress of your choosing. Or, wear it along with your New Yorker "all black" outfit. Either way, you'll be making one thing clear: you like making money, and you're good at it.`,
+      description: `A formal face mask for the most formal occasions. Pair this elegant beauty with a tux or black dress of your choosing. Or, wear it along with your New Yorker "all black" outfit. Either way, you'll be making one thing clear: you like making money, and you're good at it.`,
       images: cottonImages('fastcash-premium'),
       reviews: [
         {
@@ -1090,7 +1126,7 @@ const data: Data = {
     },
     {
       id: 'not-meddly',
-      title: "Not A Security Meddly Cotton Mask",
+      title: "Not A Security Medley Cotton Mask",
       link: '',
       primaryIx: 1,
       emText: 'LIMITED EDITION',
@@ -1108,9 +1144,10 @@ const data: Data = {
     {
       id: 'fastcash-leggings',
       title: "FastCash Leggings",
-      link: '',
+      // TODO replace link with rf code
+      link: 'https://www.zazzle.com/store/fastcashmoneyplus?rf=238012063771219973',
       primaryIx: 2,
-      description: `Perfect for yoga, running, or working out`,
+      description: `Perfect for yoga, running, or working out.`,
       images: leggingImages('fastcash-leggings'),
       reviews: [
         {
@@ -1174,7 +1211,8 @@ const data: Data = {
    {
       id: 'not-t',
       title: 'NOT T',
-      link: '',
+      // TODO replace link with rf code
+      link: 'https://www.zazzle.com/store/fastcashmoneyplus?rf=238012063771219973',
       primaryIx: 0,
       images: darkTshirtImages('not-t'),
       description: `Sponsored by the famous Not A Security (NOT) ERC-20 token.`,
@@ -1199,7 +1237,7 @@ const data: Data = {
       link: '',
       primaryIx: 0,
       images: foldedImages('fastcash-text-folded'),
-      description: <a className="link" href="http://fastcashmoneyplus.biz" target="_blank">Sponsored by FastCashMoneyPlus.biz</a>,
+      description: <>Make a statement with this bold pleated mask from the folks at FastCashMoneyPlus.biz.<br/><a className="link" href="http://fastcashmoneyplus.biz" target="_blank">Sponsored by FastCashMoneyPlus.biz</a></>,
       reviews: [
         {
           author: 'VinceSlickson',
@@ -1272,7 +1310,7 @@ const data: Data = {
           author: 'TommyFlombego',
           date: '10/5/20',
           rating: 1,
-          content: `I'm sick of all propaganda on this website. It's time someone spoke the truth about that's happening here. Hasn't anyone wondered why all these crappy face masks are so expensive? Well I'll tell you: RonaMerchCo is just a front for a global child sex trafficking ring. These listings are clearly not for the shown products, but rather for live human beings. When you put the pieces together it's fairly obvious. Smiling Eyes? Wakka Wakka? Not so subtle if you ask me. If you want more details message my friendworld account.`
+          content: `Honestly, I'm sick of all the bullshit products on this website. Hasn't anyone wondered why all these crappy face masks are so expensive? I think it's pretty obvious to anyone paying attention, but let me spell it out for the rest of you: RonaMerchCo is clearly a front for the international child sex trafficking ring run by the global cabal. These listings are obviously not for the shown products, they're for live human beings. Smiling Eyes? Wakka Wakka? Not so subtle if you ask me. If you want more details DM me on friendworld.`
         },
         {
           author: 'WendyPilsen',
@@ -1294,7 +1332,7 @@ const data: Data = {
       link: '',
       primaryIx: 0,
       images: fullFaceMaskImages('apocalypse'),
-      description: `Everyone knows it's coming, but no one knows how many years we have left. So live your last days out in style with this bold face mask!`,
+      description: `Everyone knows it's coming, but no one knows how many years we have left. So live your last days out in style with this explosive face mask!`,
       reviews: [
         {
           author: 'FreedomLover76',
@@ -1376,10 +1414,11 @@ const data: Data = {
     {
       id: 'useless',
       title: 'Useless T',
-      link: '',
+      // TODO replace link with rf code
+      link: 'https://www.zazzle.com/store/fastcashmoneyplus?rf=238012063771219973',
       primaryIx: 0,
       images: darkTshirtImages('useless'),
-      description: ``,
+      description: `Useless`,
       reviews: [
         {
           author: 'DontCallMeRaul',
@@ -1401,7 +1440,7 @@ const data: Data = {
       link: '',
       primaryIx: 1,
       images: cottonImages('branded'),
-      description: `Be the life of the party as all your friends try to scan your face at your next social gathering`,
+      description: `Be the life of the party as all your friends try to scan your face at your next social gathering.`,
       reviews: [
         {
           author: 'stupid',
@@ -1414,7 +1453,8 @@ const data: Data = {
     {
       id: 'flash-sale',
       title: 'Flash Sale Tanktop',
-      link: '',
+      // TODO replace link with rf code
+      link: 'https://www.zazzle.com/store/fastcashmoneyplus?rf=238012063771219973',
       primaryIx: 0,
       emText: 'SEXY',
       images: tanktopImages('flash-sale'),
@@ -1447,7 +1487,7 @@ const data: Data = {
       link: '',
       primaryIx: 0,
       images: foldedImages('dollar-dollar'),
-      description: `Whenever you wear this Dollar Dollar Bill mask, it looks like you're wearing actualy dollar bills wrapped around your face. It's a real hoot!`,
+      description: `Become a fast cash millionaire whenever you put this mask on. Impress your friends by making it seem like you're actually wearing dollar bills wrapped around your face. It's a real hoot!`,
       reviews: [
         {
           author: 'DumboTheClown',
@@ -1465,7 +1505,7 @@ const data: Data = {
           author: 'VinceSlickson',
           date: '9/21/20',
           rating: 3,
-          content: `Honestly, I wouldn't wear this mask out of the house. It's not quite as flashy as the $50 and $100 bill masks I've been seeing all over the place. But it's a good mask to wear to bed, espescially if it matches your PJs.`
+          content: `Honestly, I wouldn't wear this mask out of the house. It's not quite as flashy as the $50 and $100 bill masks I've been seeing all over the place. A real step down from all the other FastCash merch. But it's a good mask to wear to bed, espescially if it matches your PJs.`
         },
       ]
     },
@@ -1516,7 +1556,8 @@ const data: Data = {
     {
       id: 'shale-bad',
       title: 'Shale Bad T',
-      link: '',
+      // TODO replace link with rf code
+      link: 'https://www.zazzle.com/store/fastcashmoneyplus?rf=238012063771219973',
       primaryIx: 0,
       images: darkTshirtImages('shale-bad'),
       description: ``,
@@ -1532,7 +1573,8 @@ const data: Data = {
     {
       id: 'hat-hat',
       title: 'Hat Hat',
-      link: '',
+      // TODO replace link with rf code
+      link: 'https://www.zazzle.com/store/fastcashmoneyplus?rf=238012063771219973',
       primaryIx: 1,
       images: hatImages('hat-hat'),
       description: ``,
@@ -1553,29 +1595,43 @@ const data: Data = {
     },
     {
       id: 'super-spreader',
+      featured: true,
       title: 'Super Spreader T',
-      link: '',
+      // TODO replace link with rf code
+      link: 'https://www.zazzle.com/super_spreader_t_t_shirt-235358098629311310',
       primaryIx: 0,
       images: womanShirt('super-spreader'),
-      description: ``,
+      description: `Casual, relaxed, and breezy. Spread joy and positivity wherever you go with this cute T. Perfect for any occasion, indoors or outdoors.`,
       reviews: [
         {
           author: 'StarSeeker',
-          date: '9/25/20',
+          date: '7/25/20',
           rating: 5,
           content: `Wonderful`
         },
         {
+          author: 'ActualPleiadian',
+          date: '7/27/20',
+          rating: 5,
+          content: `I bough this for my plieadian fiance and it looks great on her!`
+        },
+        {
           author: 'WendyPilsen',
-          date: '9/27/20',
+          date: '7/29/20',
           rating: 4,
           content: `Very comfortable and a nice soft shade of blue`
         },
         {
           author: 'PissinOnUHoes69',
-          date: '9/27/20',
+          date: '8/08/20',
           rating: 1,
           content: `What a completely inappropriate and sexist thing to put on a t shirt!`
+        },
+        {
+          author: 'username',
+          date: '8/13/20',
+          rating: 5,
+          content: `what is she spreading?`
         },
 
       ]

@@ -90,12 +90,12 @@ function Analytics() {
 
 export default function App() {
   // if (process.env.NODE_ENV === 'production') {
-  //   return (
-  //     <div style={{ width: '100vw', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-  //       <Logo />
-  //       <Countdown />
-  //     </div>
-  //   )
+    // return (
+    //   <div style={{ width: '100vw', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+    //     <Logo />
+    //     <Countdown />
+    //   </div>
+    // )
   // }
   return (
     <BrowserRouter>
@@ -160,6 +160,13 @@ function Modal({ wait }: { wait: number }) {
   const isNightmode = window.nightmode
 
   useEffect(() => {
+    const lastModal = localStorage.getItem('lastModal')
+    if (lastModal && Number(lastModal) + 43200000 > Date.now()) {
+      return
+    }
+
+    localStorage.setItem('lastModal', String(Date.now()))
+
     setTimeout(() => {
       setShow(true)
     }, wait - 50)
@@ -168,6 +175,12 @@ function Modal({ wait }: { wait: number }) {
       setFade(true)
     }, wait)
   }, [])
+
+  useEffect(() => {
+    const escHandler = (e: KeyboardEvent) => e.keyCode === 27 ? onClose() : null
+    document.addEventListener('keydown', escHandler)
+    return () => document.removeEventListener('keydown', escHandler)
+  })
 
   const onClose = () => {
     setFade(false)
@@ -192,7 +205,9 @@ function Modal({ wait }: { wait: number }) {
   }
   if (!show) return null
   return (
-    <div className={`modal ${fade ? 'displayModal' : ''}`}>
+    <div
+      className={`modal ${fade ? 'displayModal' : ''}`}
+    >
       <div className="modalBackdrop" onClick={onClose} />
       <div className="modalContent">
         <div style={{ display: 'flex', justifyContent: 'flex-end'}}>
