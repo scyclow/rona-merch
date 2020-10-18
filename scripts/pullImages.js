@@ -180,6 +180,10 @@ const data = {
       images: fullFaceMaskImages('96cc1af8-520b-49ef-a441-bdf817f691dc'),
     },
     {
+      id: 'anti-facial2',
+      images: fullFaceMaskImages('c088924c-a9c9-40c1-96a6-1918279b8429'),
+    },
+    {
       id: '5g-bad',
       images: fullFaceMaskImages('603ad7c0-8898-4d93-8739-70d809affdce'),
     },

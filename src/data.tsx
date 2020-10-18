@@ -513,6 +513,29 @@ const data: Data = {
   ],
   safety: [
     {
+      id: 'anti-facial2',
+      title: 'Anti Facial Recognition Mask 2',
+      link: '',
+      primaryIx: 2,
+      emText: 'ANTI-FACIAL RECOG',
+      images: fullFaceMaskImages('anti-facial2'),
+      description: `Regardless of whether you believe COVID-19 is real, the deep state stealing and deep faking your identity is now just a plain fact of life. By reverse engineering Illuminati technologies, our uniquely patterned deep learned masks are guaranteed to scramble the government's facial recognition algorithms, making sure you get home safe to you and yours, "365-24/7". `,
+      reviews: [
+        {
+          author: 'friendlyfriend',
+          date: '8/12/20',
+          rating: 5,
+          content: `They thought I was a pumpkin!`
+        },
+        {
+          author: 'TargetedTom',
+          date: '8/15/20',
+          rating: 5,
+          content: `This is another solid one. It seems like some of the algos that had been tracking me got used to the masks with human faces on them. But this one appears to have thrown them off the scent.`
+        },
+      ]
+    },
+    {
       id: 'gas-mask',
       featured: true,
       title: 'Gas Mask Mask',
@@ -560,50 +583,6 @@ const data: Data = {
       ]
     },
     {
-      id: 'infected1-mask',
-      title: 'Infected Mask 1',
-      link: '',
-      primaryIx: 4,
-      images: fullFaceMaskImages('infected1-mask'),
-      description: `There's only one sure-fire way to make sure that people stay 6 feet away from you -- and that's by implying that you may be infected with COVID-19. `,
-      reviews: [
-        {
-          author: 'HunterMcFarlane',
-          date: '7/16/20',
-          rating: -1,
-          content: `Again, very dissapointed with this product, as well as the INFECTED line of merchandise. As with the T shirt, this mask failed to infect my kids with anything. `
-        },
-        {
-          author: 'DontCallMeRaul',
-          date: '8/1/20',
-          rating: 2,
-          content: `Honestly, I'm not the biggest fan of this "infected" merch. I think it's stupid`
-        },
-      ]
-    },
-    {
-      id: 'infected2-mask',
-      title: 'Infected Mask 2',
-      link: '',
-      primaryIx: 5,
-      images: fullFaceMaskImages('infected2-mask'),
-      description: `There's only one sure-fire way to make sure that people stay 6 feet away from you -- and that's by implying that you may be infected with COVID-19. `,
-      reviews: [
-        {
-          author: 'HunterMcFarlane',
-          date: '7/5/20',
-          rating: 0,
-          content: `Again, this mask was NOT INFECTED, Why do people buy this garbage?`
-        },
-        {
-          author: 'Hubert',
-          date: '9/2/20',
-          rating: 4,
-          content: `This mask reminds me of my days as a young man in Korea. Not pleasent memories at all. But the mask is very comfortable.`
-        },
-      ]
-    },
-    {
       id: 'infected1-t',
       featured: true,
       title: 'Infected T 1',
@@ -636,23 +615,6 @@ const data: Data = {
           date: '9/20/20',
           rating: 2,
           content: `You look like a goddamn pumpkin wearing this outfit`
-        },
-      ]
-    },
-    {
-      id: 'infected2-t',
-      title: 'Infected T 2',
-      // TODO replace link with rf code
-      link: 'https://www.zazzle.com/store/fastcashmoneyplus?rf=238012063771219973',
-      primaryIx: 1,
-      images: tShirtImages('infected2-t'),
-      description: `There's only one sure-fire way to make sure that people stay 6 feet away from you -- and that's by implying that you may be infected with COVID-19. `,
-      reviews: [
-      {
-          author: 'ActualPleiadian',
-          date: '8/1/20',
-          rating: 5,
-          content: `This shirt is great!`
         },
       ]
     },
@@ -755,50 +717,28 @@ const data: Data = {
       ]
     },
     {
-      id: '5g-bad',
-      title: '5G Bad mask',
+      id: 'infected2-mask',
+      title: 'Infected Mask 2',
       link: '',
-      primaryIx: 1,
-      images: fullFaceMaskImages('5g-bad'),
-      description: `With the fifth generation of telecom infrastructure upon us, it's natural to have your doubts regarding it's effects on public safety. `,
+      primaryIx: 5,
+      images: fullFaceMaskImages('infected2-mask'),
+      description: `There's only one sure-fire way to make sure that people stay 6 feet away from you -- and that's by implying that you may be infected with COVID-19. `,
       reviews: [
         {
-          author: 'EnergyMatters',
-          date: '8/15/20',
-          rating: 2,
-          content: `Given how sensitive I am to elctro magnetic frequencies (EMFs), this type of mask obviously appeals to me. However, I have to say that this mask fails to live up to my expectations. Wearing this mask only reduces my headaches by 16%... which is better than nothing, but not quite as effective as some of the other products in the Rona Merch catalogue.`
+          author: 'HunterMcFarlane',
+          date: '7/5/20',
+          rating: 0,
+          content: `Again, this mask was NOT INFECTED, Why do people buy this garbage?`
+        },
+        {
+          author: 'Hubert',
+          date: '9/2/20',
+          rating: 4,
+          content: `This mask reminds me of my days as a young man in Korea. Not pleasent memories at all. But the mask is very comfortable.`
         },
       ]
     },
-    {
-      id: 'sovereign-t',
-      title: 'Sovereign Citizen T',
-      // TODO replace link with rf code
-      link: 'https://www.zazzle.com/store/fastcashmoneyplus?rf=238012063771219973',
-      primaryIx: 1,
-      images: tShirtImages('sovereign-t'),
-      description: `Clearly declare your sovereignty from any nation that treads on you with this Sovereign Citizen T. Don't leave home without it! Perfect for any type of protest with police presence.`,
-      reviews: [
-        {
-          author: 'Ech0mike',
-          date: '8/5/20',
-          rating: 4,
-          content: `I squinted really hard and was able to make out the following text on this t shirt: "Am I being detained? Are you now trying to fabricate probable cause by making false statements into the free exercise any way to you. No law can convert the Articulable probable cause that authorizes you alleging gave you have your name and accost me? do not ask me to search me to possibly incriminate me, so please do you probable cause that could or information are you to violate my right to believe that I being detained? From this point forward I being detained? What facts or alleged privilege. And no law can convert the Articulable probable cause that I have your unlawful efforts to fabricate probable cause that authorizes you have committed or information are you have a court of this point forward I have a properly signed and false allegations against me? Am I have your unlawful efforts to fabricate probable cause to believe that I being detained? Can I have a properly signed and accost me? do you have committed or alleged privilege. And no law can convert the Articulable probable cause by making false statements into the Articulable probable cause to waive any other right to violate my rights? Am I being detained? What facts or to produce anything and give it requires me in any information or am about to continue in your unlawful efforts to stop and give it to continue in order to search me in order to search me in your unlawful efforts to violate my property? Am I being detained? Are From this point forward I have your name and false statements into the record and my fundamentally protected right to waive any other right into a recording being detained? Can I have already invoked my property? Am I being detained? Are fully aware that I have your unlawful efforts to believe that I being detained? What facts or arrest me? do not consent to assistance of any way to fabricate probable cause by making false statements into the record and false statements into a crime. And no law is the record and my property? Am I being detained? Can I being made of this point forward I being detained? Can I have your unlawful efforts to possibly incriminate me, so please do not ask me in order to stop and give it to fabricate probable cause that I have committed or am about to providing you to providing you have your name and badge number? Is there a court of counsel? Do you probable cause to assistance of law or arrest me? Am I being made of this encounter? Am I being detained? Am I have already invoked my fundamentally protected right or to produce anything and give it to continue in order to possibly incriminate me, so please do you to violate my rights? Am I being detained?"`
-        },
-        {
-          author: 'octofuzz',
-          date: '8/8/20',
-          rating: 2,
-          content: `I don't think this shirt will get you off the hook for anything. If the above commenter is right, this is just pure gibberish. Reads like something a machine wrote...`
-        },
-        {
-          author: 'pastisfuture',
-          date: '8/16/20',
-          rating: 4,
-          content: `I've been thinking a lot about this lately, and I think I'm going to purchase this t shirt. It's the least I can do to express the fact that society is a total fabrication. None of these laws are written in the cosmos. Why should I be subject to the arbitrary rules that others decided to enforce?`
-        }
-      ]
-    },
+
     {
       id: 'sovereign-mask',
       title: 'Sovereign Citizen Pleated Mask',
@@ -828,21 +768,44 @@ const data: Data = {
       ]
     },
     {
-      id: 'emf-tower',
-      title: 'EMF Tower Pleated Mask',
+      id: '5g-bad',
+      title: '5G Bad mask',
       link: '',
-      primaryIx: 2,
-      images: foldedImages('emf-tower'),
-      description: ``,
+      primaryIx: 1,
+      images: fullFaceMaskImages('5g-bad'),
+      description: `With the fifth generation of telecom infrastructure upon us, it's natural to have your doubts regarding it's effects on public safety. `,
       reviews: [
         {
           author: 'EnergyMatters',
-          date: '8/27/20',
-          rating: 1,
-          content: `No no no no no, I don't like this one at all...`
+          date: '8/15/20',
+          rating: 2,
+          content: `Given how sensitive I am to elctro magnetic frequencies (EMFs), this type of mask obviously appeals to me. However, I have to say that this mask fails to live up to my expectations. Wearing this mask only reduces my headaches by 16%... which is better than nothing, but not quite as effective as some of the other products in the Rona Merch catalogue.`
         },
       ]
     },
+    {
+      id: 'infected1-mask',
+      title: 'Infected Mask 1',
+      link: '',
+      primaryIx: 4,
+      images: fullFaceMaskImages('infected1-mask'),
+      description: `There's only one sure-fire way to make sure that people stay 6 feet away from you -- and that's by implying that you may be infected with COVID-19. `,
+      reviews: [
+        {
+          author: 'HunterMcFarlane',
+          date: '7/16/20',
+          rating: -1,
+          content: `Again, very dissapointed with this product, as well as the INFECTED line of merchandise. As with the T shirt, this mask failed to infect my kids with anything. `
+        },
+        {
+          author: 'DontCallMeRaul',
+          date: '8/1/20',
+          rating: 2,
+          content: `Honestly, I'm not the biggest fan of this "infected" merch. I think it's stupid`
+        },
+      ]
+    },
+
     // TODO Description
     {
       id: 'boo-hoo',
@@ -861,6 +824,79 @@ const data: Data = {
         },
       ]
     },
+
+    {
+      id: 'sovereign-t',
+      title: 'Sovereign Citizen T',
+      // TODO replace link with rf code
+      link: 'https://www.zazzle.com/store/fastcashmoneyplus?rf=238012063771219973',
+      primaryIx: 1,
+      images: tShirtImages('sovereign-t'),
+      description: `Clearly declare your sovereignty from any nation that treads on you with this Sovereign Citizen T. Don't leave home without it! Perfect for any type of protest with police presence.`,
+      reviews: [
+        {
+          author: 'Ech0mike',
+          date: '8/5/20',
+          rating: 4,
+          content: `I squinted really hard and was able to make out the following text on this t shirt: "Am I being detained? Are you now trying to fabricate probable cause by making false statements into the free exercise any way to you. No law can convert the Articulable probable cause that authorizes you alleging gave you have your name and accost me? do not ask me to search me to possibly incriminate me, so please do you probable cause that could or information are you to violate my right to believe that I being detained? From this point forward I being detained? What facts or alleged privilege. And no law can convert the Articulable probable cause that I have your unlawful efforts to fabricate probable cause that authorizes you have committed or information are you have a court of this point forward I have a properly signed and false allegations against me? Am I have your unlawful efforts to fabricate probable cause to believe that I being detained? Can I have a properly signed and accost me? do you have committed or alleged privilege. And no law can convert the Articulable probable cause by making false statements into the Articulable probable cause to waive any other right to violate my rights? Am I being detained? What facts or to produce anything and give it requires me in any information or am about to continue in your unlawful efforts to stop and give it to continue in order to search me in order to search me in your unlawful efforts to violate my property? Am I being detained? Are From this point forward I have your name and false statements into the record and my fundamentally protected right to waive any other right into a recording being detained? Can I have already invoked my property? Am I being detained? Are fully aware that I have your unlawful efforts to believe that I being detained? What facts or arrest me? do not consent to assistance of any way to fabricate probable cause by making false statements into the record and false statements into a crime. And no law is the record and my property? Am I being detained? Can I being made of this point forward I being detained? Can I have your unlawful efforts to possibly incriminate me, so please do not ask me in order to stop and give it to fabricate probable cause that I have committed or am about to providing you to providing you have your name and badge number? Is there a court of counsel? Do you probable cause to assistance of law or arrest me? Am I being made of this encounter? Am I being detained? Am I have already invoked my fundamentally protected right or to produce anything and give it to continue in order to possibly incriminate me, so please do you to violate my rights? Am I being detained?"`
+        },
+        {
+          author: 'octofuzz',
+          date: '8/8/20',
+          rating: 2,
+          content: `I don't think this shirt will get you off the hook for anything. If the above commenter is right, this is just pure gibberish. Reads like something a machine wrote...`
+        },
+        {
+          author: 'pastisfuture',
+          date: '8/16/20',
+          rating: 4,
+          content: `I've been thinking a lot about this lately, and I think I'm going to purchase this t shirt. It's the least I can do to express the fact that society is a total fabrication. None of these laws are written in the cosmos. Why should I be subject to the arbitrary rules that others decided to enforce?`
+        }
+      ]
+    },
+
+    {
+      id: 'emf-tower',
+      title: 'EMF Tower Pleated Mask',
+      link: '',
+      primaryIx: 2,
+      images: foldedImages('emf-tower'),
+      description: ``,
+      reviews: [
+        {
+          author: 'EnergyMatters',
+          date: '8/27/20',
+          rating: 1,
+          content: `No no no no no, I don't like this one at all...`
+        },
+      ]
+    },
+
+    {
+      id: 'infected2-t',
+      title: 'Infected T 2',
+      // TODO replace link with rf code
+      link: 'https://www.zazzle.com/store/fastcashmoneyplus?rf=238012063771219973',
+      primaryIx: 1,
+      images: tShirtImages('infected2-t'),
+      description: `There's only one sure-fire way to make sure that people stay 6 feet away from you -- and that's by implying that you may be infected with COVID-19. `,
+      reviews: [
+      {
+          author: 'ActualPleiadian',
+          date: '8/1/20',
+          rating: 5,
+          content: `This shirt is great!`
+        },
+      ]
+    },
+
+
+
+
+
+
+
+
   ],
 
   branded: [
@@ -912,33 +948,49 @@ const data: Data = {
       ]
     },
     {
-      id: 'fastcash-t',
-      title: 'FastCash Logo T',
-      // TODO replace link with rf code
-      link: 'https://www.zazzle.com/fast_cash_logo_t_t_shirt-235242209585069073',
-      primaryIx: 1,
-      images: tShirtImages('fastcash-t'),
-      description: <>Get the most bang for your buck with this thrifty FastCash Logo T. Not quite as flashy as the FastCash Plus and FastCash Super Plus Ts, but still a great deal. A great bargain of an investment<br/><a className="link" href="http://fastcashmoneyplus.biz" target="_blank">Sponsored by FastCashMoneyPlus.biz</a></>,
+      id: 'fastcash-text-folded',
+      title: 'FastCash Text Pleated Mask',
+      link: '',
+      primaryIx: 0,
+      images: foldedImages('fastcash-text-folded'),
+      description: <>Make a statement with this bold pleated mask from the folks at FastCashMoneyPlus.biz.<br/><a className="link" href="http://fastcashmoneyplus.biz" target="_blank">Sponsored by FastCashMoneyPlus.biz</a></>,
       reviews: [
         {
           author: 'VinceSlickson',
-          date: '9/27/20',
+          date: '8/16/20',
           rating: 5,
-          content: `A great shirt for someone who's not looking for anything fancy, but still knows that they're a winner`
-        },
-        {
-          author: 'DumboTheClown',
-          date: '9/28/20',
-          rating: 5,
-          content: `What a great shirt!`
+          content: `Now THIS is a statement mask! Anyone who wears this is clearly broadcasting to the world that they're a winner. What mroe cna I say?`
         },
         {
           author: 'WendyPilsen',
-          date: '9/28/20',
+          date: '8/20/20',
           rating: 5,
-          content: `this shirt fits well`
+          content: `This mask is safe, comfortable, and a great deal.`
+        },
+        {
+          author: 'ray',
+          date: '8/23/20',
+          rating: 5,
+          content: `I was reccomended this mask and I purchased it. I wear it fondly.`
         },
       ]
+    },
+    {
+      id: 'fastcash-leggings',
+      title: "FastCash Leggings",
+      // TODO replace link with rf code
+      link: 'https://www.zazzle.com/store/fastcashmoneyplus?rf=238012063771219973',
+      primaryIx: 2,
+      description: `Perfect for yoga, running, or working out.`,
+      images: leggingImages('fastcash-leggings'),
+      reviews: [
+        {
+          author: 'Ever_Wondering',
+          date: '8/9/20',
+          rating: 5,
+          content: `I LOVE this. Definitely going to wear this on my next outting.`
+        },
+      ],
     },
     {
       id: 'fastcash-plus-t',
@@ -962,28 +1014,6 @@ const data: Data = {
           content: `i have several pairs of this shirt`
         },
       ]
-    },
-    {
-      id: `fastcash-colorful`,
-      title: "FastCash Logo Mask Colorful",
-      link: '',
-      primaryIx: 2,
-      description: 'This vibrant, multi-colored face mask is the perfect way to express your identity as someone who is both forward-thinking and ambitious.',
-      images: fullFaceMaskImages('fastcash-colorful'),
-      reviews: [
-        {
-          author: 'CrystalBell',
-          date: '7/2/20',
-          rating: 5,
-          content: 'So glad to see the fast cash franchise embrace its progressive roots!'
-        },
-        {
-          author: 'VinceSlickson',
-          date: '7/3/20',
-          rating: 4,
-          content: `Look, this one's a bit too flowery for my tastes, but it still get the point across`
-        }
-      ],
     },
     {
       id: `ronamerch-mask`,
@@ -1021,55 +1051,50 @@ const data: Data = {
       ],
     },
     {
-      id: `ronamerch-t`,
-      title: "Rona Merch Co. T Official",
-      // TODO replace link with rf code
-      link: 'https://www.zazzle.com/store/fastcashmoneyplus?rf=238012063771219973',
-      primaryIx: 0,
-      description: 'Strut your stuff with the OFFICIAL Rona Merch Co. T. Get in on the ground floor of the hottest new face mask brand, all while supporting small businesses throughout the pandemic.',
-      images: tShirtImages('ronamerch-t'),
+      id: 'not-meddly',
+      title: "Not A Security Medley Cotton Mask",
+      link: '',
+      primaryIx: 1,
+      emText: 'LIMITED EDITION',
+      description: `The famous Not A Security (NOT) ERC-20 token releases it's limited edition Logo Meddly Cotton Face Mask. Purchase while supplies last!`,
+      images: cottonImages('not-meddly'),
       reviews: [
         {
-          author: 'username',
-          date: '8/10/20',
-          rating: 5,
-          content: `i like this mask and the branding`
-        },
-        {
-          author: 'fuckface99',
-          date: '8/21/20',
-          rating: 5,
-          content: 'THIS SHIRT ROCKS'
-        },
-        {
           author: 'DumboTheClown',
-          date: '9/1/20',
+          date: '8/8/20',
           rating: 5,
-          content: `Very stylish!`
-        }
+          content: `What a cool collection of logos!`
+        },
       ],
     },
     {
-      id: `fake-news`,
-      title: "Fake News Mask",
-      link: '',
-      primaryIx: 5,
-      description: <>As the informational landscape of America shifts away from truth and closer to fiction, this mask serves as a reminder to remain vigilant and skeptical of misinformation. <br/><a className="link" href="http://fakebullshit.news" target="_blank">Sponsored by FakeBullshit.news</a></>,
-      images: fullFaceMaskImages('fake-news'),
+      id: 'fastcash-t',
+      title: 'FastCash Logo T',
+      // TODO replace link with rf code
+      link: 'https://www.zazzle.com/fast_cash_logo_t_t_shirt-235242209585069073',
+      primaryIx: 0,
+      images: tShirtImages('fastcash-t'),
+      description: <>Get the most bang for your buck with this thrifty FastCash Logo T. Not quite as flashy as the FastCash Plus and FastCash Super Plus Ts, but still a great deal. A great bargain of an investment<br/><a className="link" href="http://fastcashmoneyplus.biz" target="_blank">Sponsored by FastCashMoneyPlus.biz</a></>,
       reviews: [
         {
-          author: 'SweetSalvation',
-          date: '9/16/20',
+          author: 'VinceSlickson',
+          date: '9/27/20',
           rating: 5,
-          content: `Nothin gets me riled up more than seeing all the propaganda being served up on a hot platter by all the FAKE news organizations on the CNN show which is why I get all my news from trusted sources that don't hate America.`
+          content: `A great shirt for someone who's not looking for anything fancy, but still knows that they're a winner`
+        },
+        {
+          author: 'DumboTheClown',
+          date: '9/28/20',
+          rating: 5,
+          content: `What a great shirt!`
         },
         {
           author: 'WendyPilsen',
-          date: '9/21/20',
+          date: '9/28/20',
           rating: 5,
-          content: `I get all my news from fake bullshit news: http://fakebullshit.news`
+          content: `this shirt fits well`
         },
-      ],
+      ]
     },
     {
       id: 'rm-see-through',
@@ -1103,61 +1128,59 @@ const data: Data = {
       ],
     },
     {
-      id: 'fastcash-premium',
-      title: "FastCash Premium Cotton Mask",
-      link: '',
-      primaryIx: 2,
-      description: `A formal face mask for the most formal occasions. Pair this elegant beauty with a tux or black dress of your choosing. Or, wear it along with your New Yorker "all black" outfit. Either way, you'll be making one thing clear: you like making money, and you're good at it.`,
-      images: cottonImages('fastcash-premium'),
-      reviews: [
-        {
-          author: 'VinceSlickson',
-          date: '7/1/20',
-          rating: 5,
-          content: `Wow, simply impecable.`
-        },
-        {
-          author: 'PickleNY',
-          date: '7/8/20',
-          rating: 5,
-          content: `This mask is so cool that I'd pay $20 for it if I could!`
-        },
-      ],
-    },
-    {
-      id: 'not-meddly',
-      title: "Not A Security Medley Cotton Mask",
-      link: '',
-      primaryIx: 1,
-      emText: 'LIMITED EDITION',
-      description: `The famous Not A Security (NOT) ERC-20 token releases it's limited edition Logo Meddly Cotton Face Mask. Purchase while supplies last!`,
-      images: cottonImages('not-meddly'),
-      reviews: [
-        {
-          author: 'DumboTheClown',
-          date: '8/8/20',
-          rating: 5,
-          content: `What a cool collection of logos!`
-        },
-      ],
-    },
-    {
-      id: 'fastcash-leggings',
-      title: "FastCash Leggings",
+      id: 'not-t',
+      title: 'NOT T',
       // TODO replace link with rf code
       link: 'https://www.zazzle.com/store/fastcashmoneyplus?rf=238012063771219973',
-      primaryIx: 2,
-      description: `Perfect for yoga, running, or working out.`,
-      images: leggingImages('fastcash-leggings'),
+      primaryIx: 0,
+      images: darkTshirtImages('not-t'),
+      description: `Sponsored by the famous Not A Security (NOT) ERC-20 token.`,
       reviews: [
         {
-          author: 'Ever_Wondering',
-          date: '8/9/20',
+          author: 'StarSeeker',
+          date: '8/1/20',
           rating: 5,
-          content: `I LOVE this. Definitely going to wear this on my next outting.`
+          content: `I'm feeling some fantastic energy from this shirt. Absolutely stellar`
         },
+        {
+          author: 'octofuzz',
+          date: '8/11/20',
+          rating: 4,
+          content: `I'm not a huge fan of NOT for obvious reasons, but even I have to admit that this is a pretty cool looking t shirt.`
+        },
+      ]
+    },
+    {
+      id: `ronamerch-t`,
+      title: "Rona Merch Co. T Official",
+      // TODO replace link with rf code
+      link: 'https://www.zazzle.com/store/fastcashmoneyplus?rf=238012063771219973',
+      primaryIx: 0,
+      description: 'Strut your stuff with the OFFICIAL Rona Merch Co. T. Get in on the ground floor of the hottest new face mask brand, all while supporting small businesses throughout the pandemic.',
+      images: tShirtImages('ronamerch-t'),
+      reviews: [
+        {
+          author: 'username',
+          date: '8/10/20',
+          rating: 5,
+          content: `i like this mask and the branding`
+        },
+        {
+          author: 'fuckface99',
+          date: '8/21/20',
+          rating: 5,
+          content: 'THIS SHIRT ROCKS'
+        },
+        {
+          author: 'DumboTheClown',
+          date: '9/1/20',
+          rating: 5,
+          content: `Very stylish!`
+        }
       ],
     },
+
+
     {
       id: 'fastcash-logo-folded',
       title: 'Fast Logo Pleated Mask',
@@ -1186,6 +1209,78 @@ const data: Data = {
         },
       ]
     },
+
+    {
+      id: `fastcash-colorful`,
+      title: "FastCash Logo Mask Colorful",
+      link: '',
+      primaryIx: 2,
+      description: 'This vibrant, multi-colored face mask is the perfect way to express your identity as someone who is both forward-thinking and ambitious.',
+      images: fullFaceMaskImages('fastcash-colorful'),
+      reviews: [
+        {
+          author: 'CrystalBell',
+          date: '7/2/20',
+          rating: 5,
+          content: 'So glad to see the fast cash franchise embrace its progressive roots!'
+        },
+        {
+          author: 'VinceSlickson',
+          date: '7/3/20',
+          rating: 4,
+          content: `Look, this one's a bit too flowery for my tastes, but it still get the point across`
+        }
+      ],
+    },
+
+    {
+      id: `fake-news`,
+      title: "Fake News Mask",
+      link: '',
+      primaryIx: 5,
+      description: <>As the informational landscape of America shifts away from truth and closer to fiction, this mask serves as a reminder to remain vigilant and skeptical of misinformation. <br/><a className="link" href="http://fakebullshit.news" target="_blank">Sponsored by FakeBullshit.news</a></>,
+      images: fullFaceMaskImages('fake-news'),
+      reviews: [
+        {
+          author: 'SweetSalvation',
+          date: '9/16/20',
+          rating: 5,
+          content: `Nothin gets me riled up more than seeing all the propaganda being served up on a hot platter by all the FAKE news organizations on the CNN show which is why I get all my news from trusted sources that don't hate America.`
+        },
+        {
+          author: 'WendyPilsen',
+          date: '9/21/20',
+          rating: 5,
+          content: `I get all my news from fake bullshit news: http://fakebullshit.news`
+        },
+      ],
+    },
+
+    {
+      id: 'fastcash-premium',
+      title: "FastCash Premium Cotton Mask",
+      link: '',
+      primaryIx: 2,
+      description: `A formal face mask for the most formal occasions. Pair this elegant beauty with a tux or black dress of your choosing. Or, wear it along with your New Yorker "all black" outfit. Either way, you'll be making one thing clear: you like making money, and you're good at it.`,
+      images: cottonImages('fastcash-premium'),
+      reviews: [
+        {
+          author: 'VinceSlickson',
+          date: '7/1/20',
+          rating: 5,
+          content: `Wow, simply impecable.`
+        },
+        {
+          author: 'PickleNY',
+          date: '7/8/20',
+          rating: 5,
+          content: `This mask is so cool that I'd pay $20 for it if I could!`
+        },
+      ],
+    },
+
+
+
     {
       id: 'not-mask',
       title: 'NOT Logo Mask',
@@ -1208,57 +1303,8 @@ const data: Data = {
         },
       ]
     },
-   {
-      id: 'not-t',
-      title: 'NOT T',
-      // TODO replace link with rf code
-      link: 'https://www.zazzle.com/store/fastcashmoneyplus?rf=238012063771219973',
-      primaryIx: 0,
-      images: darkTshirtImages('not-t'),
-      description: `Sponsored by the famous Not A Security (NOT) ERC-20 token.`,
-      reviews: [
-        {
-          author: 'StarSeeker',
-          date: '8/1/20',
-          rating: 5,
-          content: `I'm feeling some fantastic energy from this shirt. Absolutely stellar`
-        },
-        {
-          author: 'octofuzz',
-          date: '8/11/20',
-          rating: 4,
-          content: `I'm not a huge fan of NOT for obvious reasons, but even I have to admit that this is a pretty cool looking t shirt.`
-        },
-      ]
-    },
-    {
-      id: 'fastcash-text-folded',
-      title: 'FastCash Text Pleated Mask',
-      link: '',
-      primaryIx: 0,
-      images: foldedImages('fastcash-text-folded'),
-      description: <>Make a statement with this bold pleated mask from the folks at FastCashMoneyPlus.biz.<br/><a className="link" href="http://fastcashmoneyplus.biz" target="_blank">Sponsored by FastCashMoneyPlus.biz</a></>,
-      reviews: [
-        {
-          author: 'VinceSlickson',
-          date: '8/16/20',
-          rating: 5,
-          content: `Now THIS is a statement mask! Anyone who wears this is clearly broadcasting to the world that they're a winner. What mroe cna I say?`
-        },
-        {
-          author: 'WendyPilsen',
-          date: '8/20/20',
-          rating: 5,
-          content: `This mask is safe, comfortable, and a great deal.`
-        },
-        {
-          author: 'ray',
-          date: '8/23/20',
-          rating: 5,
-          content: `I was reccomended this mask and I purchased it. I wear it fondly.`
-        },
-      ]
-    },
+
+
   ],
 
   bargain: [

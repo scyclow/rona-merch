@@ -31,7 +31,7 @@
 }
 
 .bargainBackground {
-  position: absolute;
+  position: fixed;
   top: 0;
   padding-top: 250px;
   z-index: -1;

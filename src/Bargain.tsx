@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Logo from './Logo'
 import { Marquee, ItemFeature, TiltedMarquee } from './Main'
 import data from './data'
+import shuffle from 'lodash/shuffle'
 
 import './Bargain.css'
 
@@ -19,7 +20,7 @@ export default function Bargain() {
       <Background />
 
       <Content>
-        {data.bargain.map(item => (
+        {shuffle(data.bargain).map(item => (
           <ItemFeature key={item.id} item={item} style={{border: '2px solid'}}/>
         ))}
       </Content>
