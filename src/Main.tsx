@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react'
 import { Link } from 'react-router-dom'
+import {Helmet} from 'react-helmet'
 import {shuffle} from 'lodash'
 import Logo from './Logo'
 
@@ -16,6 +17,10 @@ export default function Main() {
 
   return (
     <div className="app">
+      <Helmet>
+        <title>Rona Merch Co.</title>
+      </Helmet>
+
       <header className="header">
         <Logo className="logoFull" size={350}/>
         <Title />

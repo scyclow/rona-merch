@@ -92,8 +92,25 @@ export function Wrapper({ children }: ChildProps) {
   )
 }
 
+function MaybeLink(props: any) {
+  if (props?.item?.soldOut) {
+    return (
+      <div style={{pointerEvents: 'none'}}>
+        {props?.children}
+      </div>
+    )
+  } else {
+    return (
+      <a
+        href={props?.item?.link}
+        {...props}
+      >
+        {props.children}
+      </a>
+    )
+  }
+}
 function Content({ item }: {item?: Item}) {
-
   if (!item) return <Redirect to="/" />
 
   const trackLinkClick = () => {
@@ -111,16 +128,25 @@ function Content({ item }: {item?: Item}) {
 
   const description: any = item?.description || 'DESCRIPTION MISSING'
   return (
-    <div>
+    <main>
+      {item.soldOut && (
+        <div className="soldOutMarquee">
+          <Marquee style={{ width: '200vw', maxWidth: 3000}}>
+            <span className="soldOutText">
+              SOLD OUT
+            </span>
+          </Marquee>
+        </div>
+      )}
       <div className="itemTitleSection">
         <h1 className="itemTitle">
           {item.title}
-          <h2 className="itemEmText">{item.emText}</h2>
+          {item.emText && <h2 className="itemEmText">{item.emText}</h2>}
         </h1>
       </div>
       <div className="contentGrid">
         <div className="itemLeftCol">
-          <a href={item.link} rel="noopener" target="_blank" onClick={trackLinkClick}>
+          <MaybeLink item={item} rel="noopener" target="_blank" onClick={trackLinkClick}>
             <ImageRotate ms={4000}>
               {item.images.map((image, i) => (
                 <img className="itemImage" src={image} alt={item.title + i} key={item.title + i} />
@@ -132,17 +158,17 @@ function Content({ item }: {item?: Item}) {
             </div>
             <div style={{marginTop: 15}}>
               <Arrows>
-                <div className="buyNowLink">BUY<br/> NOW</div>
+                <div className={`buyNowLink ${item.soldOut ? 'soldOutBuyNow' : ''}`}>BUY<br/> NOW</div>
               </Arrows>
             </div>
-          </a>
+          </MaybeLink>
 
           <div className="itemIntegrationSection">
             <div>
               <a href="http://fastcashmoneyplus.biz/wallet?transferAddress=electricGOD_POWERvyS4xY69R3aR$" target="_blank" rel="noreferrer">
                 <h2 className="itemSectionSubHeader">FastCash Checkout:</h2>
                 <div>
-                  <span className="itemSubHeadingContent">electricGOD_POWERvyS4xY69R3aR$</span>
+                  <span className="itemSubHeadingContent" style={{ fontFamily: 'monospace' }}>electricGOD_POWERvyS4xY69R3aR$</span>
                 </div>
               </a>
             </div>
@@ -194,7 +220,7 @@ function Content({ item }: {item?: Item}) {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   )
 }
 

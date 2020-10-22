@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { Link } from 'react-router-dom'
+import {Helmet} from 'react-helmet'
+
 import logo from './logo.svg'
 import Logo from './Logo'
 import { MarqueeReverse, ChildProps, ItemFeature } from './Main'
@@ -11,6 +13,9 @@ import './Branded.css'
 export default function Branded() {
   return (
     <>
+      <Helmet>
+        <title>Rona Merch Co. -- Branded Merch</title>
+      </Helmet>
       <div className="brandedBackground">
         <div className="header">
           <LogoLink />

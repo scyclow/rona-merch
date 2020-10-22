@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
+import {Helmet} from 'react-helmet'
+
 import Logo from './Logo'
 import { Marquee, MarqueeChild, ItemFeature, ChildProps, VerticalMarquee } from './Main'
 import {shuffle} from 'lodash'
@@ -20,6 +22,9 @@ export default function Patriot() {
   const verticalHeight = (firstSection.length - 0.5) * 300
   return (
     <>
+      <Helmet>
+        <title>Rona Merch Co. -- Patriot Portal</title>
+      </Helmet>
       <Background />
       <div className="header">
         <LogoLink />
@@ -64,6 +69,7 @@ function Background() {
     <div className="patriotBackground">
       <div className="patriotContainer">
         <div className="rotate45">
+          <div className="flagStripe white"></div>
           <div className="flagStripe blue"></div>
           <div className="flagStripe red"></div>
           <div className="flagStripe white"></div>

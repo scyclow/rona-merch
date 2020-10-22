@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import {Helmet} from 'react-helmet'
 import Logo from './Logo'
 import { Marquee, ChildProps, ItemFeature } from './Main'
 import data from './data'
@@ -12,6 +13,9 @@ export default function Safety() {
   const logoRef = useRef(null)
   return (
     <>
+      <Helmet>
+        <title>Rona Merch Co. -- Safety Swag</title>
+      </Helmet>
       <Background ref_={logoRef}/>
       <div className="header">
         <LogoLink ref_={logoRef}/>

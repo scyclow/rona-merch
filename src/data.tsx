@@ -17,6 +17,7 @@ export type Item = {
   reviews: Array<Review>
   emText?: string
   featured?: boolean
+  soldOut?: boolean
 }
 
 export type Data = {
@@ -204,6 +205,7 @@ const data: Data = {
     {
       id: 'wwg1wga-q',
       title: 'WWG1WGA Q Mask',
+      soldOut: true,
       link: '',
       primaryIx: 1,
       images: fullFaceMaskImages('wwg1wga-q'),
@@ -274,6 +276,7 @@ const data: Data = {
       id: 'wwg1wga-flag',
       title: 'WWG1WGA Flag Mask',
       link: '',
+      soldOut: true,
       primaryIx: 2,
       images: cottonImages('wwg1wga-flag'),
       description: `Celebrate the patriotic 1996 classic White Squall with this patriotic "Where We Go 1 We Go All" flag design.`,
@@ -301,7 +304,7 @@ const data: Data = {
     },
     {
       id: 'covid-2020',
-      title: 'Covid 2020 Cotton Mask',
+      title: 'Covid 2020 Mask',
       link: 'https://www.zazzle.com/z/zubbqmnr?rf=238012063771219973',
       primaryIx: 0,
       images: cottonImages('covid-2020'),
@@ -326,7 +329,8 @@ const data: Data = {
     {
       id: 'hoax',
       featured: true,
-      title: 'HOAX Cotton Mask',
+      soldOut: true,
+      title: 'HOAX Mask',
       link: '',
       primaryIx: 1,
       images: cottonImages('hoax'),
@@ -409,8 +413,10 @@ const data: Data = {
         },
       ]
     },
+    // REJECTED??
     {
       id: 'antifa-antico-lunch',
+      soldOut: true,
       title: 'Antifascist Anticommunist Lunchbox',
       link: 'https://www.zazzle.com/z/ar7u429e?rf=238012063771219973',
       primaryIx: 0,
@@ -468,6 +474,7 @@ const data: Data = {
     // REJECTED
     {
       id: 'wwg1wga-text',
+      soldOut: true,
       title: 'WWG1WGA Text Pleated Mask',
       link: '',
       primaryIx: 1,
@@ -1009,7 +1016,7 @@ const data: Data = {
     },
     {
       id: 'not-meddly',
-      title: "Not A Security Medley Cotton Mask",
+      title: "Not A Security Medley Mask",
       link: 'https://www.zazzle.com/z/tdyn05kw?rf=238012063771219973',
       primaryIx: 1,
       emText: 'LIMITED EDITION',
@@ -1057,6 +1064,7 @@ const data: Data = {
     {
       id: 'rm-see-through',
       title: "Rona Merch See Through Mask",
+      soldOut: true,
       // TODO replace link with rf code
       link: 'https://www.zazzle.com/z/yj1wuoo2?rf=238012063771219973',
       primaryIx: 0,
@@ -1209,7 +1217,7 @@ const data: Data = {
     // IN REVIEW
     {
       id: 'fastcash-premium',
-      title: "FastCash Premium Cotton Mask",
+      title: "FastCash Premium Mask",
       link: '',
       primaryIx: 2,
       description: `A formal face mask for the most formal occasions. Pair this elegant beauty with a tux or black dress of your choosing. Or, wear it along with your New Yorker "all black" outfit. Either way, you'll be making one thing clear: you like making money, and you're good at it.`,
@@ -1391,6 +1399,7 @@ const data: Data = {
     // ACTUALLY SOLD OUT
     {
       id: 'smarty-pants',
+      soldOut: true,
       title: 'Smarty Pants See Through Mask',
       link: '',
       primaryIx: 1,
@@ -1429,7 +1438,7 @@ const data: Data = {
     },
     {
       id: 'branded',
-      title: 'Branded Cotton Mask',
+      title: 'Branded Mask',
       link: 'https://www.zazzle.com/z/mjb7usdh?rf=238012063771219973',
       primaryIx: 1,
       images: cottonImages('branded'),

@@ -169,6 +169,12 @@
   box-shadow: -2px 2px 3px #666;
 }
 
+.soldOutBuyNow {
+  cursor: not-allowed;
+  pointer-events: none;
+  text-decoration: line-through;
+}
+
 .buyNowLink:hover {
   transform: rotate(720deg);
 }
@@ -231,4 +237,28 @@
     margin-top: 25px;
     padding: 0 20px;
   }
+}
+
+.soldOutMarquee {
+  position: fixed;
+  top: 50vh;
+  left: -60vw;
+  transform: rotate(-45deg);
+  z-index: 5;
+  border: 2px solid;
+  background: #fff;
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.nightmode .soldOutMarquee {
+  background: #000;
+
+}
+
+.soldOutText {
+  white-space: nowrap;
+  padding: 5px;
+  padding-right: 50px;
+  font-size: 40px;
 }

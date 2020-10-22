@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import {Helmet} from 'react-helmet'
+
 import Logo from './Logo'
 import { Marquee, ItemFeature, TiltedMarquee } from './Main'
 import data from './data'
@@ -11,6 +13,9 @@ import './Bargain.css'
 export default function Bargain() {
   return (
     <>
+      <Helmet>
+        <title>Rona Merch Co. -- Bargain Bin</title>
+      </Helmet>
       <div className="header" style={{overflow: 'visible'}}>
         <LogoLink />
         <div className="spin headerTitlePadding">
