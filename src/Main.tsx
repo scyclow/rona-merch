@@ -733,7 +733,7 @@ export function MarqueeChild({ children, className, style }: ChildProps) {
 export function ItemFeature({ item, className, style, noLink, showTitle, border }: { item: Item, noLink?: boolean, showTitle?: boolean, border?: boolean } & StyleProps) {
   const emTextElement = (
     <div className="tilt">
-      <Marquee style={{ border: '1px solid' }}>
+      <Marquee style={{ border: '1px solid', boxShadow: '0px 2px 7px #000' }}>
         <span className="tiltText">{item.emText}</span>
       </Marquee>
     </div>

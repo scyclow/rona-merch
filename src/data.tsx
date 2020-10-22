@@ -61,7 +61,6 @@ const cottonImages = (id: string) => [
   process.env.PUBLIC_URL + '/images/' + id + '-2.jpeg',
 ]
 
-
 const tanktopImages = (id: string) => [
   process.env.PUBLIC_URL + '/images/' + id + '-0.jpeg',
   process.env.PUBLIC_URL + '/images/' + id + '-1.jpeg',
@@ -87,6 +86,7 @@ const foldedImages = (id: string) => [
   process.env.PUBLIC_URL + '/images/' + id + '-3.jpeg',
   process.env.PUBLIC_URL + '/images/' + id + '-4.jpeg',
 ]
+
 const hatImages = (id: string) => [
   process.env.PUBLIC_URL + '/images/' + id + '-0.jpeg',
   process.env.PUBLIC_URL + '/images/' + id + '-1.jpeg',
@@ -325,13 +325,11 @@ const data: Data = {
         },
       ]
     },
-    // REJECTED
     {
       id: 'hoax',
       featured: true,
-      soldOut: true,
       title: 'HOAX Mask',
-      link: '',
+      link: 'https://www.zazzle.com/z/18ifgqbv?rf=238012063771219973',
       primaryIx: 1,
       images: cottonImages('hoax'),
       description: `Hedge your bets by telling the world that you think COVID-19 is just a silly hoax, all while protecting yourself and other from the deadly virus if you happen to be incorrect. You can't lose!`,
@@ -342,7 +340,6 @@ const data: Data = {
           rating: 5,
           content: `I can't lose!`
         },
-
         {
           author: 'BullseyeBob',
           date: '9/16/20',
@@ -393,6 +390,7 @@ const data: Data = {
     },
     {
       id: 'real-americans',
+      emText: 'REAL AMERICANS WEAR FACE MASKS',
       title: 'Real Americans Mask',
       link: 'https://www.zazzle.com/z/attc209i?rf=238012063771219973',
       primaryIx: 2,
@@ -505,7 +503,7 @@ const data: Data = {
       title: 'Anti Facial Recognition Mask 2',
       link: '',
       primaryIx: 2,
-      emText: 'ANTI-FACIAL RECOG',
+      emText: 'COMING SOON',
       images: fullFaceMaskImages('anti-facial2'),
       description: `Regardless of whether you believe COVID-19 is real, the deep state stealing and deep faking your identity is now just a plain fact of life. By reverse engineering Illuminati technologies, our uniquely patterned deep learned masks are guaranteed to scramble the government's facial recognition algorithms, making sure you get home safe to you and yours, "365-24/7". `,
       reviews: [
@@ -1141,11 +1139,10 @@ const data: Data = {
         }
       ],
     },
-    // IN REVIEW
     {
       id: 'fastcash-logo-folded',
       title: 'Fast Logo Pleated Mask',
-      link: '',
+      link: 'https://www.zazzle.com/z/fjly6uyg?rf=238012063771219973',
       primaryIx: 1,
       images: foldedImages('fastcash-logo-folded'),
       description: <>Make a statement with this fashionable FastCash Logo Pleated Mask. Perfect for standing out from the crowd on a crowded summer beach, or at a late summer backyard BBQ party. <br/><a className="link" href="http://fastcashmoneyplus.biz" target="_blank">Sponsored by FastCashMoneyPlus.biz</a></>,
@@ -1214,11 +1211,10 @@ const data: Data = {
         },
       ],
     },
-    // IN REVIEW
     {
       id: 'fastcash-premium',
       title: "FastCash Premium Mask",
-      link: '',
+      link: 'https://www.zazzle.com/z/5p2yksqj?rf=238012063771219973',
       primaryIx: 2,
       description: `A formal face mask for the most formal occasions. Pair this elegant beauty with a tux or black dress of your choosing. Or, wear it along with your New Yorker "all black" outfit. Either way, you'll be making one thing clear: you like making money, and you're good at it.`,
       images: cottonImages('fastcash-premium'),
@@ -1262,11 +1258,10 @@ const data: Data = {
   ],
 
   bargain: [
-    // IN REVIEW
     {
       id: 'wakka-wakka',
       title: 'Wakka Wakka Mask',
-      link: '',
+      link: 'https://www.zazzle.com/z/a50lic1l?rf=238012063771219973',
       primaryIx: 1,
       images: fullFaceMaskImages('wakka-wakka'),
       description: `Wakka Wakka all the way home with this hilarious throwback.`,
@@ -1481,11 +1476,10 @@ const data: Data = {
         },
       ]
     },
-    // IN REVIEW
     {
       id: 'dollar-dollar',
       title: 'Dollar Dollar Pleated Mask',
-      link: '',
+      link: 'https://www.zazzle.com/z/uu5bjx1b?rf=238012063771219973',
       primaryIx: 0,
       images: foldedImages('dollar-dollar'),
       description: `Become a fast cash millionaire whenever you put this mask on. Impress your friends by making it seem like you're actually wearing dollar bills wrapped around your face. It's a real hoot!`,
@@ -1510,11 +1504,10 @@ const data: Data = {
         },
       ]
     },
-    // IN REVIEW
     {
       id: 'knotty-mask',
       title: 'Knotty Pleated Mask',
-      link: '',
+      link: 'https://www.zazzle.com/z/t2p6o9kw?rf=238012063771219973',
       primaryIx: 1,
       images: foldedImages('knotty-mask'),
       description: `Show off your favorite quarantine hobby: knot tying!`,

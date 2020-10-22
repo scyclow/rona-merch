@@ -255,28 +255,23 @@
 
 
 .brandedContent {
+  padding: 0 20px;
   margin-top: 20px;
   display: grid;
   grid-gap: 15px;
-  grid-template-columns: 308px 308px 308px 308px;
-}
-
-@media (max-width: 1260px) {
-  .brandedContent {
-    grid-template-columns: 308px 308px 308px;
-  }
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 @media (max-width: 965px) {
   .brandedContent {
-    grid-template-columns: 308px 308px;
+    grid-template-columns: 1fr 1fr;
     grid-column-gap: 60px;
   }
 }
 
 @media (max-width: 700px) {
   .brandedContent {
-    grid-template-columns: 308px;
+    grid-template-columns: 1fr;
   }
 }
 

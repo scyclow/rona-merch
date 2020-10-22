@@ -140,7 +140,7 @@ function Content({ item }: {item?: Item}) {
       )}
       <div className="itemTitleSection">
         <h1 className="itemTitle">
-          {item.title}
+          <span style={{marginRight: 20}}>{item.title}</span>
           {item.emText && <h2 className="itemEmText">{item.emText}</h2>}
         </h1>
       </div>

@@ -583,6 +583,7 @@ h4.rmName {
   right: 63px;
   top: 87px;
   transform: rotate(-45deg);
+  opacity: 0.75;
 }
 
 .tiltText {
