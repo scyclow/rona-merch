@@ -83,6 +83,7 @@ a {
 @media (max-width: 750px) {
   .logoFull {
     max-width: calc(100% - 40px);
+    min-width: 300px;
 
   }
   .logo {
