@@ -112,7 +112,12 @@ function Content({ item }: {item?: Item}) {
   const description: any = item?.description || 'DESCRIPTION MISSING'
   return (
     <div>
-      <h1 className="itemTitle">{item.title}</h1>
+      <div className="itemTitleSection">
+        <h1 className="itemTitle">
+          {item.title}
+          <h2 className="itemEmText">{item.emText}</h2>
+        </h1>
+      </div>
       <div className="contentGrid">
         <div className="itemLeftCol">
           <a href={item.link} rel="noopener" target="_blank" onClick={trackLinkClick}>
@@ -123,7 +128,7 @@ function Content({ item }: {item?: Item}) {
             </ImageRotate>
             <div className="itemImage" style={{}}/>
             <div style={{marginTop: 5}}>
-              <div className="customizeLink">CUSTOMIZE ></div>
+              <div className="customizeLink">CUSTOMIZE{' >'}</div>
             </div>
             <div style={{marginTop: 15}}>
               <Arrows>
@@ -131,18 +136,33 @@ function Content({ item }: {item?: Item}) {
               </Arrows>
             </div>
           </a>
-          <div className="socialShareSection">
-            <div className="socialShare">
-              <a href="https://friendworld.social/threads/new" target="_blank" rel="noreferrer">Share on Friendworld</a>
+
+          <div className="itemIntegrationSection">
+            <div>
+              <a href="http://fastcashmoneyplus.biz/wallet?transferAddress=electricGOD_POWERvyS4xY69R3aR$" target="_blank" rel="noreferrer">
+                <h2 className="itemSectionSubHeader">FastCash Checkout:</h2>
+                <div>
+                  <span className="itemSubHeadingContent">electricGOD_POWERvyS4xY69R3aR$</span>
+                </div>
+              </a>
             </div>
-            <div className="socialShare">
-              <a href={`mailto:?Subject=Check%20out%20this%20awesome%20merch%3A&Body=This%20would%20look%20great%20on%20you%2C%20don%27t%20you%20think%3F%20${window.location.href}`} target="_blank" rel="noreferrer">Share with Email</a>
-            </div>
-            <div className="socialShare">
-              <a href={`https://twitter.com/`} target="_blank" rel="noreferrer">Share on Twitter</a>
-            </div>
-            <div className="socialShare">
-              <a href={`https://facebook.com/`} target="_blank" rel="noreferrer">Share on Facebook</a>
+
+            <div className="socialShareSection">
+              <h2 className="itemSectionSubHeader">Share:</h2>
+              <div>
+                <div className="itemSubHeadingContent">
+                  <a href="https://friendworld.social/threads/new" target="_blank" rel="noreferrer">Friendworld</a>
+                </div>
+                <div className="itemSubHeadingContent">
+                  <a href={`mailto:?Subject=Check%20out%20this%20awesome%20merch%3A&Body=This%20would%20look%20great%20on%20you%2C%20don%27t%20you%20think%3F%20${window.location.href}`} target="_blank" rel="noreferrer">Email</a>
+                </div>
+                <div className="itemSubHeadingContent">
+                  <a href={`https://twitter.com/`} target="_blank" rel="noreferrer">Twitter</a>
+                </div>
+                <div className="itemSubHeadingContent">
+                  <a href={`https://facebook.com/`} target="_blank" rel="noreferrer">Facebook</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

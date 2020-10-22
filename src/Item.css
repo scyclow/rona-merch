@@ -26,6 +26,25 @@
   margin-bottom: 0.75em;
 }
 
+
+.itemEmText {
+  position: relative;
+  top: -0.5em;
+  font-size: 20px;
+  font-weight: 400;
+  border: 1px solid;
+  padding: 0.3em;
+  display: inline-block;
+  margin-left: 1em;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.nightmode .itemEmText {
+  background-color: #ffffff;
+  color: #000000;
+}
+
 @media (max-width: 750px) {
   .itemTitle {
     text-align: center;
@@ -35,6 +54,11 @@
   .itemTitle {
     font-size: 45px;
   }
+
+  .itemEmText {
+    font-size: 15px;
+  }
+
 }
 
 .contentGrid {
@@ -75,10 +99,11 @@
   font-size: 20px;
   margin-bottom: 10px;
 }
+
 .itemSectionSubHeader {
-  font-size: 10px;
-  font-weight: 600;
-  padding-bottom: 20px;
+  font-size: 16px;
+  margin-bottom: 0.2em;
+  font-weight: 500;
 }
 
 @media (max-width: 400px) {
@@ -136,7 +161,7 @@
   text-align: center;
   font-size: 25px;
   font-weight: 600;
-  padding: 8px;
+  padding: 0.5em;
   border: 3px solid;
   border-radius: 3px;
   margin: 10px 5px;
@@ -149,6 +174,7 @@
 }
 
 .customizeLink {
+  margin-top: 0.7em;
   font-size: 14px;
   font-weight: 600;
   text-decoration: underline;
@@ -178,12 +204,31 @@
 }
 
 .socialShareSection {
-  margin-top: 30px;
+  margin-top: 15px;
 }
-.socialShare {
-  font-size: 18px;
+
+.itemSubHeadingContent {
+  font-size: 15px;
   font-weight: 600;
   text-decoration: underline;
   text-align: center;
   margin-bottom: 0.5em;
+  margin-right: 0.5em;
+  display: inline-block;
+}
+
+
+.itemIntegrationSection {
+  margin-top: 45px;
+}
+
+@media (max-width: 550px) {
+  .itemLeftCol {
+    margin-bottom: 40px;
+  }
+
+  .itemIntegrationSection {
+    margin-top: 25px;
+    padding: 0 20px;
+  }
 }
