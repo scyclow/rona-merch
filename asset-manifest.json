@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.d2bf19c4.chunk.css",
+    "main.css": "/static/css/main.3e985f46.chunk.css",
     "main.js": "/static/js/main.bf14c4fa.chunk.js",
     "main.js.map": "/static/js/main.bf14c4fa.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.98dae089.js",
@@ -8,9 +8,9 @@
     "static/js/2.6730e090.chunk.js": "/static/js/2.6730e090.chunk.js",
     "static/js/2.6730e090.chunk.js.map": "/static/js/2.6730e090.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.cf5a84e6c1b6039253da6860fa00c22f.js": "/precache-manifest.cf5a84e6c1b6039253da6860fa00c22f.js",
+    "precache-manifest.1bf0edc38fe0000592628ab55b9ffa68.js": "/precache-manifest.1bf0edc38fe0000592628ab55b9ffa68.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.d2bf19c4.chunk.css.map": "/static/css/main.d2bf19c4.chunk.css.map",
+    "static/css/main.3e985f46.chunk.css.map": "/static/css/main.3e985f46.chunk.css.map",
     "static/js/2.6730e090.chunk.js.LICENSE.txt": "/static/js/2.6730e090.chunk.js.LICENSE.txt",
     "static/media/Patriot.css": "/static/media/flagstar.398581c6.svg",
     "static/media/flashSale.svg": "/static/media/flashSale.adcbca99.svg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.98dae089.js",
     "static/js/2.6730e090.chunk.js",
-    "static/css/main.d2bf19c4.chunk.css",
+    "static/css/main.3e985f46.chunk.css",
     "static/js/main.bf14c4fa.chunk.js"
   ]
 }
