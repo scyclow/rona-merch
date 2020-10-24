@@ -786,7 +786,9 @@ h4.rmName {
 }
 
 .entireCatalog {
-  margin-top: 5px;
+  margin-top: 10px;
+
+  white-space: nowrap;
   text-decoration: underline;
 }
 

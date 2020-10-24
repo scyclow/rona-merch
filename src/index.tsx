@@ -12,6 +12,9 @@ if (hours < 5 || hours >= 22) {
   document.body.className = 'nightmode'
   // @ts-ignore
   window.nightmode = true
+  document
+    .querySelector("meta[name=theme-color]")
+    ?.setAttribute("content", "#000000")
 }
 
 

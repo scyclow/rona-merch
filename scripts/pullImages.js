@@ -184,6 +184,11 @@ const data = {
       images: fullFaceMaskImages('c088924c-a9c9-40c1-96a6-1918279b8429'),
     },
     {
+      id: 'anti-facial3',
+      images: foldedImages('76ac5e53-74b0-43a6-baa4-471aa9e42b48'),
+    },
+
+    {
       id: '5g-bad',
       images: fullFaceMaskImages('603ad7c0-8898-4d93-8739-70d809affdce'),
     },

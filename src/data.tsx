@@ -701,6 +701,36 @@ const data: Data = {
         },
       ]
     },
+    // REVIEW
+    {
+      id: 'anti-facial3',
+      title: 'Anti Facial Recognition (Camo) Mask 3',
+      link: '',
+      primaryIx: 0,
+      emText: 'COMING SOON',
+      images: foldedImages('anti-facial3'),
+      description: `With a pattern obtained from hacked documents straight from the pentagon, our latest anti-facial recognition design mixes the All-American aesthetics of camo with the All-American values of freedom. Get yours now!`,
+      reviews: [
+        {
+          author: 'friendlyfriend',
+          date: '8/15/20',
+          rating: 5,
+          content: `I originally bought this to throw off the government, but I started using it while hunting as well. Just last week I walked right up to a deer and shot it point blank while wearing this mask! It never even recognized me as human!`
+        },
+        {
+          author: 'SweetSalvation',
+          date: '9/12/20',
+          rating: 5,
+          content: `I'm not one to buy into all this government facebook watching us mumbo jumbo but this is still a damn fine facemask if I've ever seen one I used it on my last hunting trip and blended right in!`
+        },
+        {
+          author: 'TargetedTom',
+          date: '9/27/20',
+          rating: 4,
+          content: `Unlike some of the other reviews, I can't say I'm a huge fan of the camo aesthetics... but I'll be damned if this mask doesn't work. It's like the cameras don't even know I'm there.`
+        },
+      ]
+    },
     {
       id: 'infected2-mask',
       title: 'Infected Mask 2',
@@ -724,34 +754,6 @@ const data: Data = {
       ]
     },
     {
-      id: 'sovereign-mask',
-      title: 'Sovereign Citizen Pleated Mask',
-      link: 'https://www.zazzle.com/z/yblzo95w?rf=238012063771219973',
-      primaryIx: 0,
-      images: foldedImages('sovereign-mask'),
-      description: `Declare your sovereignty from any nation that treads on you with this Sovereign Citizen mask. Upon being stopped by a police officer, simply point to your face to express that they have no legal power over you. Perfect for any type of protest with police presence.`,
-      reviews: [
-        {
-          author: 'Ech0mike',
-          date: '8/5/20',
-          rating: 4,
-          content: `Just like with the t shirt, I was able to figure out the text on this mask through a combination of squinting and machine learning: "Am I being detained? Can I have your name and badge number? Is there a recording being made of this encounter? Am I being detained? What facts or information are you alleging gave you probable cause to stop and accost me? do you have a properly signed and issued warrant authorizing you to search me or my property? Am I being detained? What is the Articulable probable cause that leads you to believe that I have committed or am about to commit a crime that authorizes you to stop and detain or arrest me? Am I being detained? From this point forward I do not consent to providing you with any information or documents that could or will be used against me in a court of law or to possibly incriminate me, so please do not ask me to produce anything and give it to you. No law is valid if it requires me in any way to waive any fundamentally protected right in order to exercise any other right or alleged privilege. And no law can convert the free exercise of any right into a crime. Are fully aware that I have already invoked my fundamentally protected right to remain silent and my right to assistance of counsel? Do you intend to continue in your unlawful efforts to violate my rights? Am I being detained? Am I being detained? Are you now trying to fabricate probable cause by making false statements into the record and false allegations against me?"`
-        },
-        {
-          author: 'SweetSalvation',
-          date: '8/15/20',
-          rating: 5,
-          content: `If and when the Socialist Democrats ever take power then that'll be the day that I don't consider myself a citizen of this fine nation any more so I keep one of these masks with me in my back pocket all the time.`
-        },
-        {
-          author: 'pastisfuture',
-          date: '8/16/20',
-          rating: 4,
-          content: `I'm not sure if I consider myself a sovereign citizen, or what. But I still think it's important to keep in mind that the only power police have over you is determined by a social construct. We're born into this society with no say about it, and for some reason we're expected to follow the rules? I don't think so. The humans of the pre agricultural days didn't have police officers, and they roamed the same land we stand on today under an entirely different legal framework. `
-        }
-      ]
-    },
-    {
       id: '5g-bad',
       title: '5G Bad mask',
       link: 'https://www.zazzle.com/z/wcx1fgiu?rf=238012063771219973',
@@ -767,6 +769,8 @@ const data: Data = {
         },
       ]
     },
+
+
     {
       id: 'infected1-mask',
       title: 'Infected Mask 1',
@@ -807,6 +811,35 @@ const data: Data = {
       ]
     },
     {
+      id: 'sovereign-mask',
+      title: 'Sovereign Citizen Pleated Mask',
+      link: 'https://www.zazzle.com/z/yblzo95w?rf=238012063771219973',
+      primaryIx: 0,
+      images: foldedImages('sovereign-mask'),
+      description: `Declare your sovereignty from any nation that treads on you with this Sovereign Citizen mask. Upon being stopped by a police officer, simply point to your face to express that they have no legal power over you. Perfect for any type of protest with police presence.`,
+      reviews: [
+        {
+          author: 'Ech0mike',
+          date: '8/5/20',
+          rating: 4,
+          content: `Just like with the t shirt, I was able to figure out the text on this mask through a combination of squinting and machine learning: "Am I being detained? Can I have your name and badge number? Is there a recording being made of this encounter? Am I being detained? What facts or information are you alleging gave you probable cause to stop and accost me? do you have a properly signed and issued warrant authorizing you to search me or my property? Am I being detained? What is the Articulable probable cause that leads you to believe that I have committed or am about to commit a crime that authorizes you to stop and detain or arrest me? Am I being detained? From this point forward I do not consent to providing you with any information or documents that could or will be used against me in a court of law or to possibly incriminate me, so please do not ask me to produce anything and give it to you. No law is valid if it requires me in any way to waive any fundamentally protected right in order to exercise any other right or alleged privilege. And no law can convert the free exercise of any right into a crime. Are fully aware that I have already invoked my fundamentally protected right to remain silent and my right to assistance of counsel? Do you intend to continue in your unlawful efforts to violate my rights? Am I being detained? Am I being detained? Are you now trying to fabricate probable cause by making false statements into the record and false allegations against me?"`
+        },
+        {
+          author: 'SweetSalvation',
+          date: '8/15/20',
+          rating: 5,
+          content: `If and when the Socialist Democrats ever take power then that'll be the day that I don't consider myself a citizen of this fine nation any more so I keep one of these masks with me in my back pocket all the time.`
+        },
+        {
+          author: 'pastisfuture',
+          date: '8/16/20',
+          rating: 4,
+          content: `I'm not sure if I consider myself a sovereign citizen, or what. But I still think it's important to keep in mind that the only power police have over you is determined by a social construct. We're born into this society with no say about it, and for some reason we're expected to follow the rules? I don't think so. The humans of the pre agricultural days didn't have police officers, and they roamed the same land we stand on today under an entirely different legal framework. `
+        }
+      ]
+    },
+
+    {
       id: 'sovereign-t',
       title: 'Sovereign Citizen T',
       link: 'https://www.zazzle.com/z/ad4dtgge?rf=238012063771219973',
@@ -838,7 +871,7 @@ const data: Data = {
       id: 'emf-tower',
       title: 'EMF Tower Pleated Mask',
       link: 'https://www.zazzle.com/z/aqvf1elx?rf=238012063771219973',
-      primaryIx: 2,
+      primaryIx: 3,
       images: foldedImages('emf-tower'),
       description: ``,
       reviews: [
@@ -944,7 +977,7 @@ const data: Data = {
       title: "FastCash Leggings",
       link: 'https://www.zazzle.com/z/a850he0s?rf=238012063771219973',
       primaryIx: 2,
-      description: `Perfect for yoga, running, or working out.`,
+      description: <>Perfect for yoga, running, working out, or just lying around the house. These leggings are perfect for any occasion.<br/><a className="link" href="http://fastcashmoneyplus.biz" target="_blank">Sponsored by FastCashMoneyPlus.biz</a></>,
       images: leggingImages('fastcash-leggings'),
       reviews: [
         {
@@ -1172,7 +1205,7 @@ const data: Data = {
       title: "FastCash Logo Mask Colorful",
       link: 'https://www.zazzle.com/z/agc7i58i?rf=238012063771219973',
       primaryIx: 2,
-      description: 'This vibrant, multi-colored face mask is the perfect way to express your identity as someone who is both forward-thinking and ambitious.',
+      description: <>This vibrant, multi-colored face mask is the perfect way to express your identity as someone who is both forward-thinking and ambitious.<br/><a className="link" href="http://fastcashmoneyplus.biz" target="_blank">Sponsored by FastCashMoneyPlus.biz</a></>,
       images: fullFaceMaskImages('fastcash-colorful'),
       reviews: [
         {
@@ -1216,7 +1249,7 @@ const data: Data = {
       title: "FastCash Premium Mask",
       link: 'https://www.zazzle.com/z/5p2yksqj?rf=238012063771219973',
       primaryIx: 2,
-      description: `A formal face mask for the most formal occasions. Pair this elegant beauty with a tux or black dress of your choosing. Or, wear it along with your New Yorker "all black" outfit. Either way, you'll be making one thing clear: you like making money, and you're good at it.`,
+      description: <>A formal face mask for the most formal occasions. Pair this elegant beauty with a tux or black dress of your choosing. Or, wear it along with your New Yorker "all black" outfit. Either way, you'll be making one thing clear: you like making money, and you're good at it.<br/><a className="link" href="http://fastcashmoneyplus.biz" target="_blank">Sponsored by FastCashMoneyPlus.biz</a></>,
       images: cottonImages('fastcash-premium'),
       reviews: [
         {

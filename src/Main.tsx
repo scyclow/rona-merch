@@ -69,6 +69,9 @@ export default function Main() {
               document.body.className = isNightmode ? '' : 'nightmode';
               // @ts-ignore
               window.nightmode = !isNightmode
+              document
+                .querySelector("meta[name=theme-color]")
+                ?.setAttribute("content", isNightmode ? '#FFFFFF' : '#000000')
               setIsNightmode(!isNightmode)
             }}
           />
@@ -208,6 +211,29 @@ function Title() {
   )
 }
 
+function ViewFull() {
+  const [content, setContent] = useState('>')
+  const [direction, setDirection] = useState(1)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (direction === 1) {
+        setContent(content + '>')
+        if (content.length > 20) {
+          setDirection(-1)
+        }
+      } else {
+        setContent(content.slice(0, -1))
+        if (content.length == 1) {
+          setDirection(1)
+        }
+      }
+    }, 50)
+    return () => clearInterval(interval)
+  })
+
+  return <Link to="/items">{'View Full Product Catalog ' + content}</Link>
+}
 function FeaturedItems() {
   const items = shuffle(allData.filter(i => i.featured))
 
@@ -215,7 +241,7 @@ function FeaturedItems() {
     <div style={{ width: '100%' }}>
       <div style={{marginBottom: 15}}>
         <RotateZ>
-          <span style={{fontSize: 30}}>FEATURED ITEMS</span>
+          <Link to="/items"><span style={{fontSize: 30}}>FEATURED ITEMS</span></Link>
         </RotateZ>
       </div>
       <div style={{ border: '6px solid'}}>
@@ -226,7 +252,7 @@ function FeaturedItems() {
         </ImageMarquee>
       </div>
       <div className="entireCatalog">
-        <Link to="/items">{'View Full Product Catalog >'}</Link>
+        <ViewFull />
       </div>
     </div>
   )
