@@ -1555,6 +1555,7 @@ const data: Data = {
     },
     {
       id: 'mask-mask',
+      featured: true,
       title: 'Mask Mask',
       link: 'https://www.zazzle.com/z/roud3q2q?rf=238012063771219973',
       primaryIx: 0,
