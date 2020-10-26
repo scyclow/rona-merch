@@ -1600,6 +1600,7 @@ const data: Data = {
     },
     {
       id: 'hat-hat',
+      featured: true,
       title: 'Hat Hat',
       link: 'https://www.zazzle.com/z/a15nw0eq?rf=238012063771219973',
       primaryIx: 1,
