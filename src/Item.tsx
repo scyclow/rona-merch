@@ -51,7 +51,7 @@ export default function ItemElem() {
 
         <meta property="og:url" content={`https://ronamerch.co/items/${item?.id}`} />
         <meta name="twitter:url" content={`https://ronamerch.co/items/${item?.id}`} />
-
+        <meta name="keywords" content="covid, covid-19, covid19, covid 19, rona, merch, co., rona merch co., coronavirus, face, mask, masks, face mask, facemask, facemasks, branding, brand, ecommerce, protective gear, pandemic, quarantine, safety, branded, bargain" />
         <title>{item?.title || 'Rona Merch Item'}</title>
       </Helmet>
 
