@@ -497,13 +497,12 @@ const data: Data = {
 
 
   safety: [
-    // IN REVIEW
     {
       id: 'anti-facial2',
       title: 'Anti Facial Recognition Mask 2',
-      link: '',
+      link: 'https://www.zazzle.com/z/avwgzmi7?rf=238012063771219973',
       primaryIx: 2,
-      emText: 'COMING SOON',
+      emText: 'ANTI-FACIAL RECOG',
       images: fullFaceMaskImages('anti-facial2'),
       description: `Regardless of whether you believe COVID-19 is real, the deep state stealing and deep faking your identity is now just a plain fact of life. By reverse engineering Illuminati technologies, our uniquely patterned deep learned masks are guaranteed to scramble the government's facial recognition algorithms, making sure you get home safe to you and yours, "365-24/7". `,
       reviews: [
@@ -701,13 +700,12 @@ const data: Data = {
         },
       ]
     },
-    // REVIEW
     {
       id: 'anti-facial3',
       title: 'Anti Facial Recognition (Camo) Mask 3',
-      link: '',
+      link: 'https://www.zazzle.com/z/asmsmjoh?rf=238012063771219973',
       primaryIx: 0,
-      emText: 'COMING SOON',
+      emText: 'ANTI-FACIAL RECOG',
       images: foldedImages('anti-facial3'),
       description: `With a pattern obtained from hacked documents straight from the pentagon, our latest anti-facial recognition design mixes the All-American aesthetics of camo with the All-American values of freedom. Get yours now!`,
       reviews: [
@@ -1555,7 +1553,6 @@ const data: Data = {
     },
     {
       id: 'mask-mask',
-      featured: true,
       title: 'Mask Mask',
       link: 'https://www.zazzle.com/z/roud3q2q?rf=238012063771219973',
       primaryIx: 0,
