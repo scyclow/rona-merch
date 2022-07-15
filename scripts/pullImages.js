@@ -82,6 +82,7 @@ const womanShirt = id => [
 
 
 const data = {
+
   patriot: [
     {
       id: 'proud-american-t',
@@ -144,6 +145,10 @@ const data = {
       // TODO Description
       id: 'wwg1wga-text',
       images: foldedImages('0b19fa58-a7b1-4d02-95ba-d449d0fe0b27')
+    },
+    {
+      id: 'donate-to-save',
+      images: tShirtImages('92413e90-9c2f-496b-98f4-77675fc61194')
     },
   ],
   safety: [
