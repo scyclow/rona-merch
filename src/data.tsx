@@ -1314,6 +1314,112 @@ const data: Data = {
         },
       ]
     },
+    {
+      id: 'kissy-t',
+      title: 'FinSexy Kissy T',
+      link: 'https://www.zazzle.com/pd/spp?dz=a0e2166a-b652-436a-8edb-0fe523fd6cf2',
+      primaryIx: 0,
+      images: tShirtImages('kissy-t'),
+      description: "Let the whole world know that you want to kiss them with this sexy Kissy T!",
+      reviews: [
+        {
+          author: 'WendyPilsen',
+          date: '5/20/24',
+          rating: 5,
+          content: `the shirt fits well`
+        },
+        {
+          author: 'DumboTheClown',
+          date: '5/21/24',
+          rating: 5,
+          content: `It makes me want to kiss you!`
+        },
+        {
+          author: 'VinceSlickson',
+          date: '5/29/24',
+          rating: 5,
+          content: `I look great in this T!`
+        },
+        {
+          author: 'heatherhot6',
+          date: '6/7/24',
+          rating: 5,
+          content: `I look so hot in this T`
+        },
+        {
+          author: 'CrystalBell',
+          date: '6/8/24',
+          rating: 5,
+          content: `Beautiful`
+        },
+
+      ]
+    },
+    {
+      id: 'paypig-t',
+      title: 'FinSexy Paypig T',
+      link: 'https://www.zazzle.com/pd/spp?dz=a8fea2a8-9c7d-43ea-afb9-6d6c1b19c407',
+      primaryIx: 0,
+      images: tShirtImages('paypig-t'),
+      description: "Celebrate #FinDomSummer by declaring that you are a loud and proud paypig!",
+      reviews: [
+
+        {
+          author: 'DumboTheClown',
+          date: '5/22/24',
+          rating: 5,
+          content: `I'm a little paypig oink oink oink!`
+        },
+        {
+          author: 'fuckface99',
+          date: '5/23/24',
+          rating: 5,
+          content: 'FUCK. YES.'
+        },
+        {
+          author: 'PissinOnUHoes69',
+          date: '5/27/24',
+          rating: 4,
+          content: `I'd wear it`
+        },
+        {
+          author: 'SweetSalvation',
+          date: '6/1/24',
+          rating: 2,
+          content: `Whatever consenting adults do in their own homes is one thing I'm not gonna pass judgement but I don't think it's right that you broadcast your sexual fetishes to the whole wide world`
+        },
+
+      ]
+    },
+    {
+      id: 'property-wallet',
+      title: 'FinSexy Property Wallet',
+      link: 'https://www.zazzle.com/pd/spp/pt-photousa_wallet?dz=efc6bbf7-c6e4-462f-87d3-c3694326699e',
+      primaryIx: 0,
+      images: tShirtImages('property-wallet'),
+      description: "Let everyone know that all of your money belongs to steviep with this stylish, mult-compartment wallet.",
+      reviews: [
+        {
+          author: 'octofuzz',
+          date: '4/20/24',
+          rating: 3,
+          content: `I don't carry any hard currency, so this is useless to me`
+        },
+        {
+          author: 'fuckface99',
+          date: '4/28/24',
+          rating: 5,
+          content: 'FUCK. YES.'
+        },
+        {
+          author: 'DumboTheClown',
+          date: '6/1/24',
+          rating: 5,
+          content: `Stevie P can have all of my money!`
+        },
+
+      ]
+    },
   ],
 
   bargain: [
