@@ -1316,9 +1316,9 @@ const data: Data = {
     },
     {
       id: 'kissy-t',
-      title: 'FinSexy Kissy T',
+      title: 'FinSexy.com Kissy T',
       link: 'https://www.zazzle.com/pd/spp?dz=a0e2166a-b652-436a-8edb-0fe523fd6cf2',
-      primaryIx: 0,
+      primaryIx: 1,
       images: tShirtImages('kissy-t'),
       description: "Let the whole world know that you want to kiss them with this sexy Kissy T!",
       reviews: [
@@ -1356,10 +1356,39 @@ const data: Data = {
       ]
     },
     {
-      id: 'paypig-t',
-      title: 'FinSexy Paypig T',
-      link: 'https://www.zazzle.com/pd/spp?dz=a8fea2a8-9c7d-43ea-afb9-6d6c1b19c407',
+      id: 'property-wallet',
+      title: 'FinSexy.com Property Wallet',
+      link: 'https://www.zazzle.com/pd/spp/pt-photousa_wallet?dz=efc6bbf7-c6e4-462f-87d3-c3694326699e',
       primaryIx: 0,
+      images: tShirtImages('property-wallet'),
+      description: "Let everyone know that all of your money belongs to steviep with this stylish, mult-compartment wallet.",
+      reviews: [
+        {
+          author: 'octofuzz',
+          date: '4/20/24',
+          rating: 3,
+          content: `I don't carry any hard currency, so this is useless to me`
+        },
+        {
+          author: 'fuckface99',
+          date: '4/28/24',
+          rating: 5,
+          content: 'FUCK. YES.'
+        },
+        {
+          author: 'DumboTheClown',
+          date: '6/1/24',
+          rating: 5,
+          content: `Stevie P can have all of my money!`
+        },
+
+      ]
+    },
+    {
+      id: 'paypig-t',
+      title: 'FinSexy.com Paypig T',
+      link: 'https://www.zazzle.com/pd/spp?dz=a8fea2a8-9c7d-43ea-afb9-6d6c1b19c407',
+      primaryIx: 1,
       images: tShirtImages('paypig-t'),
       description: "Celebrate #FinDomSummer by declaring that you are a loud and proud paypig!",
       reviews: [
@@ -1387,35 +1416,6 @@ const data: Data = {
           date: '6/1/24',
           rating: 2,
           content: `Whatever consenting adults do in their own homes is one thing I'm not gonna pass judgement but I don't think it's right that you broadcast your sexual fetishes to the whole wide world`
-        },
-
-      ]
-    },
-    {
-      id: 'property-wallet',
-      title: 'FinSexy Property Wallet',
-      link: 'https://www.zazzle.com/pd/spp/pt-photousa_wallet?dz=efc6bbf7-c6e4-462f-87d3-c3694326699e',
-      primaryIx: 0,
-      images: tShirtImages('property-wallet'),
-      description: "Let everyone know that all of your money belongs to steviep with this stylish, mult-compartment wallet.",
-      reviews: [
-        {
-          author: 'octofuzz',
-          date: '4/20/24',
-          rating: 3,
-          content: `I don't carry any hard currency, so this is useless to me`
-        },
-        {
-          author: 'fuckface99',
-          date: '4/28/24',
-          rating: 5,
-          content: 'FUCK. YES.'
-        },
-        {
-          author: 'DumboTheClown',
-          date: '6/1/24',
-          rating: 5,
-          content: `Stevie P can have all of my money!`
         },
 
       ]
