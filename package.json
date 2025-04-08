@@ -29,6 +29,7 @@
     "start": "react-scripts start",
     "img": "node scripts/pullImages.js",
     "build": "react-scripts build && react-snapshot && cp ./build/index.html ./build/404.html && echo \"ronamerch.co\" > build/CNAME",
+    "build2": "react-snapshot && cp ./build/index.html ./build/404.html && echo \"ronamerch.co\" > build/CNAME",
     "snapshot": "react-snapshot"
   },
   "eslintConfig": {

@@ -1358,7 +1358,7 @@ const data: Data = {
     {
       id: 'property-wallet',
       title: 'FinSexy.com Property Wallet',
-      link: 'https://www.zazzle.com/pd/spp/pt-photousa_wallet?dz=efc6bbf7-c6e4-462f-87d3-c3694326699e',
+      link: 'https://www.zazzle.com/steviep_wallet-256704011421712692',
       primaryIx: 0,
       images: tShirtImages('property-wallet'),
       description: "Let everyone know that all of your money belongs to steviep with this stylish, mult-compartment wallet.",
@@ -1387,7 +1387,7 @@ const data: Data = {
     {
       id: 'paypig-t',
       title: 'FinSexy.com Paypig T',
-      link: 'https://www.zazzle.com/pd/spp?dz=a8fea2a8-9c7d-43ea-afb9-6d6c1b19c407',
+      link: 'https://www.zazzle.com/paypig_t_t_shirt-256340684792437822',
       primaryIx: 1,
       images: tShirtImages('paypig-t'),
       description: "Celebrate #FinDomSummer by declaring that you are a loud and proud paypig!",
